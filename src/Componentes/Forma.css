@@ -1,0 +1,148 @@
+.forma {
+    max-width: 1200px;
+    margin: 81px auto;
+    padding: 2rem 2rem 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.forma > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7rem;
+    gap: 1rem;
+    height: fit-content;
+    margin-top: 4rem;
+}
+
+.forma > div > div {
+    width: 50%;
+}
+
+.forma > div > div > div:nth-of-type(1) {
+    aspect-ratio: 2 / 1;
+    width: 100%;
+    height: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: hidden;
+    margin-bottom: 2rem;
+}
+
+.problema {
+    background-color: lavenderblush;
+    color: red;
+    font-size: var(--fuente-extra-pequeña);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem 2rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.problema {
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.problema.visible {
+    transform: translateY(0);
+}
+
+.problema.exito {
+    background-color: honeydew;
+    color: forestgreen;
+}
+
+.inscripcion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inscripcion > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.25rem;
+}
+
+.entrada {
+    display: block;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    font-size: var(--fuente-extra-pequeña);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    margin-bottom: 0.75rem;
+}
+
+.forma h1 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--fuente-extra-extra-grande);
+    font-family: inherit;
+    font-weight: 700;
+    font-style: inherit;
+    letter-spacing: -0.02em;
+    line-height: inherit;
+    margin-bottom: 1rem;
+}
+
+.ingreso > div > label {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: var(--fuente-pequeña);
+    font-family: inherit;
+    font-weight: 700;
+    font-style: inherit;
+    letter-spacing: -0.02em;
+    line-height: inherit;
+    margin-bottom: 0.5rem !important;
+}
+
+.ingreso button {
+    font-size: var(--fuente-extra-pequeña);
+    font-family: inherit;
+    font-weight: 600;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    background-color: royalblue;
+    color: white;
+    border-radius: 4px;
+    border-width: 0;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    width: fit-content;
+    display: block;
+}
+
+.ingreso > a {
+    display: block;
+    font-size: var(--fuente-extra-pequeña);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    margin-bottom: 0;
+    color: royalblue;
+    cursor: pointer;
+    margin-bottom: 2rem !important;
+}

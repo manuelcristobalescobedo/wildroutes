@@ -1,14 +1,11 @@
-import './Principal.css';
+import './Ingreso.css';
 import React, { useState } from "react";
 import Encabezado from '../Componentes/Encabezado';
 import Carro from '../Componentes/Carro';
-import Heroe from '../Componentes/Heroe';
-import Destacado from '../Componentes/Destacado';
-import Explora from '../Componentes/Explora';
-import Frecuentes from '../Componentes/Frecuentes';
 import Pie from '../Componentes/Pie';
+import Forma from '../Componentes/Forma';
 
-const Principal: React.FC = () => {
+const Ingreso: React.FC = () => {
     const [carroAbierto, setCarroAbierto] = useState(false);
 
     const abrirCarro = () => setCarroAbierto(true);
@@ -17,14 +14,11 @@ const Principal: React.FC = () => {
     return (
         <div className='pagina'>
             <Encabezado abrirCarro={abrirCarro}/>
-            <Heroe/>
-            <Destacado/>
-            <Explora/>
-            <Frecuentes/>
+            <Forma/>
             <Pie/>
             <Carro carroAbierto={carroAbierto} cerrarCarro={cerrarCarro} />
         </div>
     );
 };
 
-export default Principal;
+export default Ingreso;

@@ -1,0 +1,100 @@
+.pie {
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+}
+
+.pie > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem 6rem;
+    box-sizing: border-box;
+}
+
+.pie > div > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.pie > div > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.pie > div > div > div > h5 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--fuente-mediana);
+    font-family: inherit;
+    font-weight: 700;
+    font-style: inherit;
+    letter-spacing: -0.02em;
+    line-height: inherit;
+    margin-bottom: 0.75rem;
+}
+
+.pie > div > div > div > a {
+    margin: 0;
+    padding: 0;
+    font-size: var(--fuente-pequeña);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.pie > div > div > div > h5:nth-of-type(2) {
+    margin-top: 2rem;
+}
+
+.sociales {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.sociales > a {
+    cursor: pointer;
+    width: fit-content;
+}
+
+.sociales > a > svg {
+    height: 2rem;
+    width: auto;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    width: fit-content;
+    margin-bottom: 0 !important;
+}
+
+.contacto > svg {
+    height: 2rem;
+    width: auto;
+}
+
+.pie > div > p {
+    margin: 0;
+    padding: 0;
+    color: lightskyblue;
+    font-size: var(--fuente-extra-pequeña);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+}

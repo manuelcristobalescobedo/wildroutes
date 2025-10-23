@@ -1,0 +1,315 @@
+.carro {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+}
+
+.carro.abierto {
+    transform: translateX(0);
+}
+
+.carro > div {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.carro > div > div {
+    width: fit-content;
+    min-height: 100%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: aliceblue;
+    scrollbar-width: thin;
+    color: black;
+    scrollbar-color: currentColor transparent;
+}
+
+/* El último estilo, que personaliza la apariencia de la barra de desplazamiento, me lo entregó ChatGPT como respuesta a la pregunta "¿Es posible cambiar la barra de desplazamiento de un carro de compras?" */
+
+.carro > div > div > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+.carro > div > div > div:nth-of-type(1) > div > h3 {
+    all: unset;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: var(--fuente-extra-extra-grande);
+    font-family: inherit;
+    font-weight: 700;
+    font-style: inherit;
+    letter-spacing: -0.02em;
+    line-height: inherit;
+    margin-bottom: 2rem;
+}
+
+.carro > div > div > div:nth-of-type(1) > div > button {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: var(--fuente-pequeña);
+    font-family: inherit;
+    font-weight: 600;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    color: royalblue;
+    cursor: pointer;
+}
+
+.carro > div > div > div:nth-of-type(1) > div > button > svg {
+    height: 1.25rem;
+    width: auto;
+}
+
+.carro > div > div > div:nth-of-type(1) > div > button > p {
+    all: unset;
+    display: block;
+    margin-bottom: 1px;
+}
+
+.carro > div > div > div:nth-of-type(1) > button {
+    all: unset;
+    margin-right: -4px;
+    cursor: pointer;
+}
+
+.carro > div > div > div:nth-of-type(1) > button > svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+.item {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.item > img {
+    aspect-ratio: 1 / 1;
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    margin-right: 1.5rem;
+}
+
+.item > div {
+    max-width: 368px;
+}
+
+.item > div > h2 {
+    all: unset;
+    display: block;
+    font-size: var(--fuente-mediana);
+    font-family: inherit;
+    font-weight: 700;
+    font-style: inherit;
+    letter-spacing: -0.02em;
+    line-height: inherit;
+    margin-bottom: 0.75rem;
+}
+
+.item > div > p {
+    all: unset;
+    display: block;
+    font-size: var(--fuente-pequeña);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    margin-bottom: 1.5rem;
+}
+
+.item > div > div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.item > div > div > span {
+    display: flex;
+    flex-direction: row;
+    gap: 0.125rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.item > div > div > span > p {
+    all: unset;
+    display: block;
+    font-size: var(--fuente-extra-pequeña);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    margin-top: 0.125rem;
+}
+
+.item > div > button {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 1.125rem 0.5rem 0.75rem;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: var(--fuente-extra-pequeña);
+    font-family: inherit;
+    font-weight: 600;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+}
+
+.item > div > button > svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.item > button {
+    all: unset;
+    display: block;
+    height: fit-content;
+    color: black;
+    margin-top: 0.25rem;
+    cursor: pointer;
+}
+
+.item > button > svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.carro > div > div > button {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1.125rem 2rem 1.125rem 2rem;
+    font-size: var(--fuente-pequeña);
+    font-family: inherit;
+    font-weight: 600;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    background-color: darkblue;
+    color: white;
+    border-radius: 4px;
+    border-width: 0;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.carro > div > div > button > svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.carro > div > div > button > p {
+    all: unset;
+    display: block;
+}
+
+.total {
+    background-color: white;
+    max-width: 612px;
+    height: fit-content;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 3.5rem;
+}
+
+.total > h4 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-size: var(--fuente-extra-grande);
+    font-family: inherit;
+    font-weight: 700;
+    font-style: inherit;
+    letter-spacing: -0.02em;
+    line-height: inherit;
+    margin-bottom: 1.5rem;
+}
+
+.tabla > div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 1rem;
+    row-gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.tabla > div:nth-of-type(1) > h6 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--fuente-extra-pequeña);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    margin-bottom: 0.25rem;
+}
+
+.tabla > div:nth-of-type(1) > p {
+    margin: 0;
+    padding: 0;
+    font-size: var(--fuente-pequeña);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    max-width: 35ch;
+}
+
+.tabla > div:nth-of-type(2) > h5 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--fuente-mediana);
+    font-family: inherit;
+    font-weight: 700;
+    font-style: inherit;
+    letter-spacing: -0.02em;
+    line-height: inherit;
+    margin-bottom: 0;
+}

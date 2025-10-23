@@ -1,0 +1,88 @@
+.destacado {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.destacado > h3 {
+    padding: 0;
+    margin: 0;
+    font-size: var(--fuente-grande);
+    font-family: inherit;
+    font-weight: 700;
+    font-style: inherit;
+    letter-spacing: -0.02em;
+    line-height: inherit;
+    margin-bottom: 1.5rem;
+}
+
+.destacado > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+.tarjeta > div,
+.tarjeta > p,
+.tarjeta > h2 {
+    all: unset;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.tarjeta > img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.tarjeta > div {
+    font-size: var(--fuente-pequeña);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta > p:nth-of-type(1) {
+    font-size: var(--fuente-extra-pequeña);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    margin-bottom: 0.125rem;
+}
+
+.tarjeta > h2 {
+    font-size: var(--fuente-mediana);
+    font-family: inherit;
+    font-weight: 700;
+    font-style: inherit;
+    letter-spacing: -0.02em;
+    line-height: inherit;
+    margin-bottom: 0.75rem;
+}
+
+.tarjeta > p:nth-of-type(2) {
+    font-size: var(--fuente-pequeña);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    margin-bottom: 0.5rem;
+}
