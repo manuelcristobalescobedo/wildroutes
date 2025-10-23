@@ -1,6 +1,5 @@
 .frecuentes {
     max-width: 1200px;
-    margin: 0 auto;
     padding: 0 2rem;
     box-sizing: border-box;
     background-color: white;
@@ -8,7 +7,6 @@
 
 .frecuentes  > h3 {
     padding: 0;
-    margin: 0;
     font-size: var(--fuente-grande);
     font-family: inherit;
     font-weight: 700;
@@ -21,7 +19,7 @@
 .frecuentes  > div {
     display: flex;
     flex-direction: column;
-    margin-bottom: 7rem;
+    margin-bottom: 2rem;
 }
 
 .pregunta {

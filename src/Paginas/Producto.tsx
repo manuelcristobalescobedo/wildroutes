@@ -7,6 +7,8 @@ import productos from '../Datos/Productos.json';
 import { useParams } from "react-router-dom";
 import type { Producto as TipoProducto, Fechas, Horas } from '../Tipos/Producto';
 import React, { useState, useEffect } from 'react';
+import Galeria from '../Componentes/galeria';
+import Resenas from '../Componentes/Reseñas';
 
 export type ProductoEnCarro = TipoProducto & {
     cantidadEnCarro: number;
@@ -60,9 +62,10 @@ const Producto: React.FC = () => {
         <div className='pagina'>
             <Encabezado abrirCarro={abrirCarro} />
 
-            <main style={{ padding: '10rem 2rem', textAlign: 'center' }}>
-                <h1>{producto.nombre}</h1>
-                <h2>{producto.lema}</h2>
+            <main style={{ padding: '10rem 2rem', textAlign: 'center', color: "darkblue" }}>
+                <h1 style={{margin: "0", fontSize: "700", marginRight: "0.5rem", marginTop: "-1.9rem"}}>{producto.nombre}</h1>
+                    <h2 style={{marginBottom: "2rem"}}>{producto.lema}</h2>
+                    <Galeria producto={producto} />
                 <p>{producto.descripcion}</p>
                 <p>Precio: ${producto.precio}</p>
                 <p>Comuna: {producto.comuna} | Región: {producto.region}</p>
@@ -71,13 +74,9 @@ const Producto: React.FC = () => {
                 <p>Excluye: {producto.excluye}</p>
                 <p>Información: {producto.informacion}</p>
                 <p>Cancelación: {producto.cancelacion}</p>
-                <div style={{ margin: '2rem 0' }}>
-                    {producto.imagenes.map((img, i) => (
-                        <img key={i} src={img} alt={producto.nombre} style={{ maxWidth: '300px', margin: '1rem' }} />
-                    ))}
-                </div>
 
-                <select value={fechaSeleccionada} onChange={e => {
+                <section style={{marginTop: "4rem", marginBottom: "-6rem", alignItems: "center", marginLeft: "1rem", padding: "0.5rem 1rem"}}>
+                <select style={{marginLeft: "1rem", padding: "0.5rem 1rem"}}value={fechaSeleccionada} onChange={e => {
                     setFechaSeleccionada(e.target.value);
                     setHoraSeleccionada('');
                 }}>
@@ -87,7 +86,7 @@ const Producto: React.FC = () => {
                     ))}
                 </select>
 
-                <select 
+                <select style={{marginLeft: "1rem", padding: "0.5rem 1rem"}}
                     value={horaSeleccionada} 
                     onChange={e => setHoraSeleccionada(e.target.value)} 
                     disabled={!fechaSeleccionada}
@@ -102,7 +101,7 @@ const Producto: React.FC = () => {
                     }
                 </select>
 
-                <input 
+                <input style={{marginLeft: "1rem", padding: "0.5rem 1rem"}}
                     type="number" 
                     min={1} 
                     max={horaSeleccionada
@@ -116,12 +115,23 @@ const Producto: React.FC = () => {
                 />
 
                 <button 
-                    style={{ padding: '0.5rem 1rem', marginTop: '1rem', cursor: 'pointer' }}
+                    style={{ padding: '0.5rem 1rem',
+                             marginLeft: "1rem",
+                             background: "darkblue",
+                             color: "white",
+                             border: "none",
+                             height: "3rem",
+                             borderRadius: "4px",
+                             marginTop: '1rem', 
+                             cursor: 'pointer' }}
                     onClick={agregarAlCarro}
                 >
                     Agregar al carro
                 </button>
+                </section>
             </main>
+
+            <Resenas producto={producto}/>
 
             <Pie />
             <Carro carroAbierto={carroAbierto} cerrarCarro={cerrarCarro} />

@@ -25,64 +25,60 @@
     row-gap: 2rem;
     margin-bottom: 6rem;
 }
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  background: white; /* prevent inheritance issues */
+  color: black; /* ensure text color doesn’t change */
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1.5rem;
+}
 
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- Ensure images always look the same --- */
+.tarjeta > img {
+  width: 100%;
+  height: 200px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+/* --- Text reset & structure --- */
 .tarjeta > div,
 .tarjeta > p,
 .tarjeta > h2 {
-    all: unset;
+  all: unset;
+  display: block;
+  font-family: inherit;
+  color: inherit;
 }
 
-.tarjeta {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.tarjeta > img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.tarjeta > div {
-    font-size: var(--fuente-pequeña);
-    font-family: inherit;
-    font-weight: inherit;
-    font-style: inherit;
-    letter-spacing: inherit;
-    line-height: inherit;
-    margin-bottom: 0.5rem;
-}
-
+/* --- Location / subtitle --- */
 .tarjeta > p:nth-of-type(1) {
-    font-size: var(--fuente-extra-pequeña);
-    font-family: inherit;
-    font-weight: inherit;
-    font-style: inherit;
-    letter-spacing: inherit;
-    line-height: inherit;
-    margin-bottom: 0.125rem;
+  font-size: var(--fuente-extra-pequeña);
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
 }
 
+/* --- Title --- */
 .tarjeta > h2 {
-    font-size: var(--fuente-mediana);
-    font-family: inherit;
-    font-weight: 700;
-    font-style: inherit;
-    letter-spacing: -0.02em;
-    line-height: inherit;
-    margin-bottom: 0.75rem;
+  font-size: var(--fuente-mediana);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
 }
 
+/* --- Price or description --- */
 .tarjeta > p:nth-of-type(2) {
-    font-size: var(--fuente-pequeña);
-    font-family: inherit;
-    font-weight: inherit;
-    font-style: inherit;
-    letter-spacing: inherit;
-    line-height: inherit;
-    margin-bottom: 0.5rem;
+  font-size: var(--fuente-pequeña);
+  margin-bottom: 0.5rem;
 }

@@ -10,7 +10,7 @@ const Destacado: React.FC = () => {
             <h3>Pensado para tí</h3>
             <div className="tarjetas-container">
                 {productos.slice(0, 6).map((producto) => (
-                    <a key={producto.id} className='tarjeta' onClick={() => window.location.href = `/producto/${producto.id}`}>
+                    <a style={{marginBottom: "4rem"}}key={producto.id} className='tarjeta' onClick={() => window.location.href = `/producto/${producto.id}`}>
                         <img src={producto.imagenes[0]} alt={producto.nombre}/>
                         <div>★★★★★</div>
                         <p>{producto.comuna}, {producto.region}</p>
