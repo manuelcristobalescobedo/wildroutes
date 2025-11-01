@@ -10,7 +10,7 @@ interface CarroProps {
 
 const Carro: React.FC<CarroProps> = ({ carroAbierto, cerrarCarro }) => {
     const dispatch = useDispatch();
-    const { listaProductos, total } = useSelector((state: RootType) => state.products);
+    const { listaProductos, total } = useSelector((state: RootType) => state.productos);
 
     return (
         <aside className={`carro ${carroAbierto ? "abierto" : ""}`}>

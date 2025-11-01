@@ -16,56 +16,84 @@ type TipoSliceProducto = {
 const estadoInicialPorDefecto: TipoSliceProducto = {
     listaProductos: [],
     total: 0,
-
+    //new date, es un objeto fecha en javascript
+    //getTime devuelve los milisegundos transcurridos
     creadoEn: new Date().getTime()
 }
 
 const estadoInicial = () => {
-    const fechaActual = new Date().getTime();
-    const duracionCarro = 60 * 60 * 24
-    const estadoCarro = localStorage.getItem("carro");
-
-    if (estadoCarro) {
-        const carroRespaldado = JSON.parse(estadoCarro) as TipoSliceProducto;
-        const segundosTranscurridosCarro = (fechaActual - carroRespaldado.creadoEn) / 1000;
-        if (segundosTranscurridosCarro < duracionCarro) {
-            return carroRespaldado;
+    try {
+        // Do not access localStorage during SSR
+        if (typeof window === "undefined" || typeof localStorage === "undefined") {
+            return estadoInicialPorDefecto;
         }
+
+        const fechaActual = new Date().getTime(); //saca los segundos del dia
+        const duracionCarro = 60 * 60 * 24 //segundos * minutos * horas del dia
+        const estadoCarro = localStorage.getItem("carro"); //se obtiene de localstorage "carro"
+
+        if (estadoCarro) {
+            const carroRespaldado = JSON.parse(estadoCarro) as TipoSliceProducto;
+            const segundosTranscurridosCarro = (fechaActual - carroRespaldado.creadoEn) / 1000;
+            if (segundosTranscurridosCarro < duracionCarro) { //se ocupa este "if" para que los productos que están en el carrito perduren 24 horas
+                return carroRespaldado;
+            }
+        }
+
+    } catch (error) {
+        console.log(error);
     }
-    return estadoInicialPorDefecto;
+     return estadoInicialPorDefecto;
+}
+
+const guardarCarro = (estado: TipoSliceProducto) => {
+    if (typeof window !== "undefined" && typeof localStorage !== "undefined") {
+        localStorage.setItem("carro", JSON.stringify(estado));
+    }
 }
 
 export const sliceProducto = createSlice({
     name: 'productos',
+
     initialState: estadoInicial(),
+
     reducers: {
         agregarProducto: (estado, accion: PayloadAction<ProductoCarro>) => {
-            const nuevoProducto = accion.payload;
 
-            const fd = nuevoProducto.calendarizacion.find(fd => fd.fecha === nuevoProducto.fechaSeleccionada);
-            const horaObj = fd?.horas.find(h => h.hora === nuevoProducto.horaSeleccionada);
+            const nuevoProducto = { ...accion.payload, cantidadEnCarro: 1 };
+
+            // Encuentra los cupos máximos para la fecha y hora seleccionadas
+            const fd = nuevoProducto.calendarizacion?.find
+            (fd => fd.fecha === nuevoProducto.fechaSeleccionada);
+
+            const horaObj = fd?.horas.find
+            (h => h.hora === nuevoProducto.horaSeleccionada);
+
             const maxCupos = horaObj?.cupos ?? 1;
 
-            let existe = false;
-            estado.listaProductos.forEach((producto) => {
-                if (
-                    producto.id === nuevoProducto.id &&
-                    producto.fechaSeleccionada === nuevoProducto.fechaSeleccionada &&
-                    producto.horaSeleccionada === nuevoProducto.horaSeleccionada
-                ) {
-                    if (producto.cantidadEnCarro < maxCupos) {
-                        producto.cantidadEnCarro += nuevoProducto.cantidadEnCarro;
-                    }
-                    existe = true;
-                }
-            });
+            // Busca si ya existe un producto idéntico en el carro
+            const productoExistente = estado.listaProductos.find(p =>
+                p.id === nuevoProducto.id &&
+                p.fechaSeleccionada === nuevoProducto.fechaSeleccionada &&
+                p.horaSeleccionada === nuevoProducto.horaSeleccionada
+            );
 
-            if (!existe && nuevoProducto.cantidadEnCarro <= maxCupos) {
-                estado.listaProductos.push(nuevoProducto);
+            if (productoExistente) {
+                // Si existe y no hemos alcanzado el máximo de cupos, incrementa la cantidad
+                if (productoExistente.cantidadEnCarro < maxCupos) {
+                    productoExistente.cantidadEnCarro++;
+                }
+            } else {
+                // Si no existe, lo agrega al carro con cantidad 1
+                if (nuevoProducto.cantidadEnCarro <= maxCupos) {
+                    estado.listaProductos.push(nuevoProducto);
+                }
             }
 
             estado.total = estado.listaProductos.reduce((acc, p) => acc + p.precio * p.cantidadEnCarro, 0);
+
             estado.creadoEn = new Date().getTime();
+            guardarCarro(estado);
         },
 
         quitarProducto: (estado, accion: PayloadAction<{ id: number, fechaSeleccionada: string, horaSeleccionada: string }>) => {
@@ -82,6 +110,7 @@ export const sliceProducto = createSlice({
             estado.listaProductos = [];
             estado.total = 0;
             estado.creadoEn = new Date().getTime();
+            guardarCarro(estado);
         },
     }
 })
