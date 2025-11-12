@@ -63,11 +63,14 @@ export const sliceProducto = createSlice({
             const nuevoProducto = { ...accion.payload, cantidadEnCarro: 1 };
 
             // Encuentra los cupos máximos para la fecha y hora seleccionadas
-            const fd = nuevoProducto.calendarizacion?.find
-            (fd => fd.fecha === nuevoProducto.fechaSeleccionada);
+            const fd = nuevoProducto.calendarizacion?.find(
+            fd => fd.fecha === nuevoProducto.fechaSeleccionada
+            );
 
-            const horaObj = fd?.horas.find
-            (h => h.hora === nuevoProducto.horaSeleccionada);
+            const horaObj = fd?.horas.find(
+            h => h.hora === nuevoProducto.horaSeleccionada
+            );
+
 
             const maxCupos = horaObj?.cupos ?? 1;
 
