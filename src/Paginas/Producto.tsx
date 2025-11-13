@@ -4,128 +4,135 @@ import Carro from '../Componentes/Carro';
 import Pie from '../Componentes/Pie';
 import { useDispatch } from 'react-redux';
 import { agregarProducto } from '../Redux/productSlice';
-import productos from '../Datos/Productos.json';
 import { useParams } from "react-router-dom";
-import type { Producto as TipoProducto, Fechas, Horas } from '../Tipos/Producto';
+import type { Producto as TipoProducto } from '../Tipos/Producto';
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Calendario from "../Componentes/Calendario.tsx";
 
 export type ProductoEnCarro = TipoProducto & {
     cantidadEnCarro: number;
     fechaSeleccionada: string;
-    horaSeleccionada: string;
 };
+
+function mapearProductoBackend(data: any): TipoProducto {
+    return {
+        id: data.id,
+        uuid: data.uuid || "",
+        nombre: data.nombre || "",
+        personas: data.personas || 0,
+        descripcion: data.descripcion || "",
+        categoria: data.categoria || "",
+        lugar: data.lugar || "",
+        tourOperador: data.tourOperador || "",
+        destacado: !!data.destacado,
+        promocion: !!data.promocion,
+        imagenes: data.imagenes || [],
+        precios: data.precios || [],
+        tags: data.tags || [],
+        reseñas: data.reseñas || [],
+        fechasDisponibles: data.fechasDisponibles || [],
+    };
+}
 
 const Producto: React.FC = () => {
     const { id } = useParams<{ id: string }>();
-
-    const [carroAbierto, setCarroAbierto] = useState(false);
     const dispatch = useDispatch();
+
+    const [producto, setProducto] = useState<TipoProducto | null>(null);
+    const [carroAbierto, setCarroAbierto] = useState(false);
     const [fechaSeleccionada, setFechaSeleccionada] = useState('');
-    const [horaSeleccionada, setHoraSeleccionada] = useState('');
     const [cantidad, setCantidad] = useState(1);
 
-    const producto: TipoProducto | undefined = (productos as TipoProducto[]).find(
-        p => p.id === Number(id)
-    );
-
     useEffect(() => {
-        if (!producto) return;
-        const maxCupos = producto.calendarizacion
-            .find(fd => fd.fecha === fechaSeleccionada)?.horas
-            .find(h => h.hora === horaSeleccionada)?.cupos ?? 1;
-        if (cantidad > maxCupos) setCantidad(maxCupos);
-    }, [fechaSeleccionada, horaSeleccionada, cantidad, producto]);
+        async function getProducto() {
+            try {
+                const response = await axios.get(`http://54.242.124.35:9461/doc/productos/${id}`);
+                const productoMapeado = mapearProductoBackend(response.data);
+                setProducto(productoMapeado);
+            } catch (error) {
+                console.error("Error al obtener producto:", error);
+            }
+        }
+
+        if (id) getProducto();
+    }, [id]);
 
     const abrirCarro = () => setCarroAbierto(true);
     const cerrarCarro = () => setCarroAbierto(false);
 
     const agregarAlCarro = () => {
-        if (!fechaSeleccionada || !horaSeleccionada) {
-            return alert('Selecciona fecha y hora');
-        }
+        if (!producto) return alert('Producto no encontrado');
+        if (!fechaSeleccionada) return alert('Selecciona una fecha');
 
         const productoConExtras: ProductoEnCarro = {
-            ...producto!,
+            ...producto,
             cantidadEnCarro: cantidad,
             fechaSeleccionada,
-            horaSeleccionada
         };
 
         dispatch(agregarProducto(productoConExtras));
         abrirCarro();
     };
 
-    if (!producto) return <p>Producto no encontrado</p>;
-
-    const [fecha, setFecha] = useState("");
+    if (!producto) return <p>Cargando producto...</p>;
 
     return (
         <div className='pagina'>
-            <Encabezado abrirCarro={abrirCarro}/>
+            <Encabezado abrirCarro={abrirCarro} />
+
             <section className='presentacion'>
                 <div>
                     <h1>{producto.nombre}</h1>
-                    <p>{producto.comuna}, {producto.region}</p>
+                    <p>{producto.lugar}</p>
                     <div>
-                        <a>{producto.categorias[0]}</a>
-                        <a>{producto.categorias[1]}</a>
-                        <a>{producto.categorias[2]}</a>
+                        <a>{producto.categoria}</a>
+                        {producto.tags.map((tag, i) => (
+                            <a key={i}>{tag}</a>
+                        ))}
                     </div>
                 </div>
             </section>
+
             <section className='galeria'>
                 <div>
-                    <div>
-                        <img src={producto.imagenes[0]}/>
-                    </div>
-                    <div>
-                        <img src={producto.imagenes[1]}/>
-                    </div>
-                    <div>
-                        <img src={producto.imagenes[2]}/>
-                    </div>
+                    {producto.imagenes.map((img, i) => (
+                        <div key={i}>
+                            <img src={img} alt={producto.nombre} />
+                        </div>
+                    ))}
                 </div>
             </section>
+
             <section className='detalles'>
                 <div>
                     <div>
                         <p>{producto.descripcion}</p>
                         <div>
                             <div>
-                                <img src={producto.fotografia}/>
+                                <img
+                                    src={producto.imagenes[0]}
+                                    alt={producto.tourOperador}
+                                />
                             </div>
-                            <h4>{producto.anunciante}</h4>
+                            <h4>{producto.tourOperador}</h4>
                         </div>
                     </div>
                     <div>
-                        <h2>{producto.calendarizacion[0].horas[0].segmentos.adulto.precio} CLP por adulto</h2>
-                        <p>{producto.calendarizacion[0].horas[0].segmentos.mayor.precio} CLP por adulto mayor</p>
-                        <p>{producto.calendarizacion[0].horas[0].segmentos.nino.precio} CLP por niña o niño</p>
+                        {producto.precios.map((precio, i) => (
+                            <p key={i}>
+                                {precio.precio} CLP por {precio.segmento.toLowerCase()}
+                            </p>
+                        ))}
                     </div>
                 </div>
             </section>
-            
-            <section className="resenas">
+
+            <section className='resenas'>
                 <div>
-                    {producto.resenas.map((resena, index) => (
+                    {producto.reseñas.map((resena, index) => (
                         <div key={index} className="resena">
-                            <div>
-                                <div>
-                                    {[...Array(resena.estrellas)].map((_, i) => (
-                                        <svg width="inherit" height="inherit" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill="currentColor" d="M4.83952 14.894L6.41806 9.77717L2.29785 6.41655H7.36681L8.99973 1.44238L10.6326 6.41655H15.7016L11.5814 9.77717L13.1599 14.894L8.99973 11.737L4.83952 14.894Z"/>
-                                        </svg>
-                                    ))}
-                                </div>
-                                <p>{resena.comentario}</p>
-                            </div>
-                            <div>
-                                <div>
-                                    <img src={resena.perfil}/>
-                                </div>
-                                <p>{resena.usuario}</p>
-                            </div>
+                            <p>{resena}</p>
                         </div>
                     ))}
                 </div>
@@ -133,26 +140,27 @@ const Producto: React.FC = () => {
 
             <section className='opciones'>
                 <div>
-                    <Calendario onChange={setFecha}/>
+                    <Calendario onChange={setFechaSeleccionada} />
                     <div>
-                        {fecha && <p>Fecha seleccionada: {fecha}</p>}
-                        <select value={fechaSeleccionada} onChange={e => {setFechaSeleccionada(e.target.value); setHoraSeleccionada('');}}>
+                        {fechaSeleccionada && (
+                            <p>Fecha seleccionada: {fechaSeleccionada}</p>
+                        )}
+                        <select
+                            value={fechaSeleccionada}
+                            onChange={e => setFechaSeleccionada(e.target.value)}
+                        >
                             <option value="">Selecciona una fecha</option>
-                            {producto.calendarizacion.map((fd: Fechas) => (
-                                <option key={fd.fecha} value={fd.fecha}>{fd.fecha}</option>
+                            {producto.fechasDisponibles.map((fecha, i) => (
+                                <option key={i} value={fecha}>{fecha}</option>
                             ))}
                         </select>
-                        <select value={horaSeleccionada} onChange={e => setHoraSeleccionada(e.target.value)} disabled={!fechaSeleccionada}>
-                            <option value="">Selecciona una hora</option>
-                            {fechaSeleccionada && producto.calendarizacion
-                                .find((fd: Fechas) => fd.fecha === fechaSeleccionada)?.horas.map((horaObj: Horas) => (
-                                    <option key={horaObj.hora} value={horaObj.hora}>
-                                        {horaObj.hora} (Cupos: {horaObj.cupos})
-                                    </option>
-                                ))
-                            }
-                        </select>
-                        <input type="number" min={1} max={horaSeleccionada ? producto.calendarizacion .find(fd => fd.fecha === fechaSeleccionada)?.horas .find(h => h.hora === horaSeleccionada)?.cupos ?? 1 : 1} value={cantidad} onChange={e => setCantidad(Number(e.target.value))}/>
+
+                        <input
+                            type="number"
+                            min={1}
+                            value={cantidad}
+                            onChange={e => setCantidad(Number(e.target.value))}
+                        />
                         <button onClick={agregarAlCarro}>Agregar al carro</button>
                     </div>
                 </div>
@@ -162,29 +170,23 @@ const Producto: React.FC = () => {
                 <div>
                     <div>
                         <h5>Incluye</h5>
-                        <p>{producto.incluye}</p>
+                        <p>Información disponible próximamente</p>
                     </div>
                     <div>
                         <h5>No incluye</h5>
-                        <p>{producto.excluye}</p>
-                    </div>
-                    <div>
-                        <h5>Información</h5>
-                        <p>{producto.informacion}</p>
+                        <p>Información disponible próximamente</p>
                     </div>
                     <div>
                         <h5>Cancelación</h5>
-                        <p>{producto.cancelacion}</p>
+                        <p>Información disponible próximamente</p>
                     </div>
                 </div>
             </section>
-    
+
             <Pie />
-            <Carro carroAbierto={carroAbierto} cerrarCarro={cerrarCarro}/>
+            <Carro carroAbierto={carroAbierto} cerrarCarro={cerrarCarro} />
         </div>
     );
 };
 
 export default Producto;
-
-// Junto con productSlice.ts, construir la estructura de este archivo resultó ridículamente desafiante. Nuestras propuestas de interfaces que nos permitieran agregar un servicio con un número mínimo y máximo de cupos, asociados a un número de horarios que (a su vez) están asociados a un número de días se volvieron exponencialmente más enredadas a medida que nos alejábamos de los ejemplos que vimos en clase. Nos obligó a rehacer muchos componentes y funciones. Necesitamos múltiples conversaciones con ChatGPT, a lo largo de una cantidad vergonzosa de horas, para llegar a una solución lo suficientemente básica para que la entendiéramos y lo suficientemente efectiva para cubrir las bases necesarias del flujo de usuario.

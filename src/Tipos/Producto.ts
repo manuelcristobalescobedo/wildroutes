@@ -1,67 +1,51 @@
-type Resena = {
-    comentario: string;
-    estrellas: number;
-    perfil: string;
-    usuario: string;
-};
+export interface Precio {
+    segmento: string;
+    precio: number;
+}
 
-type Segmentos = {
-    adulto: {
-        precio: number;
-        cupos: number;
-    };
-    mayor: {
-        precio: number;
-        cupos: number;
-    };
-    nino: {
-        precio: number;
-        cupos: number;
-    };
-};
-
-type Horas = {
+export interface Hora {
     hora: string;
-    segmentos: Segmentos;
-};
+    cupos: number;
+}
 
-type Fechas = {
+export interface Dia {
     fecha: string;
-    horas: Horas[];
-};
+    horas: Hora[];
+}
 
-type Rango = {
-    minimo: number;
-    maximo: number;
-};
-
-type Producto = {
+export interface Producto {
     id: number;
     uuid: string;
     nombre: string;
-    comuna: string;
-    region: string;
-    categorias: string[];
-    imagenes: string[];
+    personas: number;
     descripcion: string;
-    lema: string;
-    anunciante: string;
-    fotografia: string;
-    resenas: Resena[];
-    calendarizacion: Fechas[];
-    etiquetas: string[];
-    caracteristicas: string;
-    informacion: string;
-    cancelacion: string;
+    categoria: string;        // si quieres manejar múltiples, puedes poner: categorias?: string[];
+    lugar: string;
+    tourOperador: string;
+    destacado?: boolean;
+    promocion?: boolean;
+    imagenes: string[];
+    precios: Precio[];        // usar producto.precios[0].precio en componentes
+    tags?: string[];
+    reseñas?: string[];       // opcional si no siempre viene
+    comuna?: string;
+    region?: string;
+    lema?: string;
+    anunciante?: string;
+    fotografia?: string;
+    heroe?: boolean;
+    calendarizacion?: Dia[];
+    fechasDisponibles?: string[];  // opcional
+}
+
+export type Imagenes = string[];
+export type Resenas = string[];
+export type Tags = string[];
+export type FechasDisponibles = string[];
+
+export interface DetalleProducto {
+    id: number;
     incluye: string;
-    excluye: string;
-    cantidad: Rango;
-    creacion: string;
-    disponible: boolean;
-    oferta: boolean;
-    heroe: boolean;
-};
-
-export type { Producto, Fechas, Horas, Segmentos };
-
-// A medida que refinamos los flujos del usuario la estructura de nuestro tipo Producto ha cambiado en maneras simples pero significativas. En esta iteración, el nombre calendarizacion pasó de ser un objeto plano con dos propiedades a una estructura jerárquica de objetos que refleja la necesidad de asociar un conjunto de cupos a una hora y un conjunto de esas horas a una fecha determinada.
+    noIncluye: string;
+    cancelacion: string;
+}
