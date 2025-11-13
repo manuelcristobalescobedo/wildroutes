@@ -1,12 +1,28 @@
 type Resena = {
     comentario: string;
     estrellas: number;
+    perfil: string;
     usuario: string;
+};
+
+type Segmentos = {
+    adulto: {
+        precio: number;
+        cupos: number;
+    };
+    mayor: {
+        precio: number;
+        cupos: number;
+    };
+    nino: {
+        precio: number;
+        cupos: number;
+    };
 };
 
 type Horas = {
     hora: string;
-    cupos: number;
+    segmentos: Segmentos;
 };
 
 type Fechas = {
@@ -31,7 +47,6 @@ type Producto = {
     lema: string;
     anunciante: string;
     fotografia: string;
-    precio: number;
     resenas: Resena[];
     calendarizacion: Fechas[];
     etiquetas: string[];
@@ -47,6 +62,6 @@ type Producto = {
     heroe: boolean;
 };
 
-export type { Producto, Fechas, Horas };
+export type { Producto, Fechas, Horas, Segmentos };
 
 // A medida que refinamos los flujos del usuario la estructura de nuestro tipo Producto ha cambiado en maneras simples pero significativas. En esta iteración, el nombre calendarizacion pasó de ser un objeto plano con dos propiedades a una estructura jerárquica de objetos que refleja la necesidad de asociar un conjunto de cupos a una hora y un conjunto de esas horas a una fecha determinada.
