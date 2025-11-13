@@ -5,7 +5,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (1)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -14,48 +14,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
@@ -80,7 +145,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (2)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -89,48 +154,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
@@ -155,7 +285,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (3)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -164,48 +294,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
@@ -230,7 +425,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (4)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -239,48 +434,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
@@ -305,7 +565,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (5)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -314,48 +574,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
@@ -380,7 +705,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (6)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -389,48 +714,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
@@ -455,7 +845,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (7)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -464,48 +854,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
@@ -530,7 +985,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (8)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -539,48 +994,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
@@ -605,7 +1125,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (9)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -614,48 +1134,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
@@ -680,7 +1265,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (10)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -689,48 +1274,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
@@ -755,7 +1405,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (11)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -764,48 +1414,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
@@ -830,7 +1545,7 @@
         "nombre": "Caminata por las lagunas altiplánicas de Piedras Rojas (12)",
         "comuna": "San Pedro de Atacama",
         "region": "Antofagasta",
-        "categorias": ["Categoría 1", "Categoría 2", "Categoría 3"],
+        "categorias": ["Turismo de aventura", "Turismo de naturaleza", "Turismo cultural"],
         "imagenes": [
             "https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg",
             "https://i.postimg.cc/nrv0sywj/Piedras-Rojas-San-Pedro-de-Atacama-Chile-2.jpg",
@@ -839,48 +1554,113 @@
         "descripcion": "Camina entre el viento, la sal y los volcanes. Las lagunas de Piedras Rojas ofrecen algunas de las postales más memorables del desierto de Atacama. Con un sendero libre de pendientes pronunciadas, la actividad invita a todos quienes quieran disfrutar de la tranquilidad del desierto.",
         "lema": "Camina entre el viento, la sal y los volcanes.",
         "anunciante": "Mauro Lima",
-        "fotografia": "https://drive.google.com/uc?export=view&id=1R98VaC-OT7vH_KHaUwO-KPh_chONkmy4",
-        "precio": 19990,
+        "fotografia": "https://i.postimg.cc/mD2WM8js/clikcc-colin-yarbrough-ORf46o-J53c-E-unsplash.jpg",
         "resenas": [
             {
-                "usuario": "Karla Robinson",
                 "comentario": "Nuestra hija quedó fascinada. El guía dedicó tiempo a responder todas sus preguntas y a explicarle los procesos que dieron origen a los volcanes, lagunas y climas del altiplano.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/43PrJpgh/alina-fedorchenko-A3dng-EIMb6g-unsplash.jpg",
+                "usuario": "Karla Robinson"
             },
             {
-                "usuario": "Miranda Salzgeber",
                 "comentario": "Una caminata tranquila que regala momentos perfectos para fotografiar y admirar el altiplano.",
-                "estrellas": 4
+                "estrellas": 4,
+                "perfil": "https://i.postimg.cc/Y05PX36q/ralph-katieb-SVq9Tff1Mlo-unsplash.jpg",
+                "usuario": "Miranda Salzgeber"
             },
             {
-                "usuario": "Marek Piwnicki",
                 "comentario": "Salimos con toda la familia y todos pudimos disfrutar sin dificultad. Los niños quedaron fascinados con los paisajes y la sencillez del recorrido permitió que todos pudiéramos disfrutar sin preocuparnos por el cansancio.",
-                "estrellas": 5
+                "estrellas": 5,
+                "perfil": "https://i.postimg.cc/qM8rPhzt/holly-landkammer-c-Iag-RVIVDXk-unsplash.jpg",
+                "usuario": "Marek Piwnicki"
             }
         ],
         "calendarizacion": [
             {
                 "fecha": "2026-02-10",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-11",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             },
             {
                 "fecha": "2026-02-12",
                 "horas": [
-                    { "hora": "08:00", "cupos": 10 },
-                    { "hora": "09:00", "cupos": 5 },
-                    { "hora": "11:00", "cupos": 8 }
+                    {
+                        "hora": "08:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "09:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    },
+                    {
+                        "hora": "11:00",
+                        "segmentos": {
+                            "adulto": { "precio": 19990, "cupos": 10 },
+                            "mayor": { "precio": 15990, "cupos": 5 },
+                            "nino": { "precio": 12990, "cupos": 8 }
+                        }
+                    }
                 ]
             }
         ],
