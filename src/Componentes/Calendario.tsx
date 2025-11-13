@@ -1,219 +1,58 @@
-//lo estaremos usando...
+import './Calendario.css';
+import { useState } from "react";
 
+interface CalendarioProps {
+  onChange?: (date: string) => void;
+}
 
-export default function DisponibilidadCalendario() {
+export default function Calendario({ onChange }: CalendarioProps) {
+  const today = new Date();
+  const [month, setMonth] = useState<number>(today.getMonth());
+  const [year, setYear] = useState<number>(today.getFullYear());
 
-  return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "2fr 1fr",
-        gap: "2rem",
-        backgroundColor: "royalblue",
-        padding: "2rem",
-        color: "darkgreen",
-        borderRadius: "15px",
-        marginTop: "5rem",
-      }}
-    >
-      {/* ─── CALENDARIO ───*/}
-      <div className="ComponenteCalendario">
-        <h3 style={{ marginBottom: "1rem", color: "white" }}>Disponibilidad</h3>
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const firstDay = new Date(year, month, 1).getDay();
 
-        <div
-          style={{
-            display: "flex",
-            gap: "2rem",
-          }}
-        >
-          {/* Enero */}
-          <div>
-            <h4 style={{ margin: "0 0 1rem", color: "white" }}>Enero de 2026</h4>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(7, 1fr)",
-                gap: "0.5rem",
-                backgroundColor: "white",
-                padding: "1rem",
-                borderRadius: "8px",
-              }}
-            >
-              {[
-                "29",
-                "30",
-                "31",
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "6",
-                "7",
-                "8",
-                "9",
-                "10",
-                "11",
-                "12",
-                "13",
-                "14",
-                "15",
-                "16",
-                "17",
-                "18",
-                "19",
-                "20",
-                "21",
-                "22",
-                "23",
-                "24",
-                "25",
-                "26",
-                "27",
-                "28",
-                "29",
-                "30",
-                "31",
-              ].map((day, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  style={{color: "darkblue"  
-                  }}
-                >
-                  {day}
-                </a>
-              ))}
+  const months = [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+  ];
+  const weekdays = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+
+  const handlePrev = () => {
+    setMonth((prev) => (prev === 0 ? 11 : prev - 1));
+    if (month === 0) setYear((y) => y - 1);
+  };
+
+  const handleNext = () => {
+    setMonth((prev) => (prev === 11 ? 0 : prev + 1));
+    if (month === 11) setYear((y) => y + 1);
+  };
+
+  const handleSelectDay = (day: number) => {
+    const selectedDate = new Date(year, month, day);
+    const formatted = selectedDate.toISOString().split("T")[0];
+    onChange?.(formatted);
+  };
+
+    return (
+        <div className='agenda'>
+            <div>
+                <button onClick={handlePrev}>‹</button>
+                <h6>{months[month]} {year}</h6>
+                <button onClick={handleNext}>›</button>
             </div>
-          </div>
-
-          {/* Febrero */}
-          <div>
-            <h4 style={{ margin: "0 0 1rem", color: "white"}}>Febrero de 2026</h4>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(7, 1fr)",
-                gap: "0.5rem",
-                backgroundColor: "white",
-                padding: "1rem",
-                borderRadius: "8px",
-              }}
-            >
-              {[
-                "26",
-                "27",
-                "28",
-                "29",
-                "30",
-                "31",
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "6",
-                "7",
-                "8",
-                "9",
-                "10",
-                "11",
-                "12",
-                "13",
-                "14",
-                "15",
-                "16",
-                "17",
-                "18",
-                "19",
-                "20",
-                "21",
-                "22",
-                "23",
-                "24",
-                "25",
-                "26",
-                "27",
-                "28",
-              ].map((day, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  style={{color: "darkblue"
-                  }}
-                >
-                  {day}
-                </a>
-              ))}
+            <div>
+                {weekdays.map((d) => (
+                    <div className='dias' key={d}>{d}</div>
+                ))}
+                {Array.from({ length: firstDay }).map((_, i) => (
+                    <div className='nada' key={"empty" + i}></div>
+                ))}
+                {Array.from({ length: daysInMonth }).map((_, i) => (
+                    <button className='numeros' key={i + 1} onClick={() => handleSelectDay(i + 1)}>{i + 1}</button>
+                ))}
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ─── ACTIVIDAD ───────────────────────────── */}
-      <div className="ComponenteActividad">
-        <h3 style={{ marginBottom: "1rem", color: "white" }}>Actividad ideal para</h3>
-
-        <div
-          style={{
-            display: "flex",
-            gap: "0.5rem",
-            marginBottom: "2rem",
-          }}
-        >
-          {["Familia", "Amigos", "Solo", "Pareja"].map((tipo, i) => (
-            <a
-              key={i}
-              href="#"
-              style={{
-                padding: "0.25rem 0.75rem",
-                borderRadius: "6px",
-                backgroundColor: "darkblue",
-                border: "2px white solid",
-                textDecoration: "none",
-                color: "white",
-                fontWeight: "500",
-              }}
-            >
-              {tipo}
-            </a>
-          ))}
-        </div>
-
-        <button
-          style={{
-            display: "block",
-            width: "100%",
-            marginBottom: "0.5rem",
-            color: "white",
-            background: "darkblue",
-            fontFamily: "inherit",
-            fontSize: "1rem",
-            borderRadius: "4px",
-            padding: "0.75rem",
-            cursor: "pointer",
-          }}
-        >
-          Pagar
-        </button>
-
-        <button
-          style={{
-            display: "block",
-            width: "100%",
-            marginBottom: "0.5rem",
-            color: "white",
-            background: "darkblue",
-            fontFamily: "inherit",
-            fontSize: "1rem",
-            borderRadius: "4px",
-            padding: "0.75rem",
-            cursor: "pointer",
-          }}
-        >
-          Agregar al carrito
-        </button>
-      </div>
     </div>
   );
 }
