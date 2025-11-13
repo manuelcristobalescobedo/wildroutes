@@ -9,12 +9,15 @@ const Heroe: React.FC = () => {
     useEffect(() => {
         async function getProductoHeroe() {
             try {
-                const response = await axios.get('http://54.242.124.35:9461/doc/productos');
-                // 🔹 Toma el primer producto como destacado
+                const response = await axios.get('http://54.242.124.35:9461/doc/productos', {
+                    timeout: 5000,
+                    });
+                // Toma el primer producto como destacado
                 const producto = response.data[0];
                 setProductoHeroe(producto);
             } catch (error) {
                 console.error("Error al obtener producto destacado desde el backend:", error);
+                setProductoHeroe(null); // evita romper el renderizado
             }
         }
 

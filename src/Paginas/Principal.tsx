@@ -32,11 +32,14 @@ const Principal: React.FC = () => {
     useEffect(() => {
         async function getProductos() {
             try {
-                const response = await axios.get('http://54.242.124.35:9461/doc/productos');
+                const response = await axios.get('http://54.242.124.35:9461/doc/productos', {
+                    timeout: 5000,
+                    });
                 console.log("Productos desde backend:", response.data);
                 setProductos(response.data);
             } catch (error) {
                 console.error("Error al obtener productos del backend:", error);
+                setProductos([]); // evita romper el renderizado
             }
         }
         getProductos();
