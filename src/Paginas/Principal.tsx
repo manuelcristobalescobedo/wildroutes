@@ -12,20 +12,38 @@ import Filtros from '../Componentes/Filtros';
 import Lista from '../Componentes/Lista';
 import type { Producto } from '../Tipos/Producto';
 
+interface FiltrosState {
+    precio: string[];
+    ubicacion: string;
+    fecha: string;
+    personas: string;
+    categoria: string;
+    cupos: string[];
+    checked: string[];
+}
+
 const Principal: React.FC = () => {
     const [carroAbierto, setCarroAbierto] = useState(false);
     const [productos, setProductos] = useState<Producto[]>([]);
-    const [filtros, setFiltros] = useState({
+
+    const [filtros, setFiltros] = useState<FiltrosState>({
+        precio: [],
         ubicacion: '',
         fecha: '',
         personas: '',
-        categoria: ''
+        categoria: '',
+        cupos: [],
+        checked: [],
     });
-    const [appliedFiltros, setAppliedFiltros] = useState({
+
+    const [appliedFiltros, setAppliedFiltros] = useState<FiltrosState>({
+        precio: [],
         ubicacion: '',
         fecha: '',
         personas: '',
-        categoria: ''
+        categoria: '',
+        cupos: [],
+        checked: [],
     });
 
     // 🔹 Obtener productos desde backend
@@ -34,12 +52,12 @@ const Principal: React.FC = () => {
             try {
                 const response = await axios.get('http://54.242.124.35:9461/doc/productos', {
                     timeout: 5000,
-                    });
+                });
                 console.log("Productos desde backend:", response.data);
                 setProductos(response.data);
             } catch (error) {
                 console.error("Error al obtener productos del backend:", error);
-                setProductos([]); // evita romper el renderizado
+                setProductos([]);
             }
         }
         getProductos();
@@ -48,40 +66,60 @@ const Principal: React.FC = () => {
     const abrirCarro = () => setCarroAbierto(true);
     const cerrarCarro = () => setCarroAbierto(false);
 
-    const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFiltros(prev => ({ ...prev, [name]: value }));
+    const enCambioDeFiltro = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        const { name, value, type,} = e.target;
+
+        // Si es checkbox de tipo múltiple (precio o cupos)
+        if (type === "checkbox") {
+            setFiltros(prev => {
+                const currentValues = prev[name as keyof FiltrosState] as string[];
+
+                // Alternar el valor (agregar o quitar)
+                const updatedValues = currentValues.includes(value)
+                    ? currentValues.filter(v => v !== value)
+                    : [...currentValues, value];
+
+                return { ...prev, [name]: updatedValues };
+            });
+        } else {
+            setFiltros(prev => ({ ...prev, [name]: value }));
+        }
     };
 
     const limpiarFiltros = () => {
-        const emptyFilters = { ubicacion: '', fecha: '', personas: '', categoria: '' };
-        setFiltros(emptyFilters);
-        setAppliedFiltros(emptyFilters);
+        const empty: FiltrosState = {
+            precio: [],
+            ubicacion: '',
+            fecha: '',
+            personas: '',
+            categoria: '',
+            cupos: [],
+            checked: [],
+        };
+        setFiltros(empty);
+        setAppliedFiltros(empty);
     };
 
     const aplicarFiltros = () => {
         setAppliedFiltros(filtros);
     };
 
-    // ✅ Filtrado según estructura real de Producto.ts
+    // ✅ Filtrado de productos
     const productosFiltrados = useMemo(() => {
         return productos.filter(p => {
-            // Ubicación
             if (appliedFiltros.ubicacion && !p.lugar?.toLowerCase().includes(appliedFiltros.ubicacion.toLowerCase()))
                 return false;
 
-            // Fecha
             if (appliedFiltros.fecha && !p.fechasDisponibles?.some(f => f === appliedFiltros.fecha))
                 return false;
 
-            // Personas
             if (appliedFiltros.personas && p.personas < parseInt(appliedFiltros.personas))
                 return false;
 
-            // Categoría
             if (appliedFiltros.categoria && p.categoria.toLowerCase() !== appliedFiltros.categoria.toLowerCase())
                 return false;
 
+            // Precio y cupos podrían aplicarse aquí según estructura del producto
             return true;
         });
     }, [appliedFiltros, productos]);
@@ -102,7 +140,7 @@ const Principal: React.FC = () => {
 
             <Filtros
                 filtros={filtros}
-                onFilterChange={handleFilterChange}
+                enCambioDeFiltro={enCambioDeFiltro}
                 onClearFilters={limpiarFiltros}
                 onApplyFilters={aplicarFiltros}
             />

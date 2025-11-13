@@ -1,21 +1,43 @@
 import './Catalogo.css';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import Encabezado from '../Componentes/Encabezado';
 import Carro from '../Componentes/Carro';
 import Pie from '../Componentes/Pie';
 import Lista from '../Componentes/Lista';
-import Filtro from '../Componentes/Filtro';
+import Filtros from '../Componentes/Filtros';
 import type { Producto } from '../Tipos/Producto';
+
+interface FiltrosState {
+    precio: string[];
+    ubicacion: string;
+    fecha: string;
+    personas: string;
+    categoria: string;
+    cupos: string[];
+    checked: string[];
+}
 
 const Catalogo: React.FC = () => {
     const [carroAbierto, setCarroAbierto] = useState(false);
-    const [filtroAbierto, setFiltroAbierto] = useState(false);
     const [productos, setProductos] = useState<Producto[]>([]);
-    const [filtros, setFiltros] = useState({
-        precio: [] as string[],
-        cupos: [] as string[],
-        categoria: [] as string[],
+    const [filtros, setFiltros] = useState<FiltrosState>({
+        precio: [],
+        ubicacion: '',
+        fecha: '',
+        personas: '',
+        categoria: '',
+        cupos: [],
+        checked: [],
+    });
+    const [appliedFiltros, setAppliedFiltros] = useState<FiltrosState>({
+        precio: [],
+        ubicacion: '',
+        fecha: '',
+        personas: '',
+        categoria: '',
+        cupos: [],
+        checked: [],
     });
 
     // 🔹 Obtener productos desde el backend
@@ -27,82 +49,103 @@ const Catalogo: React.FC = () => {
                 setProductos(response.data);
             } catch (error) {
                 console.error("❌ Error al obtener productos del backend:", error);
+                setProductos([]);
             }
         }
 
         getProductos();
     }, []);
 
-    // 🔹 Control de carro y filtro
+    // 🔹 Control del carro
     const abrirCarro = () => setCarroAbierto(true);
     const cerrarCarro = () => setCarroAbierto(false);
-    const abrirFiltro = () => setFiltroAbierto(true);
-    const cerrarFiltro = () => setFiltroAbierto(false);
 
-    // 🔹 Actualizar filtros
-    const actualizarFiltro = (tipo: "precio" | "cupos" | "categoria", valor: string, checked: boolean) => {
+    // 🔹 Manejar cambio de filtros
+const enCambioDeFiltro = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+
+    // Si el evento viene de un checkbox (HTMLInputElement con type="checkbox")
+    if (e.target instanceof HTMLInputElement && e.target.type === "checkbox") {
+        const { checked } = e.target;
         setFiltros(prev => {
-            const prevValores = prev[tipo];
-            const nuevosValores = checked
-                ? [...prevValores, valor]
-                : prevValores.filter(v => v !== valor);
-            return { ...prev, [tipo]: nuevosValores };
+            const currentValues = prev[name as keyof FiltrosState] as string[];
+            const updatedValues = checked
+                ? [...currentValues, value]
+                : currentValues.filter(v => v !== value);
+
+            return { ...prev, [name]: updatedValues };
         });
-    };
+    } else {
+        // Si no es checkbox, se trata de un select u otro input
+        setFiltros(prev => ({ ...prev, [name]: value }));
+    }
+};
 
     const limpiarFiltros = () => {
-        setFiltros({
+        const empty: FiltrosState = {
             precio: [],
+            ubicacion: '',
+            fecha: '',
+            personas: '',
+            categoria: '',
             cupos: [],
-            categoria: [],
-        });
+            checked: [],
+        };
+        setFiltros(empty);
+        setAppliedFiltros(empty);
     };
 
-    // 🔹 Aplicar filtros
-    const productosFiltrados = productos.filter(p => {
-        // Filtro por precio
-        if (filtros.precio.length) {
-            const precioNum = p.precios?.[0]?.precio ?? 0;
-            const coincidePrecio =
-                (filtros.precio.includes("bajo") && precioNum <= 24990) ||
-                (filtros.precio.includes("medio") && precioNum >= 25000 && precioNum <= 49990) ||
-                (filtros.precio.includes("alto") && precioNum >= 50000);
-            if (!coincidePrecio) return false;
-        }
+    const aplicarFiltros = () => {
+        setAppliedFiltros(filtros);
+    };
 
-        // Filtro por cupos
-        if (filtros.cupos.length) {
-            const cuposNum = p.calendarizacion?.[0]?.horas?.[0]?.cupos ?? 0;
-            const coincideCupos =
-                (filtros.cupos.includes("bajo") && cuposNum < 9) ||
-                (filtros.cupos.includes("medio") && cuposNum >= 10 && cuposNum <= 19) ||
-                (filtros.cupos.includes("alto") && cuposNum >= 20);
-            if (!coincideCupos) return false;
-        }
+    // 🔹 Aplicar filtros con useMemo
+    const productosFiltrados = useMemo(() => {
+        return productos.filter(p => {
+            // Filtro por precio
+            if (appliedFiltros.precio.length) {
+                const precioNum = p.precios?.[0]?.precio ?? 0;
+                const coincidePrecio =
+                    (appliedFiltros.precio.includes("bajo") && precioNum <= 24990) ||
+                    (appliedFiltros.precio.includes("medio") && precioNum >= 25000 && precioNum <= 49990) ||
+                    (appliedFiltros.precio.includes("alto") && precioNum >= 50000);
+                if (!coincidePrecio) return false;
+            }
 
-        // Filtro por categoría (seguro ante undefined)
-        if (filtros.categoria.length && (!p.categoria || !filtros.categoria.includes(p.categoria))) {
-            return false;
-        }
+            // Filtro por cupos
+            if (appliedFiltros.cupos.length) {
+                const cuposNum = p.calendarizacion?.[0]?.horas?.[0]?.cupos ?? 0;
+                const coincideCupos =
+                    (appliedFiltros.cupos.includes("bajo") && cuposNum < 9) ||
+                    (appliedFiltros.cupos.includes("medio") && cuposNum >= 10 && cuposNum <= 19) ||
+                    (appliedFiltros.cupos.includes("alto") && cuposNum >= 20);
+                if (!coincideCupos) return false;
+            }
 
-        return true;
-    });
+            // Filtro por categoría
+            if (appliedFiltros.categoria && p.categoria.toLowerCase() !== appliedFiltros.categoria.toLowerCase())
+                return false;
+
+            return true;
+        });
+    }, [appliedFiltros, productos]);
 
     return (
         <div className='pagina'>
             <Encabezado abrirCarro={abrirCarro} />
-            <Lista abrirFiltro={abrirFiltro} productos={productosFiltrados} />
+            <Lista productos={productosFiltrados} />
             <Pie />
             <Carro carroAbierto={carroAbierto} cerrarCarro={cerrarCarro} />
-            <Filtro
-                filtroAbierto={filtroAbierto}
-                cerrarFiltro={cerrarFiltro}
+
+            <Filtros
                 filtros={filtros}
-                actualizarFiltro={actualizarFiltro}
-                limpiarFiltros={limpiarFiltros}
+                enCambioDeFiltro={enCambioDeFiltro}
+                onClearFilters={limpiarFiltros}
+                onApplyFilters={aplicarFiltros}
             />
         </div>
     );
 };
 
 export default Catalogo;
+

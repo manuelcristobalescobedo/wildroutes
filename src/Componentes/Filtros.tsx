@@ -1,23 +1,32 @@
 import React, { useState } from "react";
 
 interface FiltrosProps {
-    filtros: {
-        ubicacion: string;
-        fecha: string;
-        personas: string;
-        categoria: string;
-    };
-    onFilterChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
-    onClearFilters: () => void;
-    onApplyFilters: () => void;
+  filtros: {
+    precio: string[];
+    ubicacion: string;
+    fecha: string;
+    personas: string;
+    categoria: string;
+    cupos: string[];
+    checked: string[];
+  };
+  enCambioDeFiltro: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
+  onClearFilters: () => void;
+  onApplyFilters: () => void;
 }
 
-export default function Filtros({ filtros, onFilterChange, onClearFilters, onApplyFilters }: FiltrosProps) {
+export default function Filtros({
+  filtros,
+  enCambioDeFiltro,
+  onClearFilters,
+  onApplyFilters,
+}: FiltrosProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem 0' }}>
+      {/* Open Filters Button */}
+      <div style={{ display: "flex", justifyContent: "center", padding: "2rem 0" }}>
         <button
           onClick={() => setIsOpen(true)}
           style={{
@@ -35,40 +44,41 @@ export default function Filtros({ filtros, onFilterChange, onClearFilters, onApp
         </button>
       </div>
 
-      {/* OVERLAY (only visible when open) */}
+      {/* Overlay */}
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
           style={{
             position: "fixed",
             inset: "0",
-            background: "rgba(0, 0, 0, 0.4)", // translucent dark overlay
-            zIndex: "10",
+            background: "rgba(0, 0, 0, 0.4)",
+            zIndex: 10,
           }}
-        />
+        ></div>
       )}
 
-      {/* FILTER PANEL */}
+      {/* Sidebar */}
       <aside
+        onClick={(e) => e.stopPropagation()} // prevent overlay click from closing
         style={{
           position: "fixed",
-          top: "0",
-          right: isOpen ? "0" : "-450px",
-          width: "400px",
+          top: 0,
+          right: isOpen ? 0 : "-700px",
+          width: "600px",
           height: "100vh",
-          background: "darkblue",
+          background: "aliceblue",
           padding: "1.5rem",
-          boxShadow: isOpen ? "0 0 20px rgba(0,0,0,0.2)" : "none",
+          boxShadow: "0 0 20px rgba(0,0,0,0.2)",
           transition: "right 0.4s ease",
-          zIndex: isOpen ? "1001" : "20",
+          zIndex: 20,
           display: "flex",
           flexDirection: "column",
           gap: "1.5rem",
           overflowY: "auto",
-          color: "white",
+          color: "black",
         }}
       >
-        {/* HEADER */}
+        {/* Header */}
         <div
           style={{
             display: "flex",
@@ -76,97 +86,101 @@ export default function Filtros({ filtros, onFilterChange, onClearFilters, onApp
             alignItems: "center",
             borderBottom: "2px solid #000",
             paddingBottom: "0.5rem",
-            color: "white"
           }}
         >
-          <h2 style={{ fontWeight: "600", margin: "0", color: "white" }}>Filtros</h2>
+          <h2 style={{ fontWeight: "600", margin: "0" }}>Filtros</h2>
           <button
             onClick={() => setIsOpen(false)}
             style={{
-              background: "darkblue",
-              color: "white",
+              background: "none",
+              color: "black",
               border: "none",
-              fontSize: "0.9rem",
+              fontSize: "1.4rem",
               cursor: "pointer",
-              borderRadius: "4px",
-              width: "2rem",
-              height: "2rem",
-              paddingRight: "1.8rem",
-              paddingBottom: "1.8rem"
             }}
           >
             ✕
           </button>
         </div>
 
-        {/* CAMPOS DE FILTRO */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "1rem", color: "white" }}>
-          {/* UBICACIÓN */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
-            <label style={{ fontWeight: "500", color: "white" }}>Ubicación</label>
+        {/* filtros de precio */}
+        <h4>Rango de precios</h4>
+        <div style={{ display: "flex", flexDirection: "row", gap: "1rem" }}>
+          <label>
             <input
-              name="ubicacion"
-              type="text"
-              placeholder="Buscar ciudad o región"
-              value={filtros.ubicacion}
-              onChange={onFilterChange}
-              style={{
-                padding: "0.5rem",
-                borderRadius: "6px",
-                border: "1px solid darkblue",
-                backgroundColor: "white",
-              }}
+              type="checkbox"
+              name="precio"
+              value="bajo"
+              checked={filtros.precio.includes("bajo")}
+              onChange={enCambioDeFiltro}
             />
-          </div>
-
-          {/* FECHA */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
-            <label style={{ fontWeight: "500", color: "white" }}>Fecha</label>
+            Hasta 24.990
+          </label>
+          <br />
+          <label>
             <input
-              name="fecha"
-              type="date"
-              value={filtros.fecha}
-              onChange={onFilterChange}
-              style={{
-                padding: "0.5rem",
-                borderRadius: "6px",
-                border: "1px solid darkblue",
-                backgroundColor: "white",
-              }}
+              type="checkbox"
+              name="precio"
+              value="medio"
+              checked={filtros.precio.includes("medio")}
+              onChange={enCambioDeFiltro}
             />
-          </div>
-
-          {/* NÚMERO DE PERSONAS */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
-            <label style={{ fontWeight: "500", color: "white" }}>Número de personas</label>
+            Desde 25.000 hasta 49.990
+          </label>
+          <br />
+          <label>
             <input
-              name="personas"
-              type="number"
-              min="1"
-              placeholder="Ej: 2"
-              value={filtros.personas}
-              onChange={onFilterChange}
-              style={{
-                padding: "0.5rem",
-                borderRadius: "6px",
-                border: "1px solid darkblue",
-                backgroundColor: "white",
-              }}
+              type="checkbox"
+              name="precio"
+              value="alto"
+              checked={filtros.precio.includes("alto")}
+              onChange={enCambioDeFiltro}
             />
-          </div>
+            Desde 50.000
+          </label>
+        </div>
 
-          {/* CATEGORÍA */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
-            <label style={{ fontWeight: "500", color: "white" }}>Categoría</label>
+           {/* Cupos disponibles */}
+          <h4>Cupos disponibles</h4>
+          <div style={{ display: "flex", flexDirection: "row", gap: "1rem" }}>
+            <label >
+              <input type="checkbox" 
+                      name="cupos" value="bajo" 
+                      checked={filtros.cupos.includes("bajo")} 
+                      onChange={enCambioDeFiltro}/>
+                                Menos de 9
+            </label>
+            <label>
+              <input type="checkbox" 
+                      name="cupos" 
+                      value="medio" 
+                      checked={filtros.cupos.includes("medio")} 
+                      onChange={enCambioDeFiltro}/>
+                                Entre 10 y 19
+            </label>
+            <label>
+              <input type="checkbox" 
+                      name="cupos" 
+                      value="alto" 
+                      checked={filtros.cupos.includes("alto")} 
+                      onChange={enCambioDeFiltro}/>
+                                Más de 20
+           </label>
+        </div>        
+
+          {/* Categoría */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem", marginTop: "1rem" }}>
+            <label style={{ fontWeight: "500" }}>Categoría</label>
             <select
               name="categoria"
               value={filtros.categoria}
-              onChange={onFilterChange}
+              onChange={enCambioDeFiltro}
               style={{
                 padding: "0.5rem",
                 borderRadius: "6px",
                 border: "1px solid darkblue",
                 backgroundColor: "white",
+                marginTop: "1rem",
               }}
             >
               <option value="">Selecciona una categoría</option>
@@ -175,22 +189,22 @@ export default function Filtros({ filtros, onFilterChange, onClearFilters, onApp
               <option value="Turismo escénico">Turismo escénico</option>
             </select>
           </div>
-        </div>
+        
 
-        {/* BOTONES */}
-        <div
+        {/* Buttons */}
+        <div className="Aplicar-filtros"
           style={{
             marginTop: "auto",
             display: "flex",
             flexDirection: "column",
             gap: "0.8rem",
-            marginBottom: "4rem"
+            marginBottom: "4rem",
           }}
         >
-          <button
+          <button 
             onClick={() => {
-                onApplyFilters();
-                setIsOpen(false);
+              onApplyFilters();
+              setIsOpen(false);
             }}
             style={{
               padding: "0.6rem 1.2rem",
@@ -206,11 +220,12 @@ export default function Filtros({ filtros, onFilterChange, onClearFilters, onApp
           </button>
 
           <button
+            className="Limpiar-filtros"
             onClick={onClearFilters}
             style={{
               padding: "0.6rem 1.2rem",
-              background: "royalblue",
-              color: "white",
+              background: "lightgray",
+              color: "black",
               border: "2px solid darkblue",
               borderRadius: "6px",
               cursor: "pointer",
