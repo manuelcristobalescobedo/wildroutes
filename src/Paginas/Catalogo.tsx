@@ -44,7 +44,7 @@ const Catalogo: React.FC = () => {
     useEffect(() => {
         async function getProductos() {
             try {
-                const response = await axios.get('http://13.218.227.241:9461/productos/2');
+                const response = await axios.get(`http://13.218.227.241:9461/productos/2`);
                 console.log("✅ Productos desde backend:", response.data);
                 setProductos(response.data);
             } catch (error) {
