@@ -1,5 +1,6 @@
 import './Principal.css';
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
+import axios from "axios";
 import Encabezado from '../Componentes/Encabezado';
 import Carro from '../Componentes/Carro';
 import Heroe from '../Componentes/Heroe';
@@ -8,12 +9,12 @@ import Explora from '../Componentes/Explora';
 import Frecuentes from '../Componentes/Frecuentes';
 import Pie from '../Componentes/Pie';
 import Filtros from '../Componentes/Filtros';
-import productos from '../Datos/Productos.json';
-import type { Producto } from '../Tipos/Producto';
 import Lista from '../Componentes/Lista';
+import type { Producto } from '../Tipos/Producto';
 
 const Principal: React.FC = () => {
     const [carroAbierto, setCarroAbierto] = useState(false);
+    const [productos, setProductos] = useState<Producto[]>([]);
     const [filtros, setFiltros] = useState({
         ubicacion: '',
         fecha: '',
@@ -26,6 +27,20 @@ const Principal: React.FC = () => {
         personas: '',
         categoria: ''
     });
+
+    // 🔹 Obtener productos desde backend
+    useEffect(() => {
+        async function getProductos() {
+            try {
+                const response = await axios.get('http://54.242.124.35:9461/doc/productos');
+                console.log("Productos desde backend:", response.data);
+                setProductos(response.data);
+            } catch (error) {
+                console.error("Error al obtener productos del backend:", error);
+            }
+        }
+        getProductos();
+    }, []);
 
     const abrirCarro = () => setCarroAbierto(true);
     const cerrarCarro = () => setCarroAbierto(false);
@@ -45,26 +60,51 @@ const Principal: React.FC = () => {
         setAppliedFiltros(filtros);
     };
 
+    // ✅ Filtrado según estructura real de Producto.ts
     const productosFiltrados = useMemo(() => {
-        return (productos as Producto[]).filter(p => {
-            if (appliedFiltros.ubicacion && !`${p.comuna}, ${p.region}`.toLowerCase().includes(appliedFiltros.ubicacion.toLowerCase())) return false;
-            if (appliedFiltros.fecha && !p.calendarizacion.some(c => c.fecha === appliedFiltros.fecha)) return false;
-            if (appliedFiltros.personas && p.calendarizacion.every(c => c.horas.every(h => h.cupos < parseInt(appliedFiltros.personas)))) return false;
-            if (appliedFiltros.categoria && !p.categorias.includes(appliedFiltros.categoria)) return false;
+        return productos.filter(p => {
+            // Ubicación
+            if (appliedFiltros.ubicacion && !p.lugar?.toLowerCase().includes(appliedFiltros.ubicacion.toLowerCase()))
+                return false;
+
+            // Fecha
+            if (appliedFiltros.fecha && !p.fechasDisponibles?.some(f => f === appliedFiltros.fecha))
+                return false;
+
+            // Personas
+            if (appliedFiltros.personas && p.personas < parseInt(appliedFiltros.personas))
+                return false;
+
+            // Categoría
+            if (appliedFiltros.categoria && p.categoria.toLowerCase() !== appliedFiltros.categoria.toLowerCase())
+                return false;
+
             return true;
         });
-    }, [appliedFiltros]);
+    }, [appliedFiltros, productos]);
 
     return (
         <div className='pagina'>
-            <Encabezado abrirCarro={abrirCarro}/>
-            <Heroe/>
-            {appliedFiltros.ubicacion || appliedFiltros.fecha || appliedFiltros.personas || appliedFiltros.categoria ? <Lista productos={productosFiltrados} /> : <Destacado />}
-            <Explora/>
-            <Frecuentes/>
-            
-            <Filtros filtros={filtros} onFilterChange={handleFilterChange} onClearFilters={limpiarFiltros} onApplyFilters={aplicarFiltros} />
-            <Pie/>
+            <Encabezado abrirCarro={abrirCarro} />
+            <Heroe />
+
+            {appliedFiltros.ubicacion || appliedFiltros.fecha || appliedFiltros.personas || appliedFiltros.categoria ? (
+                <Lista productos={productosFiltrados} />
+            ) : (
+                <Destacado productos={productos} />
+            )}
+
+            <Explora />
+            <Frecuentes />
+
+            <Filtros
+                filtros={filtros}
+                onFilterChange={handleFilterChange}
+                onClearFilters={limpiarFiltros}
+                onApplyFilters={aplicarFiltros}
+            />
+
+            <Pie />
             <Carro carroAbierto={carroAbierto} cerrarCarro={cerrarCarro} />
         </div>
     );

@@ -29,33 +29,37 @@ const Lista: React.FC<ListaProps> = ({ productos, abrirFiltro }) => {
             )}
 
             <div className="tarjetas-container">
-                {productos.map((producto) => (
-                    <a
-                        key={producto.id}
-                        className="tarjeta"
-                        href={`/producto/${producto.id}`}
-                    >
-                        <img
-                            src={producto.imagenes[0]}
-                            alt={producto.nombre}
-                        />
-                        <div>
-                            {'★'.repeat(
-                                Math.round(
-                                    producto.resenas?.reduce(
-                                        (acc, r) => acc + r.estrellas,
-                                        0
-                                    ) / (producto.resenas?.length || 1)
-                                ) || 5
-                            )}
-                        </div>
-                        <p>
-                            {producto.comuna}, {producto.region}
-                        </p>
-                        <h2>{producto.nombre}</h2>
-                        <p>{producto.precios?.[0]?.precio} CLP por persona</p>
-                    </a>
-                ))}
+                {productos.map((producto) => {
+                    // Simulación de "promedio de estrellas"
+                    // Si reseñas es un string[], usamos su largo como referencia
+                    const promedioEstrellas =
+                        producto.reseñas && producto.reseñas.length > 0
+                            ? Math.min(producto.reseñas.length, 5) // máximo 5 estrellas
+                            : 5;
+
+                    return (
+                        <a
+                            key={producto.id}
+                            className="tarjeta"
+                            href={`/producto/${producto.id}`}
+                        >
+                            <img
+                                src={producto.imagenes[0]}
+                                alt={producto.nombre}
+                            />
+                            <div>
+                                {'★'.repeat(promedioEstrellas)}
+                            </div>
+                            <p>
+                                {producto.comuna}, {producto.region}
+                            </p>
+                            <h2>{producto.nombre}</h2>
+                            <p>
+                                {producto.precios?.[0]?.precio ?? '—'} CLP por persona
+                            </p>
+                        </a>
+                    );
+                })}
             </div>
         </section>
     );

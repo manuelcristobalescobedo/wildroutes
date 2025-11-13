@@ -7,7 +7,6 @@ import Pie from '../Componentes/Pie';
 import Lista from '../Componentes/Lista';
 import Filtro from '../Componentes/Filtro';
 import type { Producto } from '../Tipos/Producto';
-import productosJson from '../Datos/Productos.json';
 
 const Catalogo: React.FC = () => {
     const [carroAbierto, setCarroAbierto] = useState(false);
@@ -19,16 +18,15 @@ const Catalogo: React.FC = () => {
         categoria: [] as string[],
     });
 
-    // Backend
+    // 🔹 Obtener productos desde el backend
     useEffect(() => {
         async function getProductos() {
             try {
                 const response = await axios.get('http://54.242.124.35:9461/doc/productos');
-                console.log("Productos desde backend:", response.data);
+                console.log("✅ Productos desde backend:", response.data);
                 setProductos(response.data);
             } catch (error) {
-                console.error("Error al obtener productos del backend, usando datos locales:", error);
-                setProductos(productosJson as Producto[]);
+                console.error("❌ Error al obtener productos del backend:", error);
             }
         }
 
@@ -62,8 +60,9 @@ const Catalogo: React.FC = () => {
 
     // 🔹 Aplicar filtros
     const productosFiltrados = productos.filter(p => {
+        // Filtro por precio
         if (filtros.precio.length) {
-            const precioNum = p.precio;
+            const precioNum = p.precios?.[0]?.precio ?? 0;
             const coincidePrecio =
                 (filtros.precio.includes("bajo") && precioNum <= 24990) ||
                 (filtros.precio.includes("medio") && precioNum >= 25000 && precioNum <= 49990) ||
@@ -71,6 +70,7 @@ const Catalogo: React.FC = () => {
             if (!coincidePrecio) return false;
         }
 
+        // Filtro por cupos
         if (filtros.cupos.length) {
             const cuposNum = p.calendarizacion?.[0]?.horas?.[0]?.cupos ?? 0;
             const coincideCupos =
@@ -80,7 +80,8 @@ const Catalogo: React.FC = () => {
             if (!coincideCupos) return false;
         }
 
-        if (filtros.categoria.length && !p.categorias.some(cat => filtros.categoria.includes(cat))) {
+        // Filtro por categoría (seguro ante undefined)
+        if (filtros.categoria.length && (!p.categoria || !filtros.categoria.includes(p.categoria))) {
             return false;
         }
 

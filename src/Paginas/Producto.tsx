@@ -84,10 +84,10 @@ const Producto: React.FC = () => {
             <section className='presentacion'>
                 <div>
                     <h1>{producto.nombre}</h1>
-                    <p>{producto.lugar}</p>
+                    <p>{producto.comuna}, {producto.region}</p>
                     <div>
                         <a>{producto.categoria}</a>
-                        {producto.tags.map((tag, i) => (
+                        {producto.tags?.map((tag, i) => (
                             <a key={i}>{tag}</a>
                         ))}
                     </div>
@@ -110,12 +110,11 @@ const Producto: React.FC = () => {
                         <p>{producto.descripcion}</p>
                         <div>
                             <div>
-                                <img
-                                    src={producto.imagenes[0]}
-                                    alt={producto.tourOperador}
-                                />
+                                {producto.fotografia && (
+                                    <img src={producto.fotografia} alt={producto.anunciante} />
+                                )}
                             </div>
-                            <h4>{producto.tourOperador}</h4>
+                            <h4>{producto.anunciante}</h4>
                         </div>
                     </div>
                     <div>
@@ -130,7 +129,7 @@ const Producto: React.FC = () => {
 
             <section className='resenas'>
                 <div>
-                    {producto.reseñas.map((resena, index) => (
+                    {producto.reseñas?.map((resena, index) => (
                         <div key={index} className="resena">
                             <p>{resena}</p>
                         </div>
@@ -150,7 +149,7 @@ const Producto: React.FC = () => {
                             onChange={e => setFechaSeleccionada(e.target.value)}
                         >
                             <option value="">Selecciona una fecha</option>
-                            {producto.fechasDisponibles.map((fecha, i) => (
+                            {producto.fechasDisponibles?.map((fecha, i) => (
                                 <option key={i} value={fecha}>{fecha}</option>
                             ))}
                         </select>
