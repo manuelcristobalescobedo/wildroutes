@@ -19,15 +19,15 @@ export interface Producto {
     nombre: string;
     personas: number;
     descripcion: string;
-    categoria: string;        // si quieres manejar múltiples, puedes poner: categorias?: string[];
+    categoria: string;
     lugar: string;
     tourOperador: string;
     destacado?: boolean;
     promocion?: boolean;
     imagenes: string[];
-    precios: Precio[];        // usar producto.precios[0].precio en componentes
+    precios: Precio[];
     tags?: string[];
-    reseñas?: string[];       // opcional si no siempre viene
+    reseñas?: string[];
     comuna?: string;
     region?: string;
     lema?: string;
@@ -35,7 +35,7 @@ export interface Producto {
     fotografia?: string;
     heroe?: boolean;
     calendarizacion?: Dia[];
-    fechasDisponibles?: string[];  // opcional
+    fechasDisponibles?: string[];
 }
 
 export type Imagenes = string[];
