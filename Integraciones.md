@@ -1,151 +1,195 @@
-# INTEGRACIONES.md
-
-El objetivo de este archivo es documentar las integraciones de cada página de esta aplicación, señalando claramente (1) el nombre de la página, su ruta y componente, (2) su objeto principal y (3) la definición de ese objeto.
-
 <br>
+Este archivo documenta las integraciones de cada página de esta aplicación, señalando el nombre de la página, su ruta y componente, su objeto principal, la definición de ese objeto, el enlace del servicio de Swagger responsable de ese objeto, el enlace de la tarea asociada su desarrollo en Github y el estado de la integración.
 
-## Inicio
+## Principal
 
-### Nombre de la página
+### Ruta y compontente
 
-Como es costumbre, la página principal de la aplicación se encuentra en la ruta `/`. La página **Inicio** se renderiza mediante el componente `Inicio.tsx`.
+La página **Principal** se encuentra en la ruta `/` y se reproduce a partir del componente `Principal.tsx`.
 
-### Descripción de su objeto principal
+### Objeto principal
 
-La función principal de esta página es mostrar los datos de una serie de objetos de tipo `Producto` (definidos en `Producto.ts`) en la forma de tarjetas, las unidades básicas de la aplicación.
+La página **Principal** presenta los datos de una serie de objetos de tipo `Producto` (definidos en `Producto.ts`) en forma de tarjetas.
 
-### Definición de su objeto principal
+### Definición del objeto
 
-Cada objeto `Producto` está compuesto por cinco tipos relacionados (`Precios`, `Resena`, `Calendario`, `Rango` y `Producto`) de los cuales los primeros cuatro son tipos auxiliares, incluidos dentro del tipo principal `Producto`.
+Cada objeto `Producto` está compuesto por varios tipos relacionados (`Precio`, `Hora`, `Dia`, `DetalleProducto` y `Producto`), de los cuales los primeros tres (`Precio`, `Hora` y `Dia`) funcionan como tipos auxiliares incluidos dentro del tipo principal `Producto`, mientras que `DetalleProducto` actúa como un complemento separado que la API entrega junto al producto principal.
+
+Los alias `Imagenes`, `Resenas`, `Tags` y `FechasDisponibles` son nombres abreviados que representan arreglos de texto que se utilizan en distintas partes del modelo.
 
 ```
-type Precios = {
-    estudiante: number;
-    adulto: number;
-    mayor: number;
-};
+export interface Precio {
+    segmento: string;
+    precio: number;
+}
 
-type Resena = {
-    comentario: string;
-    estrellas: number;
-    usuario: string;
-};
+export interface Hora {
+    hora: string;
+    cupos: number;
+}
 
-type Calendario = {
-    fechas: string[];
-    horas: string[];
-};
+export interface Dia {
+    fecha: string;
+    horas: Hora[];
+}
 
-type Rango = {
-    minimo: number;
-    maximo: number;
-};
-
-type Producto = {
-    id: string;
-    titulo: string;
-    ubicacion: string;
-    categorias: string[];
-    imagenes: string[];
+export interface Producto {
+    id: number;
+    uuid: string;
+    nombre: string;
+    personas: number;
     descripcion: string;
-    anunciante: string;
-    fotografia: string;
-    precios: Precios;
-    resenas: Resena[];
-    calendarizacion: Calendario;
-    etiquetas: string[];
-    caracteristicas: string;
-    informacion: string;
-    cancelacion: string;
+    categoria: string;
+    lugar: string;
+    tourOperador: string;
+    destacado?: boolean;
+    promocion?: boolean;
+    imagenes: string[];
+    precios: Precio[];
+    tags?: string[];
+    reseñas?: string[];
+    comuna?: string;
+    region?: string;
+    lema?: string;
+    anunciante?: string;
+    fotografia?: string;
+    heroe?: boolean;
+    calendarizacion?: Dia[];
+    fechasDisponibles?: string[];
+}
+
+export type Imagenes = string[];
+export type Resenas = string[];
+export type Tags = string[];
+export type FechasDisponibles = string[];
+
+export interface DetalleProducto {
+    id: number;
     incluye: string;
-    excluye: string;
-    personas: Rango;
-    registro: string;
-    disponibilidad: boolean;
-    oferta: boolean;
-};
+    noIncluye: string;
+    cancelacion: string;
+}
 ```
+
+### Enlace del objeto
+http://13.218.227.241:9461/doc/productos
+
+### Enlace de la tarea
+https://github.com/bootcamp-uchile-2025/grupo-6-frontend/issues/227
+
+### Estado de la integración
+En progreso
 
 <br>
 
 ## Catálogo
 
-### Nombre de la página
+### Ruta y compontente
 
-La página **Catálogo** encuentra en la ruta `/catalogo` y se renderiza mediante el componente `Catalogo.tsx`.
+La página **Catálogo** se encuentra en la ruta `/catalogo` y se reproduce a partir del componente `Catalogo.tsx`.
 
-### Descripción de su objeto principal
+### Objeto principal
 
-Al igual que la página Inicio, **Catálogo** presenta la información de una serie de objetos de tipo `Producto` en la forma de tarjetas. En este caso, como resultado de una búsqueda exitosa.
+La página **Catálogo** presenta los datos de una serie de objetos de tipo `Producto` (definidos en `Producto.ts`) en forma de tarjetas que, en este caso, aparecen como resultado de una búsqueda exitosa.
 
-### Definición de su objeto principal
+### Definición del objeto
 
-Nuevamente, cada objeto `Producto` está compuesto por cuatro tipos auxiliares (`Precios`, `Resena`, `Calendario` y `Rango`) y un tipo principal (`Producto`).
+Las propiedades y tipos del objeto principal de la página **Catálogo** pueden encontrarse en la descripción de la página **Principal** bajo el título **Definición del objeto**.
 
-Las propiedades y los valores del objeto pueden encontrarse en la descripción de la página Inicio bajo el título Definición de su objeto principal.
+### Enlace del objeto
+http://13.218.227.241:9461/doc/productos
+
+### Enlace de la tarea
+https://github.com/bootcamp-uchile-2025/grupo-6-frontend/issues/225
+
+### Estado de la integración
+En progreso
 
 <br>
 
 ## Producto
 
-### Nombre de la página
+### Ruta y compontente
 
-La página **Producto** encuentra en la ruta `/producto/:id` y se renderiza mediante el componente `Producto.tsx`.
+La página **Producto** se encuentra en la ruta `/producto/:id` y se reproduce a partir del componente `Producto.tsx`.
 
-### Descripción de su objeto principal
+### Objeto principal
 
-A diferencia de las páginas Inicio y Catálogo, **Producto** presenta los datos de un solo objeto de tipo `Producto` en la forma de secciones.
+La página **Producto** presenta los datos de un solo objeto de tipo `Producto` en la forma de secciones.
 
-### Definición de su objeto principal
+### Definición del objeto
 
-Nuevamente, cada objeto `Producto` está compuesto por cuatro tipos auxiliares (`Precios`, `Resena`, `Calendario` y `Rango`) y un tipo principal (`Producto`).
+Las propiedades y tipos del objeto principal de la página **Producto** pueden encontrarse en la descripción de la página **Principal** bajo el título **Definición del objeto**.
 
-Las propiedades y los valores del objeto pueden encontrarse en la descripción de la página Inicio bajo el título Definición de su objeto principal.
+### Enlace del objeto
+http://13.218.227.241:9461/doc/productos
+
+### Enlace de la tarea
+https://github.com/bootcamp-uchile-2025/grupo-6-frontend/issues/231
+
+### Estado de la integración
+En progreso
 
 <br>
 
 ## Acceso
 
-### Nombre de la página
+### Ruta y compontente
 
-La página **Acceso** encuentra en la ruta `/acceso` y se renderiza mediante el componente `Acceso.tsx`.
+La página **Acceso** se encuentra en la ruta `/acceso` y se reproduce a partir del componente `Acceso.tsx`.
 
-### Descripción de su objeto principal
+### Objeto principal
 
-**Acceso** recibe y valida los datos de un objeto de tipo `Usuario`. 
+La página **Acceso** recibe y valida los datos de un objeto de tipo `Usuario`. 
 
-### Definición de su objeto principal
+### Definición del objeto
 
-El objeto `Usuario` contiene siete propiedades con valores de cadena (`id`, `nombre`, `apellido`, `correo`,`telefono`, `fotografia` y `registro`), una con valores booleanos (`activo`) y una con un arreglo de cadenas por valor (`reservas`).
+El objeto `Usuario` está compuesto por campos primarios (`nombre`, `apellidos`, `correo`, `celular`, `direccion`, `rut`, `contrasena` y `confirmarContrasena`), por lo que no depende de tipos auxiliares ni estructuras adicionales.
 
 ```
-type Usuario = {
-    id: string;
+export type Usuario = {
     nombre: string;
-    apellido: string;
+    apellidos: string;
     correo: string;
-    telefono: string;
-    fotografia: string;
-    registro: string;
-    activo: boolean;
-    reservas?: string[];
+    celular: string;
+    direccion: string;
+    rut: string;
+    contrasena: string;
+    confirmarContrasena: string;
 };
 ```
+
+### Enlace del objeto
+http://18.215.170.96:9461/doc/usuarios 
+
+### Enlace de la tarea
+No existe
+
+### Estado de la integración
+Pendiente
 
 <br>
 
 ## Registro
 
-### Nombre de la página
+### Ruta y compontente
 
-La página **Registro** encuentra en la ruta `/registro` y se renderiza mediante el componente `Registro.tsx`.
+La página **Registro** se encuentra en la ruta `/registro` y se reproduce a partir del componente `Registro.tsx`.
 
-### Descripción de su objeto principal
+### Objeto principal
 
-Al igual que Acceso, **Registro** recibe y valida los datos de un objeto de tipo `Usuario`. 
+La página **Registro** recibe y valida los datos de un objeto de tipo `Usuario`. 
 
-### Definición de su objeto principal
 
-Nuevamente, el objeto `Usuario` contiene nueve propiedades con valores de múltiples tipos.
+### Definición del objeto
 
-Las propiedades y los valores del objeto pueden encontrarse en la descripción de la página Acceso bajo el título Definición de su objeto principal.
+Las propiedades y tipos del objeto principal de la página **Registro** pueden encontrarse en la descripción de la página **Acceso** bajo el título **Definición del objeto**.
+
+### Enlace del objeto
+http://18.215.170.96:9461/doc/usuarios 
+
+### Enlace de la tarea
+No existe
+
+### Estado de la integración
+Pendiente
