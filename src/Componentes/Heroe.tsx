@@ -9,7 +9,7 @@ const Heroe: React.FC = () => {
     useEffect(() => {
         async function getProductoHeroe() {
             try {
-                const response = await axios.get(`http://13.218.227.241:9461/productos/2`, {
+                const response = await axios.get(`http://18.215.170.96:9461/productos/2`, {
                     timeout: 5000,
                     });
                 // Toma el primer producto como destacado
