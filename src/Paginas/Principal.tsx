@@ -50,7 +50,7 @@ const Principal: React.FC = () => {
     useEffect(() => {
         async function getProductos() {
             try {
-                const response = await axios.get(`http://13.218.227.241:9461/productos/2`, {
+                const response = await axios.get(`http://18.215.170.96:9461/productos/2`, {
                     timeout: 5000,
                 });
                 console.log("Productos desde backend:", response.data);
