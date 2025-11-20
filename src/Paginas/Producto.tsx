@@ -47,7 +47,7 @@ const Producto: React.FC = () => {
     useEffect(() => {
         async function getProducto() {
             try {
-                const response = await axios.get(`http://13.218.227.241:9461/productos/${id}`);
+                const response = await axios.get(`http://18.215.170.96:9461/productos/${id}`);
                 const productoMapeado = mapearProductoBackend(response.data);
                 setProducto(productoMapeado);
             } catch (error) {
