@@ -1,0 +1,83 @@
+.campo-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+    .campo-texto > input {
+        padding: 1.25em 1.5em;
+        border: 2px solid #cbd4ff;
+        border-radius: 8px;
+        font-size: 0.8rem;
+    }
+
+.campo-contraseña {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+    .campo-contraseña > input {
+        padding: 1.25em 1.5em;
+        border: 2px solid #cbd4ff;
+        border-radius: 8px;
+        font-size: 0.8rem;
+    }
+
+.campo-numero {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+    .campo-numero > input {
+        padding: 1.25em 1.5em;
+        border: 2px solid #cbd4ff;
+        border-radius: 8px;
+        font-size: 0.8rem;
+    }
+
+.campo-archivo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+    .campo-archivo > div {
+        border: 2px solid #cbd4ff;
+        border-radius: 8px;
+        padding: 2em;
+        text-align: center;
+    }
+
+.selector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+    .selector > select {
+        padding: 1.25em 1.5em;
+        border: 2px solid #cbd4ff;
+        border-radius: 8px;
+        font-size: 0.8rem;
+    }
+
+.selector-fecha {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+    .selector-fecha > input {
+        padding: 1.25em 1.5em;
+        border: 2px solid #cbd4ff;
+        border-radius: 8px;
+        font-size: 0.8rem;
+}
+
+.casilla-verificacion {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+}

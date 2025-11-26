@@ -1,0 +1,45 @@
+.etiqueta-primaria {
+    font-size: 1.250rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1.1;
+    color: #000;
+    border-radius: 6px;
+}
+
+    .etiqueta-primaria > svg{
+        height: 1.5em;
+        width: 1.5rem;
+        padding: 0.5em 1em;
+    }
+
+.etiqueta-secundaria{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1.3;
+    color: #000;
+}
+
+    .etiqueta-secundaria > svg{
+        height: 1.5em;
+        width: 1.5rem;
+        padding: 0.5em 1em;
+    }
+
+.etiqueta-terciaria {
+    font-size: 0.800rem;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1.3;
+}
+
+    .etiqueta-terciaria > svg{
+        height: 1.5em;
+        width: 1.5rem;
+        padding: 0.5em 1em;
+    }
