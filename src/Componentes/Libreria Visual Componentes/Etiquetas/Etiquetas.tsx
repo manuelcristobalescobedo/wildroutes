@@ -1,26 +1,33 @@
 import './Etiquetas.css';
 
-function EtiquetaPrimaria( {svg, texto }: { svg: React.ReactNode, texto: string }) {
+function EtiquetaPrimaria({ svg, children }: { svg?: React.ReactNode, children: React.ReactNode }) {
     return (
         <p className="etiqueta-primaria">
-        {svg} {texto}
+            {svg && <span>{svg}</span>}
+            {children}
         </p>
-    )};
+    );
+}
 
-function EtiquetaSecundaria( {svg, texto }: { svg: React.ReactNode, texto: string }) {
+function EtiquetaSecundaria({ svg, children }: { svg?: React.ReactNode, children: React.ReactNode }) {
     return (
         <p className="etiqueta-secundaria">
-        {svg} {texto}
+            {svg && <span>{svg}</span>}
+            {children}
         </p>
-    )};
+    );
+}
 
-    function EtiquetaTerciaria( {svg, texto }: { svg: React.ReactNode, texto: string }) {
-        return (
-            <p className="etiqueta-terciaria">
-            {svg} {texto}
-            </p>
-        )};
+function EtiquetaTerciaria({ svg, children }: { svg?: React.ReactNode, children: React.ReactNode }) {
+    return (
+        <p className="etiqueta-terciaria">
+            {svg && <span>{svg}</span>}
+            {children}
+        </p>
+    );
+}
 
 export { EtiquetaPrimaria, EtiquetaSecundaria, EtiquetaTerciaria };
+
 
 

@@ -1,12 +1,9 @@
-function CampoTexto({ label, placeholder }: { label: string, placeholder: string }) {
+function CampoTexto({ label, placeholder }: { label: string, placeholder?: string }) {
     return (
         <div className="campo-texto">
             <label>{label}</label>
             <input
                 placeholder={placeholder}
-                style={{
-                    
-                }}
             />
         </div>
     );
@@ -31,10 +28,10 @@ function CampoNumero({label}: {label: string}) {
     )
 }
 
-function CampoArchivo() {
+function CampoArchivo({label}: ({label: string})) {
     return (
         <div>
-            <label className="campo-archivo">Fotografías</label>
+            <label className="campo-archivo">{label}</label>
             <div>
                 <span role="img" style={{ fontSize: "3rem" }}>🖼</span>
             </div>
@@ -43,16 +40,19 @@ function CampoArchivo() {
     )
 }
 
-function Selector({ label, opciones }: { label: string, opciones: string[] }) {
+function Selector({ label, opciones = [] }: { label: string, opciones: string[] }) {
     return (
         <div className="selector">
             <label>{label}</label>
             <select>
-                {opciones.map(op => <option key={op}>{op}</option>)}
+                {opciones.length > 0
+                    ? opciones.map(op => <option key={op}>{op}</option>)
+                    : <option disabled>Sin opciones</option>}
             </select>
         </div>
     );
 }
+
 
 function SelectorFecha({ label }: { label: string }) {
     return (

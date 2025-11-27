@@ -1,60 +1,73 @@
+import type React from 'react';
 import './Botones.css'
 
-function BotonPrimario({ svg, texto }: { svg: React.ReactNode, texto: string }) {
+function BotonPrimario({ svg, children }: { svg?: React.ReactNode, children: React.ReactNode }) {
     return (
         <button className="boton-primario">
-            {svg} {texto}
+            {svg && <span>{svg}</span>}
+            {children}
         </button>
     );
 }
 
-function BotonSecundario({ svg, texto }: { svg: React.ReactNode, texto: string }) {
+function BotonSecundario({ svg, children }: { svg?: React.ReactNode, children: React.ReactNode }) {
     return (
         <button className="boton-secundario">
-            {svg} {texto}
+            {svg && <span>{svg}</span>}
+            {children}
         </button>
     );
 }
 
-function BotonTerciario({ svg, texto }: { svg: React.ReactNode, texto: string }) {
+function BotonTerciario({ svg, children }: { svg?: React.ReactNode, children: React.ReactNode }) {
     return (
         <button className="boton-terciario">
-            {svg} {texto}
+            {svg && <span>{svg}</span>}
+            {children}
         </button>
     );
 }
 
-function BotonCuaternario({ svg, texto }: { svg: React.ReactNode, texto: string }) {
+function BotonCuaternario({ svg, children }: { svg?: React.ReactNode, children: React.ReactNode }) {
     return (
         <button className="boton-cuaternario">
-            {svg} {texto}
+            {svg && <span>{svg}</span>}
+            {children}
         </button>
     );
 }
 
-function BotonQuinario ({ numero }: { numero: number}) {
+function BotonQuinario({ numero }: { numero: number }) {
     return (
         <button className="boton-quinario">
-           {numero}
+            {numero}
         </button>
     );
 }
 
-function BotonMarca ({ svg, texto }: { svg: React.ReactNode, texto: string }) {
+function BotonMarca({ svg, children }: { svg?: React.ReactNode, children: React.ReactNode }) {
     return (
         <button className="boton-marca">
-           {svg} {texto}
+            {svg && <span>{svg}</span>}
+            {children}
         </button>
     );
 }
 
-function BotonUsuario ({ size = "4rem" }: { size?: string}) {
+function BotonUsuario({ svg, size = 40 }: { svg?: React.ReactNode, size?: number | string }) {
     return (
-        <div>
-            {size}
-            <img src="/placeholder-user.png"> </img>
-        </div>
-    )
+        <button className="boton-usuario" style={{ width: size, height: size }}>
+            {svg ? (
+                <span>{svg}</span>
+            ) : (
+                <img
+                    src="/placeholder-user.png"
+                    alt="Usuario"
+                    style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+                />
+            )}
+        </button>
+    );
 }
 
 export { BotonPrimario, BotonSecundario, BotonTerciario, BotonCuaternario, BotonQuinario, BotonMarca, BotonUsuario };
