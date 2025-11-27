@@ -5,17 +5,20 @@ import Pie from '../Componentes/Pie';
 import { useDispatch } from 'react-redux';
 import { agregarProducto } from '../Redux/productSlice';
 import { useParams } from "react-router-dom";
-import type { Producto as TipoProducto } from '../Tipos/Producto';
+import type { ProductoBackend } from "../Tipos/Producto";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Calendario from "../Componentes/Calendario.tsx";
+import type {Producto as TipoProducto} from "../Tipos/Producto";
+
+
 
 export type ProductoEnCarro = TipoProducto & {
     cantidadEnCarro: number;
     fechaSeleccionada: string;
 };
 
-function mapearProductoBackend(data: any): TipoProducto {
+function mapearProductoBackend(data: ProductoBackend): TipoProducto {
     return {
         id: data.id,
         uuid: data.uuid || "",

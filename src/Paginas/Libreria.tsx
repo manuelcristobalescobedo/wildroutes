@@ -1,6 +1,6 @@
 import { TituloPrimario, TituloSecundario, TituloTerciario, TituloCuaternario, TituloQuintario, TituloSextario } from "../Componentes/Libreria Visual Componentes/Titulos/Titulos";
 import { ParrafoPrimario, ParrafoSecundario } from "../Componentes/Libreria Visual Componentes/Parrafos/Parrafos";
-import { CampoTexto, CampoContraseña, CampoArchivo, CampoNumero, CasillaVerificacion, Selector, SelectorFecha } from "../Componentes/Libreria Visual Componentes/Formularios/Formularios";
+import FormulariosUI from "../Componentes/Libreria Visual Componentes/Formularios/Formularios";
 import { EtiquetaPrimaria, EtiquetaSecundaria, EtiquetaTerciaria } from "../Componentes/Libreria Visual Componentes/Etiquetas/Etiquetas";
 import { BotonPrimario, BotonSecundario, BotonTerciario, BotonMarca, BotonCuaternario, BotonQuinario, BotonUsuario} from "../Componentes/Libreria Visual Componentes/Botones/Botones";
 import { EnlacePrimario, EnlaceSecundario } from "../Componentes/Libreria Visual Componentes/Enlaces/Enlaces";
@@ -40,15 +40,15 @@ export default function LibreriaVisual() {
             <BotonUsuario svg={<img src="/icono-Usuario.svg"/>}></BotonUsuario>
         </div>
         <div>
-            <CampoTexto label="Primer nombre" placeholder="Tu nombre"></CampoTexto>
-            <CampoContraseña label="Contraseña"></CampoContraseña>
-            <CampoArchivo label="Fotografías"></CampoArchivo>
-            <CampoNumero label="Cantidad"></CampoNumero>
-            <Selector label="Categoría" opciones={["Turismo", "Aventura", "Trekking"]}></Selector>
-            <SelectorFecha label="Fecha de Registro"></SelectorFecha>
+            <FormulariosUI.CampoTexto label="Primer nombre" placeholder="Tu nombre"></FormulariosUI.CampoTexto>
+            <FormulariosUI.CampoContraseña label="Contraseña"></FormulariosUI.CampoContraseña>
+            <FormulariosUI.CampoArchivo label="Fotografías"></FormulariosUI.CampoArchivo>
+            <FormulariosUI.CampoNumero label="Cantidad"></FormulariosUI.CampoNumero>
+            <FormulariosUI.Selector label="Categoría" opciones={["Turismo", "Aventura", "Trekking"]}></FormulariosUI.Selector>
+            <FormulariosUI.SelectorFecha label="Fecha de Registro"></FormulariosUI.SelectorFecha>
         </div>
         <div>
-            <CasillaVerificacion texto="Accepto términos y condiciones"></CasillaVerificacion>
+            <FormulariosUI.CasillaVerificacion texto="Accepto términos y condiciones"></FormulariosUI.CasillaVerificacion>
         </div>
         </>
     )

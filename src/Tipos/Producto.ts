@@ -12,8 +12,7 @@ export interface Dia {
     fecha: string;
     horas: Hora[];
 }
-
-export interface Producto {
+export type ProductoBackend = {
     id: number;
     uuid: string;
     nombre: string;
@@ -49,3 +48,5 @@ export interface DetalleProducto {
     noIncluye: string;
     cancelacion: string;
 }
+
+export type Producto = ProductoBackend;
