@@ -6,6 +6,7 @@ import Registro from '../Paginas/Registro';
 import Catalogo from '../Paginas/Catalogo';
 import Ingreso from '../Paginas/Ingreso';
 import Producto from '../Paginas/Producto';
+import LibreriaVisual from '../Paginas/Libreria';
 
 const Rutas: React.FC = () => {
     return (
@@ -16,6 +17,7 @@ const Rutas: React.FC = () => {
                 <Route path="/catalogo" element={<Catalogo/>}/>
                 <Route path="/ingreso" element={<Ingreso/>}/>
                 <Route path="/producto" element={<Producto/>}/>
+                <Route path="/libreria" element={<LibreriaVisual/>}/>
             </Routes>
         </Router>
     );
