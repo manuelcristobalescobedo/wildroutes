@@ -1,3 +1,5 @@
+import './Botones.css'
+
 function BotonPrimario({ svg, texto }: { svg: React.ReactNode, texto: string }) {
     return (
         <button className="boton-primario">
