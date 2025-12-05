@@ -1,0 +1,27 @@
+.etiqueta-primaria {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.3;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 9999px;
+    border: solid 1px;
+}
+
+.etiqueta-primaria svg {
+    display: flex;
+    align-items: center;
+    width: 1.5em;
+    height: 1.5em;
+    flex-shrink: 0;
+}
+
+.etiqueta-primaria span {
+    padding: 0 4px
+}
