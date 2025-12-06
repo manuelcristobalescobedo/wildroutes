@@ -1,14 +1,13 @@
 import "./EtiquetaPrimaria.css";
-import Iconos from "../../Iconos/Indice";
 
-type EtiquetaPrimariaProps = { texto: string; icono?: React.ReactNode; color?: string; };
+type EtiquetaPrimariaProps = { texto: string; primerIcono?: React.ReactNode; segundoIcono?: React.ReactNode; enlace?: string; accion?: () => void; };
 
-export default function EtiquetaPrimaria({ texto, icono, color = "#000000", }: EtiquetaPrimariaProps) {
+export default function EtiquetaPrimaria({ texto, primerIcono, segundoIcono, enlace, accion }: EtiquetaPrimariaProps) {
     return (
-        <h1 className="etiqueta-primaria" style={{ color, borderColor: color }}>
-            {icono && icono}
-            <span>{texto}</span>
-            <Iconos.Cerrar />
+        <h1 className="etiqueta-primaria">
+            {primerIcono && <span className="icono-inicio">{primerIcono}</span>}
+            {enlace ? (<a className="texto" href={enlace}>{texto}</a>) : (<span className="texto">{texto}</span>)}
+            {segundoIcono && (<span className="icono-fin" onClick={accion ?? undefined} style={{ cursor: accion ? "pointer" : "default" }}>{segundoIcono}</span>)}
         </h1>
     );
 }

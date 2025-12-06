@@ -1,14 +1,13 @@
 import "./EtiquetaSecundaria.css";
-import Iconos from "../../Iconos/Indice";
 
-type EtiquetaSecundariaProps = { texto: string; icono?: React.ReactNode; color?: string; };
+type EtiquetaSecundariaProps = { texto: string; primerIcono?: React.ReactNode; segundoIcono?: React.ReactNode; enlace?: string; accion?: () => void; };
 
-export default function EtiquetaSecundaria({ texto, icono, color = "#000000", }: EtiquetaSecundariaProps) {
+export default function EtiquetaSecundaria({ texto, primerIcono, segundoIcono, enlace, accion }: EtiquetaSecundariaProps) {
     return (
-        <h1 className="etiqueta-secundaria" style={{ color, borderColor: color }}>
-            {icono && icono}
-            <span>{texto}</span>
-            <Iconos.Cerrar />
+        <h1 className="etiqueta-secundaria">
+            {primerIcono && <span className="icono-inicio">{primerIcono}</span>}
+            {enlace ? (<a className="texto" href={enlace}>{texto}</a>) : (<span className="texto">{texto}</span>)}
+            {segundoIcono && (<span className="icono-fin" onClick={accion ?? undefined} style={{ cursor: accion ? "pointer" : "default" }}>{segundoIcono}</span>)}
         </h1>
     );
 }

@@ -109,18 +109,18 @@ export default function PaginaElementos() {
             </section>
 
             <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EtiquetaPrimaria texto="Artículo" icono={<Iconos.Vender/>} color="#606060"/>
+                <EtiquetaPrimaria texto="Artículo" primerIcono={<Iconos.Vender/>} segundoIcono={<Iconos.Cerrar/>}/>
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EtiquetaPrimaria</p>
             </section>
 
             <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EtiquetaSecundaria texto="Artículo" icono={<Iconos.Vender/>} color="#606060"/>
-                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EtiquetaSecundaria</p>
+                <EtiquetaSecundaria texto="Artículo" primerIcono={<Iconos.Vender/>} segundoIcono={<Iconos.Cerrar/>}/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EtiquetaPrimaria</p>
             </section>
 
             <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EtiquetaTerciaria texto="Artículo" icono={<Iconos.Vender/>} color="#606060"/>
-                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EtiquetaTerciaria</p>
+                <EtiquetaTerciaria texto="Artículo" primerIcono={<Iconos.Vender/>} segundoIcono={<Iconos.Cerrar/>}/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EtiquetaPrimaria</p>
             </section>
 
         </div>
