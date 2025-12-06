@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap");
+
 :root {
     --color-primario-mas-bajo: #ECB9BD;
     --color-primario-bajo: #D9737B;
@@ -30,8 +32,8 @@
     --color-neutro-mas-mas-alto: #606060;
     --color-neutro-mas-mas-mas-alto: #4A4A4A;
     --color-neutro-mas-mas-mas-mas-alto: #333333;
-    --color-neutrp-opaco-mas-bajo: #3333331a;
-    --color-neutrp-opaco-bajo: #33333380;
+    --color-neutro-opaco-mas-bajo: #3333331a;
+    --color-neutro-opaco-bajo: #33333380;
     --color-error-bajo: #FB3748;
     --color-error-alto: #D00416;
     --color-error-opaco: #fb37471a;
@@ -42,8 +44,6 @@
     --color-exito-alto: #1FC16B;
     --color-exito-opaco: #1fc16b1a;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap");
 
 html {
   font-family: "Nunito Sans", sans-serif;

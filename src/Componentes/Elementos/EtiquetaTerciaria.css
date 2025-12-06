@@ -3,7 +3,7 @@
     padding: 0;
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Nunito Sans", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -11,10 +11,12 @@
     width: fit-content;
     padding: 4px 8px;
     border-radius: 9999px;
-    border: solid 1px;
+    color: var(--color-neutro-mas-mas-alto);
+    background-color: transparent;
+    border: solid 1px var(--color-neutro-mas-mas-alto);
 }
 
-.etiqueta-terciaria svg {
+.etiqueta-terciaria .icono-inicio, .etiqueta-terciaria .icono-fin {
     display: flex;
     align-items: center;
     width: 1.125em;
@@ -22,6 +24,14 @@
     flex-shrink: 0;
 }
 
-.etiqueta-terciaria span {
-    padding: 0 4px
+.etiqueta-terciaria .texto {
+    padding: 0 4px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.etiqueta-terciaria:hover {
+    color: var(--color-primario-alto);
+    background-color: transparent;
+    border: solid 1px var(--color-primario-alto);
 }

@@ -11,10 +11,12 @@
     width: fit-content;
     padding: 4px 8px;
     border-radius: 9999px;
-    border: solid 1px;
+    color: var(--color-neutro-mas-mas-alto);
+    background-color: transparent;
+    border: solid 1px var(--color-neutro-mas-mas-alto);
 }
 
-.etiqueta-primaria svg {
+.etiqueta-primaria .icono-inicio, .etiqueta-primaria .icono-fin {
     display: flex;
     align-items: center;
     width: 1.5em;
@@ -22,6 +24,14 @@
     flex-shrink: 0;
 }
 
-.etiqueta-primaria span {
-    padding: 0 4px
+.etiqueta-primaria .texto {
+    padding: 0 4px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.etiqueta-primaria:hover {
+    color: var(--color-primario-alto);
+    background-color: transparent;
+    border: solid 1px var(--color-primario-alto);
 }
