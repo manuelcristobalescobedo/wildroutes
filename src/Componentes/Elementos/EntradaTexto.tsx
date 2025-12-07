@@ -1,13 +1,13 @@
-import "./InputTexto.css";
+import "./EntradaTexto.css";
 
-type InputTextoProps = { label: string; name: string; value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; placeholder?: string; informacion?: string; error?: string; type?: string; required?: boolean; };
+type EntradaTextoProps = { etiqueta: string; nombre: string; valor: string; accion: (e: React.ChangeEvent<HTMLInputElement>) => void; marcador?: string; informacion?: string; error?: string; tipo?: string; requerido?: boolean; };
 
-export default function InputTexto({ label, name, value, onChange, placeholder, informacion, error, type = "text", required, }: InputTextoProps) {
+export default function EntradaTexto({ etiqueta, nombre, valor, accion, marcador, informacion, error, tipo = "text", requerido, }: EntradaTextoProps) {
     return (
-        <div className="input-texto">
-            <label htmlFor={name} className="label">{label}</label>
-            <input id={name} name={name} type={type} value={value} onChange={onChange} placeholder={placeholder} required={required} className={`campo ${error ? "error" : ""}`}/>
-            {error ? (<span className="mensaje-error">{error}</span>) : informacion ? (<span className="mensaje-informacion">{informacion}</span>) : null}
+        <div className="entrada-texto">
+            <label htmlFor={nombre} className="etiqueta">{etiqueta}</label>
+            <input id={nombre} name={nombre} type={tipo} value={valor} onChange={accion} placeholder={marcador} required={requerido} className={`campo ${error ? "error" : ""}`}/>
+            <span className={error ? "mensaje-error" : "mensaje-informacion"}>{error ?? informacion ?? ""}</span>
         </div>
     );
 }
