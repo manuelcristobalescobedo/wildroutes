@@ -13,15 +13,24 @@
     border-radius: 9999px;
     color: var(--color-neutro-mas-mas-alto);
     background-color: transparent;
-    border: solid 1px var(--color-neutro-mas-mas-alto);
+    border: solid 1.5px var(--color-neutro-mas-mas-alto);
+    cursor: pointer;
 }
 
 .etiqueta-secundaria .icono-inicio, .etiqueta-secundaria .icono-fin {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+}
+
+.etiqueta-secundaria .icono-inicio {
+    width: 1.25em;
+    height: 1.25em;
+}
+
+.etiqueta-secundaria .icono-fin {
     width: 1.5em;
     height: 1.5em;
-    flex-shrink: 0;
 }
 
 .etiqueta-secundaria .texto {
@@ -33,5 +42,5 @@
 .etiqueta-secundaria:hover {
     color: var(--color-primario-alto);
     background-color: transparent;
-    border: solid 1px var(--color-primario-alto);
+    border: solid 1.5px var(--color-primario-alto);
 }

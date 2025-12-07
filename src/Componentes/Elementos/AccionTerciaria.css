@@ -1,0 +1,35 @@
+.accion-terciaria {
+    all: unset;
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 0;
+    border-radius: 8px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 120ms ease-in-out;
+    cursor: pointer;
+    color: var(--color-neutro-mas-mas-mas-bajo);
+    background-color: var(--color-primario-mas-alto);
+    border: 1.5px solid;
+    border-color: var(--color-primario-mas-alto);
+    padding: 4px 4px;
+}
+
+.accion-terciaria > .texto {
+    padding: 0 4px;
+}
+
+.accion-terciaria > .icono {
+    height: 2em;
+    width: 2em;
+}
+
+.accion-terciaria:hover {
+    color: var(--color-neutro-mas-mas-mas-bajo);
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    padding: 4px 4px;
+}
