@@ -1,0 +1,35 @@
+.accion-primaria {
+    all: unset;
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 0;
+    border-radius: 8px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 120ms ease-in-out;
+    cursor: pointer;
+    color: var(--color-secundario-alto);
+    background-color: var(--color-neutro-mas-mas-mas-bajo);
+    border: 1.5px solid;
+    border-color: var(--color-neutro-mas-mas-mas-bajo);
+    padding: 4px 4px;
+}
+
+.accion-primaria > .texto {
+    padding: 0 4px;
+}
+
+.accion-primaria > .icono {
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.accion-primaria:hover {
+    color: var(--color-neutro-mas-mas-mas-bajo);
+    background-color: var(--color-secundario-alto);
+    border-color: var(--color-neutro-mas-mas-mas-bajo);
+    padding: 4px 4px;
+}

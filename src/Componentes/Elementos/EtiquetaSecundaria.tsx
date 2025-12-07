@@ -4,10 +4,10 @@ type EtiquetaSecundariaProps = { texto: string; primerIcono?: React.ReactNode; s
 
 export default function EtiquetaSecundaria({ texto, primerIcono, segundoIcono, enlace, accion }: EtiquetaSecundariaProps) {
     return (
-        <h1 className="etiqueta-secundaria">
+        <span className="etiqueta-secundaria">
             {primerIcono && <span className="icono-inicio">{primerIcono}</span>}
             {enlace ? (<a className="texto" href={enlace}>{texto}</a>) : (<span className="texto">{texto}</span>)}
-            {segundoIcono && (<span className="icono-fin" onClick={accion ?? undefined} style={{ cursor: accion ? "pointer" : "default" }}>{segundoIcono}</span>)}
-        </h1>
+            {segundoIcono && (<span className="icono-fin" onClick={accion}>{segundoIcono}</span>)}
+        </span>
     );
 }

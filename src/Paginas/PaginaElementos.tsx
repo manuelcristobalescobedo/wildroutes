@@ -14,6 +14,19 @@ import ParrafoCuaternario from "../Componentes/Elementos/ParrafoCuaternario.tsx"
 import EtiquetaPrimaria from "../Componentes/Elementos/EtiquetaPrimaria.tsx";
 import EtiquetaSecundaria from "../Componentes/Elementos/EtiquetaSecundaria.tsx";
 import EtiquetaTerciaria from "../Componentes/Elementos/EtiquetaTerciaria.tsx";
+import EnlacePrimario from "../Componentes/Elementos/EnlacePrimario.tsx";
+import EnlaceSecundario from "../Componentes/Elementos/EnlaceSecundario.tsx";
+import EnlaceTerciario from "../Componentes/Elementos/EnlaceTerciario.tsx";
+import EnlaceCuaternario from "../Componentes/Elementos/EnlaceCuaternario.tsx";
+import BotonPrimario from "../Componentes/Elementos/BotonPrimario.tsx";
+import BotonSecundario from "../Componentes/Elementos/BotonSecundario.tsx";
+import BotonTerciario from "../Componentes/Elementos/BotonTerciario.tsx";
+import BotonCuaternario from "../Componentes/Elementos/BotonCuaternario.tsx";
+import AccionPrimaria from "../Componentes/Elementos/AccionPrimaria.tsx";
+import AccionSecundaria from "../Componentes/Elementos/AccionSecundaria.tsx";
+import AccionTerciaria from "../Componentes/Elementos/AccionTerciaria.tsx";
+import AccionCuaternaria from "../Componentes/Elementos/AccionCuaternaria.tsx";
+import AccionQuinaria from "../Componentes/Elementos/AccionQuinaria.tsx";
 
 export default function PaginaElementos() {
     return (
@@ -109,18 +122,168 @@ export default function PaginaElementos() {
             </section>
 
             <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EtiquetaPrimaria texto="Artículo" primerIcono={<Iconos.Vender/>} segundoIcono={<Iconos.Cerrar/>}/>
+                <EtiquetaPrimaria texto="Artículo" primerIcono={<Iconos.Vender/>} segundoIcono={<Iconos.Cerrar/>} enlace="google.com"/>
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EtiquetaPrimaria</p>
             </section>
 
             <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EtiquetaSecundaria texto="Artículo" primerIcono={<Iconos.Vender/>} segundoIcono={<Iconos.Cerrar/>}/>
-                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EtiquetaPrimaria</p>
+                <EtiquetaSecundaria texto="Artículo" primerIcono={<Iconos.Vender/>} segundoIcono={<Iconos.Cerrar/>} enlace="google.com"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EtiquetaSecundaria</p>
             </section>
 
             <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EtiquetaTerciaria texto="Artículo" primerIcono={<Iconos.Vender/>} segundoIcono={<Iconos.Cerrar/>}/>
-                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EtiquetaPrimaria</p>
+                <EtiquetaTerciaria texto="Artículo" primerIcono={<Iconos.Vender/>} segundoIcono={<Iconos.Cerrar/>} enlace="google.com"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EtiquetaTerciaria</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlacePrimario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="alto"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlacePrimario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlacePrimario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="base"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlacePrimario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlacePrimario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="bajo"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlacePrimario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlaceSecundario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="alto"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlaceSecundario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlaceSecundario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="base"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlaceSecundario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlaceSecundario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="bajo"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlaceSecundario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlaceTerciario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="alto"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlaceTerciario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlaceTerciario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="base"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlaceTerciario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlaceTerciario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="bajo"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlaceTerciario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlaceCuaternario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="alto"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlaceCuaternario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlaceCuaternario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="base"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlaceCuaternario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlaceCuaternario texto="Anchor text" icono={<Iconos.Calendario/>} enlace="google.com" nivel="bajo"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlaceCuaternario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonPrimario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="alto"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonPrimario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonPrimario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="base"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonPrimario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonPrimario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="bajo"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonPrimario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonSecundario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="alto"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonSecundario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonSecundario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="base"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonSecundario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonSecundario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="bajo"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonSecundario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonTerciario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="alto"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonTerciario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonTerciario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="base"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonTerciario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonTerciario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="bajo"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonTerciario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonCuaternario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="alto"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonCuaternario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonCuaternario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="base"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonCuaternario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <BotonCuaternario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="bajo"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonCuaternario</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <AccionPrimaria icono={<Iconos.Persona/>}/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>AccionPrimaria</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <AccionSecundaria icono={<Iconos.Borrar/>}/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>AccionSecundaria</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <AccionTerciaria icono={<Iconos.Borrar/>}/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>AccionTerciaria</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <AccionCuaternaria icono={<Iconos.FlechaDerecha/>}/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>AccionCuaternaria</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <AccionQuinaria icono={<Iconos.Cerrar/>}/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>AccionQuinaria</p>
+            </section>
+
+            <section style={{ padding: "1rem", border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <AccionQuinaria icono={<Iconos.Cerrar/>}/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>AccionQuinaria</p>
             </section>
 
         </div>

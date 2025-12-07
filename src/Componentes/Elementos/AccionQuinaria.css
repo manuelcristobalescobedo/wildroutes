@@ -1,0 +1,34 @@
+.accion-quinaria {
+    all: unset;
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 0;
+    border-radius: 9999px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 120ms ease-in-out;
+    cursor: pointer;
+    color: var(--color-neutro-mas-mas-mas-bajo);
+    background-color: var(--color-primario-mas-alto);
+    border: 1.5px solid;
+    border-color: var(--color-primario-mas-alto);
+    padding: 0;
+}
+
+.accion-quinaria > .texto {
+    padding: 0 4px;
+}
+
+.accion-quinaria > .icono {
+    height: 2em;
+    width: 2em;
+}
+
+.accion-quinaria:hover {
+    color: var(--color-neutro-mas-mas-mas-bajo);
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}

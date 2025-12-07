@@ -1,0 +1,47 @@
+.input-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Espacio mínimo entre elementos */
+}
+
+/* Label */
+.input-texto .label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Input base */
+.input-texto .campo {
+  padding: 8px;
+  border: 1px solid #ccc;      /* Normal */
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;               /* Importante: deja focus solo al border */
+  transition: border-color 0.15s ease;
+}
+
+/* Hover */
+.input-texto .campo:hover {
+  border-color: #999;
+}
+
+/* Focus */
+.input-texto .campo:focus {
+  border-color: #333;
+}
+
+/* Error */
+.input-texto .campo.error {
+  border-color: red;
+}
+
+/* Mensajes debajo del input */
+.input-texto .mensaje-informacion {
+  font-size: 12px;
+  color: #666;
+}
+
+.input-texto .mensaje-error {
+  font-size: 12px;
+  color: red;
+}
