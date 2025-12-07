@@ -6,9 +6,9 @@ type EntradaSeleccionProps = { etiqueta: string; nombre: string; valor: string; 
 
 export default function EntradaSeleccion({ etiqueta, nombre, valor, opciones, accion, informacion, error, requerido, }: EntradaSeleccionProps) {
     return (
-        <div className="entrada-texto">
+        <div className="entrada-seleccion">
             <label htmlFor={nombre} className="etiqueta">{etiqueta}</label>
-            <select id={nombre} name={nombre} value={valor} onChange={accion} required={requerido} className={`campo ${error ? "error" : ""}`}>
+            <select id={nombre} name={nombre} value={valor} onChange={accion} required={requerido} className={`campo ${error ? "estado-error" : ""}`}>
                 {opciones.map((op) => (<option key={op.valor} value={op.valor}>{op.texto}</option>))}
             </select>
             <span className={error ? "mensaje-error" : "mensaje-informacion"}>{error ?? informacion ?? ""}</span>

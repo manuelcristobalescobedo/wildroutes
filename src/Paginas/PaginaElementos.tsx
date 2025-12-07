@@ -32,6 +32,7 @@ import AccionQuinaria from "../Componentes/Elementos/AccionQuinaria.tsx";
 import EntradaTexto from "../Componentes/Elementos/EntradaTexto.tsx";
 import EntradaCampo from "../Componentes/Elementos/EntradaCampo.tsx";
 import EntradaSeleccion from "../Componentes/Elementos/EntradaSeleccion.tsx";
+import EntradaNumero from "../Componentes/Elementos/EntradaNumero.tsx";
 
 export default function PaginaElementos() {
     const [entrada, setEntrada] = useState({ nombre: "", apellido: "", telefono: "+56 9 ", rut: "", correo: "", contrasena: "",  confirmar: "", mensaje: "", });
@@ -360,9 +361,9 @@ export default function PaginaElementos() {
                 <EntradaSeleccion  etiqueta="Categoría" nombre="categoria" valor={form.categoria} accion={manejarCambio} requerido opciones={[ { valor: "", texto: "Selecciona una categoría" }, { valor: "ropa", texto: "Ropa" }, { valor: "electronica", texto: "Electrónica" }, { valor: "hogar", texto: "Hogar" }, ]} informacion="Elige una opción válida" error={errores.categoria} />
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaSeleccion</p>
             </section>
-            
+
             <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EntradaSeleccion  etiqueta="Categoría" nombre="categoria" valor={form.categoria} accion={manejarCambio} requerido opciones={[ { valor: "", texto: "Selecciona una categoría" }, { valor: "ropa", texto: "Ropa" }, { valor: "electronica", texto: "Electrónica" }, { valor: "hogar", texto: "Hogar" }, ]} informacion="Elige una opción válida" error={errores.categoria} />
+                <EntradaNumero nombre="cantidad" etiqueta="Cantidad" min={1} max={999} step={1} value={1} />
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaSeleccion</p>
             </section>
 
