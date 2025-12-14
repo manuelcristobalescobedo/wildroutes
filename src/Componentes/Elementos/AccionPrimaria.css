@@ -1,6 +1,7 @@
 .accion-primaria {
     all: unset;
     display: inline-flex;
+    height: fit-content;
     width: fit-content;
     align-items: center;
     gap: 0;
@@ -14,7 +15,7 @@
     color: var(--color-secundario-alto);
     background-color: var(--color-neutro-mas-mas-mas-bajo);
     border: 1.5px solid;
-    border-color: var(--color-neutro-mas-mas-mas-bajo);
+    border-color: transparent;
     padding: 4px 4px;
 }
 
@@ -30,6 +31,6 @@
 .accion-primaria:hover {
     color: var(--color-neutro-mas-mas-mas-bajo);
     background-color: var(--color-secundario-alto);
-    border-color: var(--color-neutro-mas-mas-mas-bajo);
+    border-color: transparent;
     padding: 4px 4px;
 }

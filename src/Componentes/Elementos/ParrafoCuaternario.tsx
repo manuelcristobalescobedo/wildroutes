@@ -9,9 +9,9 @@ type ParrafoCuaternarioProps = {
 
 export default function ParrafoCuaternario({ texto, icono, color = "#000000", }: ParrafoCuaternarioProps) {
     return (
-        <h1 className="parrafo-cuaternario" style={{ color, display: "flex", alignItems: "center", gap: "0.5rem", }}>
+        <p className="parrafo-cuaternario" style={{ color, display: "flex", alignItems: "center", gap: "0.5rem", }}>
             {icono && <span>{icono}</span>}
             <span>{texto}</span>
-        </h1>
+        </p>
     );
 }
