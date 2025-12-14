@@ -2,9 +2,9 @@ import { useState } from "react";
 import "./EntradaNumero.css";
 import Iconos from "../../Iconos/Indice";
 
-interface EntradaNumeroProps { nombre: string; etiqueta: string; min?: number; max?: number; step?: number; value?: number; onChange?: (value: number) => void; }
+interface EntradaNumeroProps { nombre: string; etiqueta: string; min?: number; max?: number; step?: number; value?: number; onChange?: (value: number) => void; estilo?: string; }
 
-export default function EntradaNumero({ nombre, etiqueta, min = 0, max = 9999, step = 1, value = 0, onChange, }: EntradaNumeroProps) {
+export default function EntradaNumero({ nombre, etiqueta, min = 0, max = 9999, step = 1, value = 0, onChange, estilo, }: EntradaNumeroProps) {
     const [internal, setInternal] = useState(value);
 
     const updateValue = (val: number) => {
@@ -15,7 +15,7 @@ export default function EntradaNumero({ nombre, etiqueta, min = 0, max = 9999, s
 
     return (
         <div className="entrada-numero">
-            <label htmlFor={nombre} className="etiqueta">{etiqueta}</label>
+            <label htmlFor={nombre} className="etiqueta" style={{ color: estilo }}>{etiqueta}</label>
             <div>
                 <button type="button" className="btn-menos" onClick={() => updateValue(internal - step)}><Iconos.Sustraer/></button>
                 <input type="number" value={internal} onChange={(e) => updateValue(Number(e.target.value))}/>

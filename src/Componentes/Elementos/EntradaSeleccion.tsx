@@ -2,12 +2,12 @@ import "./EntradaSeleccion.css";
 
 type Opcion = { valor: string; texto: string; };
 
-type EntradaSeleccionProps = { etiqueta: string; nombre: string; valor: string; opciones: Opcion[]; accion: (e: React.ChangeEvent<HTMLSelectElement>) => void; informacion?: string; error?: string; requerido?: boolean; };
+type EntradaSeleccionProps = { etiqueta: string; nombre: string; valor: string; opciones: Opcion[]; accion: (e: React.ChangeEvent<HTMLSelectElement>) => void; informacion?: string; error?: string; requerido?: boolean; estilo?: string; };
 
-export default function EntradaSeleccion({ etiqueta, nombre, valor, opciones, accion, informacion, error, requerido, }: EntradaSeleccionProps) {
+export default function EntradaSeleccion({ etiqueta, nombre, valor, opciones, accion, informacion, error, requerido, estilo, }: EntradaSeleccionProps) {
     return (
         <div className="entrada-seleccion">
-            <label htmlFor={nombre} className="etiqueta">{etiqueta}</label>
+            <label htmlFor={nombre} className="etiqueta" style={{ color: estilo }}>{etiqueta}</label>
             <select id={nombre} name={nombre} value={valor} onChange={accion} required={requerido} className={`campo ${error ? "estado-error" : ""}`}>
                 {opciones.map((op) => (<option key={op.valor} value={op.valor}>{op.texto}</option>))}
             </select>

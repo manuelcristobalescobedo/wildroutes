@@ -33,6 +33,12 @@ import EntradaTexto from "../Componentes/Elementos/EntradaTexto.tsx";
 import EntradaCampo from "../Componentes/Elementos/EntradaCampo.tsx";
 import EntradaSeleccion from "../Componentes/Elementos/EntradaSeleccion.tsx";
 import EntradaNumero from "../Componentes/Elementos/EntradaNumero.tsx";
+import EnlaceAlternativoPrimario from "../Componentes/Elementos/EnlaceAlternativoPrimario.tsx";
+import EnlaceAlternativoSecundario from "../Componentes/Elementos/EnlaceAlternativoSecundario.tsx";
+import EntradaVerificacionPrimaria from "../Componentes/Elementos/EntradaVerificacionPrimaria.tsx";
+import EntradaVerificacionSecundaria from "../Componentes/Elementos/EntradaVerificacionSecundaria.tsx";
+import EntradaRadioSecundaria from "../Componentes/Elementos/EntradaRadioSecundaria.tsx";
+import EntradaRadioPrimaria from "../Componentes/Elementos/EntradaRadioPrimaria.tsx";
 
 export default function PaginaElementos() {
     const [entrada, setEntrada] = useState({ nombre: "", apellido: "", telefono: "+56 9 ", rut: "", correo: "", contrasena: "",  confirmar: "", mensaje: "", });
@@ -233,6 +239,16 @@ export default function PaginaElementos() {
             </section>
 
             <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlaceAlternativoPrimario texto="Inicia sesión" icono={<Iconos.Enlace/>} enlace="google.com" color="#B66C0C" flotar="#B66C0C"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlaceAlternativoPrimario</p>
+            </section>
+
+            <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EnlaceAlternativoSecundario texto="Inicia sesión" icono={<Iconos.Enlace/>} enlace="google.com" color="#B66C0C" flotar="#B66C0C"/>
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EnlaceAlternativoPrimario</p>
+            </section>
+
+            <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
                 <BotonPrimario texto="Anchor text" icono={<Iconos.Calendario/>} nivel="alto"/>
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>BotonPrimario</p>
             </section>
@@ -318,53 +334,73 @@ export default function PaginaElementos() {
             </section>
 
             <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EntradaTexto  etiqueta="Nombre" nombre="nombre" valor={entrada.nombre} accion={(e) => setEntrada({ ...entrada, nombre: e.target.value })} marcador="Primer nombre" informacion="Usa solo caracteres alfabéticos" tipo="text"/>
+                <EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Nombre" nombre="nombre" valor={entrada.nombre} accion={(e) => setEntrada({ ...entrada, nombre: e.target.value })} marcador="Primer nombre" informacion="Usa solo caracteres alfabéticos" tipo="text"/>
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaTexto</p>
             </section>
 
             <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EntradaTexto  etiqueta="Apellido" nombre="apellido" valor={entrada.apellido} accion={(e) => setEntrada({ ...entrada, apellido: e.target.value })} marcador="Primer apellido" informacion="Usa solo caracteres alfabéticos" tipo="text"/>
+                <EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Apellido" nombre="apellido" valor={entrada.apellido} accion={(e) => setEntrada({ ...entrada, apellido: e.target.value })} marcador="Primer apellido" informacion="Usa solo caracteres alfabéticos" tipo="text"/>
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaTexto</p>
             </section>
 
             <section style={{ padding: "1rem", border: "1px so boxSizing: 'border-box',lid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>                
-                <EntradaTexto  etiqueta="Teléfono" nombre="telefono" valor={entrada.telefono} accion={(e) => setEntrada({ ...entrada, telefono: e.target.value })} informacion="Usa solo caracteres numéricos" tipo="text"/>
+                <EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Teléfono" nombre="telefono" valor={entrada.telefono} accion={(e) => setEntrada({ ...entrada, telefono: e.target.value })} informacion="Usa solo caracteres numéricos" tipo="text"/>
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaTexto</p>
             </section>
 
             <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EntradaTexto  etiqueta="RUT" nombre="rut" valor={entrada.rut} accion={(e) => setEntrada({ ...entrada, rut: e.target.value })} marcador="Primer apellido" informacion="Usa solo caracteres alfanuméricos" tipo="text"/>
+                <EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="RUT" nombre="rut" valor={entrada.rut} accion={(e) => setEntrada({ ...entrada, rut: e.target.value })} marcador="Primer apellido" informacion="Usa solo caracteres alfanuméricos" tipo="text"/>
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaTexto</p>
             </section>
 
             <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EntradaTexto  etiqueta="Correo electrónico" nombre="correo" valor={entrada.correo} accion={(e) => setEntrada({ ...entrada, correo: e.target.value })} marcador="ejemplo@correo.cl" informacion="" tipo="text"/>
+                <EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Correo electrónico" nombre="correo" valor={entrada.correo} accion={(e) => setEntrada({ ...entrada, correo: e.target.value })} marcador="ejemplo@correo.cl" informacion="" tipo="text"/>
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaTexto</p>
             </section>
 
             <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EntradaTexto  etiqueta="Contraseña" nombre="contrasena" valor={entrada.contrasena} accion={(e) => setEntrada({ ...entrada, contrasena: e.target.value })} informacion="Usa como mínimo un símbolo" tipo="password"/>
+                <EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Contraseña" nombre="contrasena" valor={entrada.contrasena} accion={(e) => setEntrada({ ...entrada, contrasena: e.target.value })} informacion="Usa como mínimo un símbolo" tipo="password"/>
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaTexto</p>
             </section>
 
             <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EntradaTexto  etiqueta="Confirmar contraseña" nombre="confirmar" valor={entrada.confirmar} accion={(e) => setEntrada({ ...entrada, confirmar: e.target.value })} informacion="Usa como mínimo un símbolo" tipo="password"/>
+                <EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Confirmar contraseña" nombre="confirmar" valor={entrada.confirmar} accion={(e) => setEntrada({ ...entrada, confirmar: e.target.value })} informacion="Usa como mínimo un símbolo" tipo="password"/>
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaTexto</p>
             </section>
 
             <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EntradaCampo  etiqueta="Mensaje" nombre="mensaje" valor={entrada.mensaje} accion={(e) => setEntrada({ ...entrada, mensaje: e.target.value })} marcador="Escribe tu mensaje"/>
+                <EntradaCampo estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Mensaje" nombre="mensaje" valor={entrada.mensaje} accion={(e) => setEntrada({ ...entrada, mensaje: e.target.value })} marcador="Escribe tu mensaje"/>
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaCampo</p>
             </section>
 
             <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EntradaSeleccion  etiqueta="Categoría" nombre="categoria" valor={form.categoria} accion={manejarCambio} requerido opciones={[ { valor: "", texto: "Selecciona una categoría" }, { valor: "ropa", texto: "Ropa" }, { valor: "electronica", texto: "Electrónica" }, { valor: "hogar", texto: "Hogar" }, ]} informacion="Elige una opción válida" error={errores.categoria} />
+                <EntradaSeleccion estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Categoría" nombre="categoria" valor={form.categoria} accion={manejarCambio} requerido opciones={[ { valor: "", texto: "Selecciona una categoría" }, { valor: "ropa", texto: "Ropa" }, { valor: "electronica", texto: "Electrónica" }, { valor: "hogar", texto: "Hogar" }, ]} informacion="Elige una opción válida" error={errores.categoria} />
                 <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaSeleccion</p>
             </section>
 
             <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                <EntradaNumero nombre="cantidad" etiqueta="Cantidad" min={1} max={999} step={1} value={1} />
-                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaSeleccion</p>
+                <EntradaNumero estilo="var(--color-neutro-mas-mas-mas-mas-alto)" nombre="cantidad" etiqueta="Cantidad" min={1} max={999} step={1} value={1} />
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaNumero</p>
+            </section>
+
+            <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EntradaVerificacionPrimaria texto="Acepto los términos y condiciones" />
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaVerificacionPrimaria</p>
+            </section>
+
+            <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EntradaVerificacionSecundaria texto="Acepto los términos y condiciones" />
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaVerificacionSecundaria</p>
+            </section>
+
+            <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EntradaRadioPrimaria texto="Primera opción" />
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaRadioPrimario</p>
+            </section>
+
+            <section style={{ padding: "1rem", boxSizing: 'border-box', border: "1px solid #ddd", borderRadius: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                <EntradaRadioSecundaria texto="Primera opción" />
+                <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}>EntradaRadioSecundario</p>
             </section>
 
         </div>
