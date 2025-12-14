@@ -6,6 +6,7 @@ import Ingreso from './Paginas/Ingreso';
 import Producto from './Paginas/Producto';
 import PaginaIconos from './Paginas/PaginaIconos';
 import PaginaElementos from './Paginas/PaginaElementos';
+import NuevaPrincipal from './Paginas/NuevaPrincipal';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/producto/:id" element={<Producto />} />
             <Route path="/iconos" element={<PaginaIconos />} />
             <Route path="/elementos" element={<PaginaElementos />} />
+            <Route path="/nueva-principal" element={<NuevaPrincipal />} />
         </Routes>
     );
 }
