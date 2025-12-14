@@ -10,6 +10,7 @@ import Carro from "./Carro";
 import Categoria from "./Categoria";
 import Cerrar from "./Cerrar";
 import CerrarPequeno from "./CerrarPequeno";
+import Circulo from "./Circulo";
 import CirculoAgregar from "./CirculoAgregar";
 import CirculoAprobado from "./CirculoAprobado";
 import CirculoDenegado from "./CirculoDenegado";
@@ -51,8 +52,8 @@ import Visibilidad from "./Visibilidad";
 import VisibilidadDesactivada from "./VisibilidadDesactivada";
 import Voluntariado from "./Voluntariado";
 
-export { Actividad, Anadir, Apple, Aprobado, Borrar, Burbuja, Buscar, Calendario, Carro, Categoria, Cerrar, CerrarPequeno, CirculoAgregar, CirculoAprobado, CirculoDenegado, CirculoQuitar, Correo, Descuento, Despejar, Dinero, Editar, Enlace, Estrella, Evento, Explorar, Facebook, Favorito, FlechaAbajo, FlechaArriba, FlechaDerecha, FlechaIzquierda, Foro, Google, Historial, Imagen, Insatisfecho, Limite, Lista, Mapa, Mezcla, Persona, Repetir, Satisfecho, Soporte, Sustraer, Telefono, Todo, Ubicacion, Vender, Visibilidad, VisibilidadDesactivada, Voluntariado, };
+export { Actividad, Anadir, Apple, Aprobado, Borrar, Burbuja, Buscar, Calendario, Carro, Categoria, Cerrar, CerrarPequeno, Circulo, CirculoAgregar, CirculoAprobado, CirculoDenegado, CirculoQuitar, Correo, Descuento, Despejar, Dinero, Editar, Enlace, Estrella, Evento, Explorar, Facebook, Favorito, FlechaAbajo, FlechaArriba, FlechaDerecha, FlechaIzquierda, Foro, Google, Historial, Imagen, Insatisfecho, Limite, Lista, Mapa, Mezcla, Persona, Repetir, Satisfecho, Soporte, Sustraer, Telefono, Todo, Ubicacion, Vender, Visibilidad, VisibilidadDesactivada, Voluntariado, };
 
-const Iconos = { Actividad, Anadir, Apple, Aprobado, Borrar, Burbuja, Buscar, Calendario, Carro, Categoria, Cerrar, CerrarPequeno, CirculoAgregar, CirculoAprobado, CirculoDenegado, CirculoQuitar, Correo, Descuento, Despejar, Dinero, Editar, Enlace, Estrella, Evento, Explorar, Facebook, Favorito, FlechaAbajo, FlechaArriba, FlechaDerecha, FlechaIzquierda, Foro, Google, Historial, Imagen, Insatisfecho, Limite, Lista, Mapa, Mezcla, Persona, Repetir, Satisfecho, Soporte, Sustraer, Telefono, Todo, Ubicacion, Vender, Visibilidad, VisibilidadDesactivada, Voluntariado, };
+const Iconos = { Actividad, Anadir, Apple, Aprobado, Borrar, Burbuja, Buscar, Calendario, Carro, Categoria, Cerrar, CerrarPequeno, Circulo, CirculoAgregar, CirculoAprobado, CirculoDenegado, CirculoQuitar, Correo, Descuento, Despejar, Dinero, Editar, Enlace, Estrella, Evento, Explorar, Facebook, Favorito, FlechaAbajo, FlechaArriba, FlechaDerecha, FlechaIzquierda, Foro, Google, Historial, Imagen, Insatisfecho, Limite, Lista, Mapa, Mezcla, Persona, Repetir, Satisfecho, Soporte, Sustraer, Telefono, Todo, Ubicacion, Vender, Visibilidad, VisibilidadDesactivada, Voluntariado, };
 
 export default Iconos;

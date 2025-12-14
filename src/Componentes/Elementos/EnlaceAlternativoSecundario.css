@@ -1,0 +1,28 @@
+.enlace-alternativo-secundario {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 0;
+    border-radius: 8px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 120ms ease-in-out;
+    color: var(--color-enlace-alternativo-secundario);
+}
+
+.enlace-alternativo-secundario-texto {
+    padding: 0 4px;
+}
+
+.enlace-alternativo-secundario-icono {
+    height: 1.375em;
+    width: 1.375em;
+}
+
+.enlace-alternativo-secundario:hover {
+    color: var(--color-flotar-enlace-alternativo-secundario);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
