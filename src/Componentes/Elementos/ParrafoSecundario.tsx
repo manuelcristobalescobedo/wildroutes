@@ -9,9 +9,9 @@ type ParrafoSecundarioProps = {
 
 export default function ParrafoSecundario({ texto, icono, color = "#000000", }: ParrafoSecundarioProps) {
     return (
-        <h1 className="parrafo-secundario" style={{ color, display: "flex", alignItems: "center", gap: "0.5rem", }}>
+        <p className="parrafo-secundario" style={{ color, display: "flex", alignItems: "center", gap: "0.5rem", }}>
             {icono && <span>{icono}</span>}
             <span>{texto}</span>
-        </h1>
+        </p>
     );
 }

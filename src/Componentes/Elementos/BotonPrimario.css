@@ -1,7 +1,7 @@
 .boton-primario {
     all: unset;
     display: inline-flex;
-    width: fit-content;
+    width: max-content;
     align-items: center;
     gap: 0;
     border-radius: 8px;
