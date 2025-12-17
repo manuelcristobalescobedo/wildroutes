@@ -7,6 +7,12 @@ import Producto from './Paginas/Producto';
 import PaginaIconos from './Paginas/PaginaIconos';
 import PaginaElementos from './Paginas/PaginaElementos';
 import NuevaPrincipal from './Paginas/NuevaPrincipal';
+import RecuperarCuenta from './Paginas/RecuperarCuenta';
+import RestablecerContrasena from './Paginas/RestablecerContraseña';
+import RegistroUsuario from './Paginas/RegistroUsuario';
+import LoginUsuario from './Paginas/LoginUsuario';
+import GestionProductos from './Paginas/GestionProductos';
+import AgregarNuevaActividad from './Paginas/AgregarNuevaActividad';
 
 function App() {
     return (
@@ -19,6 +25,12 @@ function App() {
             <Route path="/iconos" element={<PaginaIconos />} />
             <Route path="/elementos" element={<PaginaElementos />} />
             <Route path="/nueva-principal" element={<NuevaPrincipal />} />
+            <Route path="/recuperar-cuenta" element={<RecuperarCuenta />} />
+            <Route path="/restablecer-contraseña" element={<RestablecerContrasena />} />
+            <Route path="/registro-usuario" element={<RegistroUsuario />} />
+            <Route path="/login-usuario" element={<LoginUsuario />} />
+            <Route path="/gestion-productos" element={<GestionProductos />} />
+            <Route path="/agregar-actividad" element={<AgregarNuevaActividad />} />
         </Routes>
     );
 }
