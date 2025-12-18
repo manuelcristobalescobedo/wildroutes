@@ -13,6 +13,7 @@ import RegistroUsuario from './Paginas/RegistroUsuario';
 import LoginUsuario from './Paginas/LoginUsuario';
 import GestionProductos from './Paginas/GestionProductos';
 import AgregarNuevaActividad from './Paginas/AgregarNuevaActividad';
+import EditarActividad from './Paginas/EditarActividad';
 
 function App() {
     return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/login-usuario" element={<LoginUsuario />} />
             <Route path="/gestion-productos" element={<GestionProductos />} />
             <Route path="/agregar-actividad" element={<AgregarNuevaActividad />} />
+            <Route path="/editar-actividad/:id" element={<EditarActividad />} />
         </Routes>
     );
 }
