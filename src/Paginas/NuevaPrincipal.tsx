@@ -71,7 +71,128 @@ export default function NuevaPrincipal() {
                     ))}
                 </div>                
             </section>
+            <section className="Titular">
+                <div/>
+                <Elementos.TituloCuaternario texto="¡Mira esto! Está pensado para tí" icono={<Iconos.Voluntariado/>} color="var(--color-secundario-mas-alto)"/>
+                <div/>
+            </section>
+            <section className="Intereses">
+                <a className="Tarjeta">
+                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
+                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
+                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
+                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
+                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
+                </a>
+                <a className="Tarjeta">
+                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
+                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
+                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
+                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
+                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
+                </a>
+                <a className="Tarjeta">
+                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
+                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
+                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
+                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
+                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
+                </a>
+                <a className="Tarjeta">
+                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
+                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
+                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
+                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
+                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
+                </a>
+            </section>
+            <section className="Titular">
+                <div/>
+                <Elementos.TituloCuaternario texto="Descuentos exclusivos" icono={<Iconos.Vender/>} color="var(--color-secundario-mas-alto)"/>
+                <div/>
+            </section>
+            <section className="Descuentos">
+                <a className="Tarjeta">
+                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
+                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
+                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
+                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
+                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
+                    <Iconos.Rebaja />
+                </a>
+                <a className="Tarjeta">
+                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
+                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
+                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
+                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
+                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
+                    <Iconos.Rebaja />
+                </a>
+                <a className="Tarjeta">
+                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
+                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
+                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
+                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
+                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
+                    <Iconos.Rebaja />
+                </a>
+                <a className="Tarjeta">
+                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
+                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
+                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
+                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
+                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
+                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
+                    <Iconos.Rebaja />
+                </a>
+            </section>
+            <section className="Titular">
+                <div/>
+                <Elementos.TituloCuaternario texto="Explora más atividades" icono={<Iconos.Mapa/>} color="var(--color-secundario-mas-alto)"/>
+                <div/>
+            </section>
+            <section className="Explorar">
+                <a className="Aventura" href="google.com" style={{ backgroundImage: 'url(https://i.postimg.cc/tTJz1pYV/imagen-2.jpg)' }}>
+                    <Elementos.TituloQuinario color="var(--color-primario)" texto="Deporte aventura" />
+                </a>
+                <a className="Aventura" href="google.com" style={{ backgroundImage: 'url(https://i.postimg.cc/tTJz1pYV/imagen-2.jpg)' }}>
+                    <Elementos.TituloQuinario color="var(--color-primario)" texto="Deporte aventura" />
+                </a>
+                <a className="Aventura" href="google.com" style={{ backgroundImage: 'url(https://i.postimg.cc/tTJz1pYV/imagen-2.jpg)' }}>
+                    <Elementos.TituloQuinario color="var(--color-primario)" texto="Deporte aventura" />
+                </a>
+            </section>
+            <section className="Preguntas">
+                <div style={{ backgroundImage: 'url(https://i.postimg.cc/0Nk4MqQy/imagen-7.jpg)' }}>
+                    <Elementos.ParrafoPrimario icono={<Iconos.Ubicacion />} texto="Museo Precolombino, Región Metropolitana" color="var(--color-neutro-mas-mas-mas-bajo)"/>
+                </div>
+                <div>
+                    <Elementos.TituloCuaternario icono={<Iconos.Soporte />} texto="Preguntas frecuentes" color="var(--color-secundario-mas-alto)" />
+                    <Elementos.EnlacePrimario nivel="alto" texto="¿Puedo reservar una actividada sin iniciar sesión?" enlace="google.com" />
+                    <Elementos.EnlacePrimario nivel="alto" texto="¿Qué debo hacer para cancelar una reserva?" enlace="google.com" />
+                    <Elementos.EnlacePrimario nivel="alto" texto="¿Puedo sumar una persona a último minuto?" enlace="google.com" />
+                    <Elementos.EnlacePrimario nivel="alto" texto="¿Puedo cambiar mi lugar de pick up más adelante?" enlace="google.com" />
+                    <Elementos.EnlacePrimario nivel="alto" texto="Ver más" enlace="google.com" icono={<Iconos.Anadir />}/>
+                </div>
+            </section>
+            {/*
             <section className="Espaciador" />
+            */}
             <Pie />
         </main>
     );
