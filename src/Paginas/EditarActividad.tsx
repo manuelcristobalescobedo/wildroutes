@@ -6,8 +6,9 @@ import Pie from "../Componentes/Componentes/Pie";
 import TituloPrimario from "../Componentes/Elementos/TituloPrimario";
 import Elementos from "../Componentes/Elementos/Indice";
 
-import Actividad from "../Iconos/Actividad";
+import ActividadIcono from "../Iconos/Actividad";
 
+/* ================== tipos ================== */
 interface ActividadForm {
   nombre: string;
   descripcion: string;
@@ -25,6 +26,11 @@ interface ActividadForm {
   act4: string;
 }
 
+interface Actividad extends ActividadForm {
+  id: number;
+}
+
+/* ================== componente ================== */
 export default function EditarActividad() {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
@@ -48,12 +54,12 @@ export default function EditarActividad() {
 
   /* ================== cargar actividad ================== */
   useEffect(() => {
-    const actividades = JSON.parse(
+    const actividades: Actividad[] = JSON.parse(
       localStorage.getItem("actividades") || "[]"
     );
 
     const actividadEditar = actividades.find(
-      (act: any) => act.id === Number(id)
+      act => act.id === Number(id)
     );
 
     if (!actividadEditar) {
@@ -62,20 +68,20 @@ export default function EditarActividad() {
     }
 
     setEntrada({
-      nombre: actividadEditar.nombre || "",
-      descripcion: actividadEditar.descripcion || "",
-      precio: actividadEditar.precio || "",
-      maxPersonas: actividadEditar.maxPersonas || "",
-      minPersonas: actividadEditar.minPersonas || "",
-      zona: actividadEditar.zona || "",
-      region: actividadEditar.region || "",
-      comuna: actividadEditar.comuna || "",
-      devolucion: actividadEditar.devolucion || "",
-      reembolso: actividadEditar.reembolso || "",
-      actividad: actividadEditar.actividad || "",
-      act2: actividadEditar.act2 || "",
-      act3: actividadEditar.act3 || "",
-      act4: actividadEditar.act4 || ""
+      nombre: actividadEditar.nombre,
+      descripcion: actividadEditar.descripcion,
+      precio: actividadEditar.precio,
+      maxPersonas: actividadEditar.maxPersonas,
+      minPersonas: actividadEditar.minPersonas,
+      zona: actividadEditar.zona,
+      region: actividadEditar.region,
+      comuna: actividadEditar.comuna,
+      devolucion: actividadEditar.devolucion,
+      reembolso: actividadEditar.reembolso,
+      actividad: actividadEditar.actividad,
+      act2: actividadEditar.act2,
+      act3: actividadEditar.act3,
+      act4: actividadEditar.act4
     });
   }, [id, navigate]);
 
@@ -88,11 +94,11 @@ export default function EditarActividad() {
   };
 
   const guardarCambios = () => {
-    const actividades = JSON.parse(
+    const actividades: Actividad[] = JSON.parse(
       localStorage.getItem("actividades") || "[]"
     );
 
-    const actualizadas = actividades.map((act: any) =>
+    const actualizadas = actividades.map(act =>
       act.id === Number(id)
         ? { ...act, ...entrada }
         : act
@@ -116,7 +122,7 @@ export default function EditarActividad() {
       >
         <TituloPrimario
           texto="Editar Actividad"
-          icono={<Actividad />}
+          icono={<ActividadIcono />}
           color="#000000ff"
         />
       </section>
