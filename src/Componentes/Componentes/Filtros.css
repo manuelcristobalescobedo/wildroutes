@@ -1,0 +1,44 @@
+.Filtros {
+    grid-column: 1 / 2;
+    grid-row: 1 / auto;
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 20px;
+    background-color: var(--color-neutro-mas-mas-bajo);
+    border-radius: 6px;
+    margin-bottom: 48px;
+}
+
+.Filtros > h1 {
+    margin-bottom: 26px;
+}
+
+.Filtros > fieldset {
+    all: unset;
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 24px 0;
+    padding: 0 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-bottom: 1.5px solid var(--color-secundario-mas-alto);
+    border-radius: 0.75px;
+}
+
+.Filtros > fieldset > legend {
+    margin-bottom: 16px;
+}
+
+.Filtros > fieldset > label {
+    margin-left: 4px;
+    color: var(--color-neutro-mas-mas-mas-mas-alto);
+}
+
+.Filtros > div {
+    width: 100%;
+    border-bottom: 1.5px solid var(--color-secundario-mas-alto);
+    border-radius: 0.75px;
+}

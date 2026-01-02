@@ -26,7 +26,7 @@ export default function Encabezado() {
                 </a>
                 <div>
                     <Elementos.EntradaTexto apariencia="var(--color-secundario-bajo)" estilo="var(--color-neutro-mas-mas-mas-bajo)" etiqueta="Tu próximo destino" nombre="nombre" valor={entrada.nombre} accion={(e) => setEntrada({ ...entrada, nombre: e.target.value })} marcador="¿A dónde?" informacion="Usa solo caracteres alfabéticos" tipo="text"/>
-                    <Elementos.EntradaTexto apariencia="var(--color-secundario-bajo)" estilo="var(--color-neutro-mas-mas-mas-bajo)" etiqueta="Fecha" nombre="fecha" valor={entrada.fecha} accion={(e) => setEntrada({ ...entrada, fecha: e.target.value })} marcador="¿Cuándo?" informacion="Usa solo caracteres alfabéticos" tipo="text"/>
+                    <Elementos.EntradaTexto apariencia="var(--color-secundario-bajo)" estilo="var(--color-neutro-mas-mas-mas-bajo)" etiqueta="Fecha" nombre="fecha" valor={entrada.fecha} accion={(e) => setEntrada({ ...entrada, fecha: e.target.value })} marcador="¿Cuándo?" informacion="Usa solo caracteres numéricos" tipo="date"/>
                     <Elementos.EntradaNumero estilo="var(--color-neutro-mas-mas-mas-bajo)" nombre="cantidad" etiqueta="Personas" min={1} max={999} step={1} value={1} />
                     <Elementos.AccionTerciaria icono={<Iconos.Buscar/>} />
                 </div>

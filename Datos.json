@@ -1,0 +1,148 @@
+{
+    "servicios": [
+        {
+            "id": 1,
+            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "titulo": ":) Cabalgata por el Valle del Elqui",
+            "ubicacion": {
+                "comuna": "Vicuña",
+                "region": "Coquimbo",
+                "pais": "Chile"
+            },
+            "calificacion": 4.9,
+            "resenas": 200,
+            "precio": "$500.000",
+            "intereses": false,
+            "descuentos": true,
+            "zona": "Zona centro",
+            "ideal": "Parejas",
+            "actividad": "Turismo escénico"
+        },
+        {
+            "id": 2,
+            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "titulo": "Cabalgata por el Valle del Elqui",
+            "ubicacion": {
+                "comuna": "Vicuña",
+                "region": "Coquimbo",
+                "pais": "Chile"
+            },
+            "calificacion": 4.9,
+            "resenas": 200,
+            "precio": "$500.000",
+            "intereses": false,
+            "descuentos": true,
+            "zona": "Zona centro",
+            "ideal": "Parejas",
+            "actividad": "Turismo escénico"
+        },
+        {
+            "id": 3,
+            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "titulo": "Cabalgata por el Valle del Elqui",
+            "ubicacion": {
+                "comuna": "Vicuña",
+                "region": "Coquimbo",
+                "pais": "Chile"
+            },
+            "calificacion": 4.9,
+            "resenas": 200,
+            "precio": "$500.000",
+            "intereses": false,
+            "descuentos": true,
+            "zona": "Zona centro",
+            "ideal": "Parejas",
+            "actividad": "Turismo escénico"
+        },
+        {
+            "id": 4,
+            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "titulo": "Cabalgata por el Valle del Elqui",
+            "ubicacion": {
+                "comuna": "Vicuña",
+                "region": "Coquimbo",
+                "pais": "Chile"
+            },
+            "calificacion": 4.9,
+            "resenas": 200,
+            "precio": "$500.000",
+            "intereses": false,
+            "descuentos": true,
+            "zona": "Zona centro",
+            "ideal": "Parejas",
+            "actividad": "Turismo escénico"
+        },
+        {
+            "id": 5,
+            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "titulo": "Cabalgata por el Valle del Elqui",
+            "ubicacion": {
+                "comuna": "Vicuña",
+                "region": "Coquimbo",
+                "pais": "Chile"
+            },
+            "calificacion": 4.9,
+            "resenas": 200,
+            "precio": "$500.000",
+            "intereses": true,
+            "descuentos": false,
+            "zona": "Zona centro",
+            "ideal": "Parejas",
+            "actividad": "Turismo escénico"
+        },
+        {
+            "id": 6,
+            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "titulo": "Cabalgata por el Valle del Elqui",
+            "ubicacion": {
+                "comuna": "Vicuña",
+                "region": "Coquimbo",
+                "pais": "Chile"
+            },
+            "calificacion": 4.9,
+            "resenas": 200,
+            "precio": "$500.000",
+            "intereses": true,
+            "descuentos": false,
+            "zona": "Zona centro",
+            "ideal": "Parejas",
+            "actividad": "Turismo escénico"
+        },
+        {
+            "id": 7,
+            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "titulo": "Cabalgata por el Valle del Elqui",
+            "ubicacion": {
+                "comuna": "Vicuña",
+                "region": "Coquimbo",
+                "pais": "Chile"
+            },
+            "calificacion": 4.9,
+            "resenas": 200,
+            "precio": "$500.000",
+            "intereses": true,
+            "descuentos": false,
+            "zona": "Zona centro",
+            "ideal": "Parejas",
+            "actividad": "Turismo escénico"
+        },
+        {
+            "id": 8,
+            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "titulo": ";) Cabalgata por el Valle del Elqui",
+            "ubicacion": {
+                "comuna": "Vicuña",
+                "region": "Coquimbo",
+                "pais": "Chile"
+            },
+            "calificacion": 4.9,
+            "resenas": 200,
+            "precio": "$500.000",
+            "intereses": true,
+            "descuentos": false,
+            "zona": "Zona centro",
+            "ideal": "Parejas",
+            "actividad": "Turismo escénico"
+        }
+    ]
+}

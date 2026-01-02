@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     width: fit-content;
-    padding: 9.6px 12px;
+    padding: 10.5px 12px;
     border: 1.5px solid var(--color-secundario);
     background-color: var(--color-neutro-mas-mas-mas-bajo);
     border-radius: 8px;

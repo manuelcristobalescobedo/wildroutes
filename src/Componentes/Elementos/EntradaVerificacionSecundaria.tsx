@@ -3,12 +3,14 @@ import Iconos from "../../Iconos/Indice";
 
 type EntradaVerificacionSecundariaProps = {
     texto: string;
+    checked: boolean;
+    onChange: () => void;
 };
 
-export default function EntradaVerificacionSecundaria({ texto }: EntradaVerificacionSecundariaProps) {
+export default function EntradaVerificacionSecundaria({ texto, checked, onChange }: EntradaVerificacionSecundariaProps) {
     return (
         <label className="entrada-verificacion-secundaria">
-            <input type="checkbox" />
+            <input type="checkbox" checked={checked} onChange={onChange}/>
             <span className="entrada-verificacion-secundaria-marca">
                 <Iconos.Aprobado />
             </span>

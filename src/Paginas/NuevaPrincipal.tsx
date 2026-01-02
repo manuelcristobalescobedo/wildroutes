@@ -2,9 +2,12 @@ import { useState } from "react";
 import "./NuevaPrincipal.css";
 import "../index.css";
 import Encabezado from "../Componentes/Componentes/Encabezado";
+import Descuentos from "../Componentes/Componentes/Descuentos";
+import Intereses from "../Componentes/Componentes/Intereses";
 import Pie from "../Componentes/Componentes/Pie";
 import Elementos from "../Componentes/Elementos/Indice";
 import Iconos from "../Iconos/Indice";
+import Titular from "../Componentes/Componentes/Titular";
 
 export default function NuevaPrincipal() {
     const diapositivas = [
@@ -71,101 +74,11 @@ export default function NuevaPrincipal() {
                     ))}
                 </div>                
             </section>
-            <section className="Titular">
-                <div/>
-                <Elementos.TituloCuaternario texto="¡Mira esto! Está pensado para tí" icono={<Iconos.Voluntariado/>} color="var(--color-secundario-mas-alto)"/>
-                <div/>
-            </section>
-            <section className="Intereses">
-                <a className="Tarjeta">
-                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
-                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
-                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
-                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
-                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
-                </a>
-                <a className="Tarjeta">
-                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
-                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
-                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
-                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
-                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
-                </a>
-                <a className="Tarjeta">
-                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
-                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
-                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
-                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
-                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
-                </a>
-                <a className="Tarjeta">
-                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
-                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
-                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
-                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
-                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
-                </a>
-            </section>
-            <section className="Titular">
-                <div/>
-                <Elementos.TituloCuaternario texto="Descuentos exclusivos" icono={<Iconos.Vender/>} color="var(--color-secundario-mas-alto)"/>
-                <div/>
-            </section>
-            <section className="Descuentos">
-                <a className="Tarjeta">
-                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
-                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
-                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
-                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
-                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
-                    <Iconos.Rebaja />
-                </a>
-                <a className="Tarjeta">
-                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
-                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
-                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
-                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
-                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
-                    <Iconos.Rebaja />
-                </a>
-                <a className="Tarjeta">
-                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
-                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
-                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
-                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
-                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
-                    <Iconos.Rebaja />
-                </a>
-                <a className="Tarjeta">
-                    <img src="https://i.postimg.cc/zGZfHP83/imagen-6.jpg"/>
-                    <Elementos.TituloSeptenario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="Cabalgata por el Valle del Elqui" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-alto)" icono={<Iconos.Ubicacion />} texto="Elqui, Región de Coquimbo, Chile" />
-                    <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto="4.9 (200 reseñas)" color="var(--color-terciario-bajo)"/>
-                    <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="$500.000" />
-                    <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona" />
-                    <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace="google.com" />
-                    <Iconos.Rebaja />
-                </a>
-            </section>
-            <section className="Titular">
-                <div/>
-                <Elementos.TituloCuaternario texto="Explora más atividades" icono={<Iconos.Mapa/>} color="var(--color-secundario-mas-alto)"/>
-                <div/>
-            </section>
+            <Titular texto="¡Mira esto! Está pensado para tí" icono={<Iconos.Voluntariado/>} color="var(--color-secundario-mas-alto)" />
+            <Intereses />
+            <Titular texto="Descuentos exclusivos" icono={<Iconos.Vender/>} color="var(--color-secundario-mas-alto)" />
+            <Descuentos />
+            <Titular texto="Explora más atividades" icono={<Iconos.Mapa/>} color="var(--color-secundario-mas-alto)" />
             <section className="Explorar">
                 <a className="Aventura" href="google.com" style={{ backgroundImage: 'url(https://i.postimg.cc/tTJz1pYV/imagen-2.jpg)' }}>
                     <Elementos.TituloQuinario color="var(--color-primario)" texto="Deporte aventura" />
@@ -190,9 +103,6 @@ export default function NuevaPrincipal() {
                     <Elementos.EnlacePrimario nivel="alto" texto="Ver más" enlace="google.com" icono={<Iconos.Anadir />}/>
                 </div>
             </section>
-            {/*
-            <section className="Espaciador" />
-            */}
             <Pie />
         </main>
     );
