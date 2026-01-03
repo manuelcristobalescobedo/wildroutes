@@ -1,10 +1,11 @@
 import "./EntradaVerificacionPrimaria.css";
 import Iconos from "../../Iconos/Indice";
+import type { ChangeEvent } from "react";
 
 type EntradaVerificacionPrimariaProps = {
     texto: string;
     checked: boolean;
-    onChange: () => void;
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export default function EntradaVerificacionPrimaria({ texto, checked, onChange }: EntradaVerificacionPrimariaProps) {

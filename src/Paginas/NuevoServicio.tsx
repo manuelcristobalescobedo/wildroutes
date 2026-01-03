@@ -7,6 +7,7 @@ import Elementos from "../Componentes/Elementos/Indice";
 import Iconos from "../Iconos/Indice";
 import Calificacion from "../Componentes/Componentes/Calificacion";
 import { useState } from "react";
+import Resena from "../Componentes/Componentes/Resena";
 
 export default function NuevoServicio() {
     const [calificacion, setCalificacion] = useState(0)
@@ -85,21 +86,7 @@ export default function NuevoServicio() {
                     <Elementos.ParrafoPrimario texto="por persona" color="var(--color-neutro-mas-mas-mas-mas-alto)" />
                 </div>
             </section>
-            <section className="Resenas">
-                <Elementos.TituloSextario texto="Deja una reseña" color="var(--color-neutro-mas-mas-mas-mas-alto)" />
-                <div>
-                    <div>
-                        <Elementos.EntradaTexto valor="" accion={() => {}} informacion="" tipo="text" estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Título" nombre="titulo" />
-                        <Elementos.EntradaCampo estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Reseña" nombre="resena" valor="" accion={() => {}} marcador="Escribe tu reseña"/>
-                    </div>
-                    <div>
-                        <Calificacion etiqueta="Calificación" valor={calificacion} alCambiar={setCalificacion} />
-                        <Elementos.EntradaVerificacionSecundaria checked onChange={() => {}} texto="Acepto publicar mi nombre y foto de perfil junto con esta reseña" />
-                        <Elementos.EntradaVerificacionSecundaria checked onChange={() => {}} texto="Al publicar esta reseña, me adhiero a las Guías comunitarias de Wildroutes" />
-                        <Elementos.BotonSecundario texto="Publicar" nivel="alto" accion={() => {}}/>
-                    </div>
-                </div>
-            </section>
+            <Resena />
             <Pie />
         </main>
     );

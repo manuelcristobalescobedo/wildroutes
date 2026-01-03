@@ -1,180 +1,390 @@
 {
-    "servicios": [
-        {
-            "id": 1,
-            "imagenes": [
-                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
-                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
-                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
-            ],
-            "titulo": ":) Cabalgata por el Valle del Elqui",
-            "ubicacion": {
-                "comuna": "Vicuña",
-                "region": "Coquimbo",
-                "pais": "Chile"
-            },
-            "calificacion": 4.9,
-            "resenas": 200,
-            "precio": "$75.000",
-            "intereses": false,
-            "descuentos": true,
-            "zona": "Zona centro",
-            "ideal": "Parejas",
-            "actividad": "Turismo escénico"
-        },
-        {
-            "id": 2,
-            "imagenes": [
-                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
-                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
-                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
-            ],
-            "titulo": "Cabalgata por el Valle del Elqui",
-            "ubicacion": {
-                "comuna": "Vicuña",
-                "region": "Coquimbo",
-                "pais": "Chile"
-            },
-            "calificacion": 4.9,
-            "resenas": 200,
-            "precio": "$75.000",
-            "intereses": false,
-            "descuentos": true,
-            "zona": "Zona centro",
-            "ideal": "Parejas",
-            "actividad": "Turismo escénico"
-        },
-        {
-            "id": 3,
-            "imagenes": [
-                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
-                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
-                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
-            ],
-            "titulo": "Cabalgata por el Valle del Elqui",
-            "ubicacion": {
-                "comuna": "Vicuña",
-                "region": "Coquimbo",
-                "pais": "Chile"
-            },
-            "calificacion": 4.9,
-            "resenas": 200,
-            "precio": "$75.000",
-            "intereses": false,
-            "descuentos": true,
-            "zona": "Zona centro",
-            "ideal": "Parejas",
-            "actividad": "Turismo escénico"
-        },
-        {
-            "id": 4,
-            "imagenes": [
-                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
-                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
-                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
-            ],
-            "titulo": "Cabalgata por el Valle del Elqui",
-            "ubicacion": {
-                "comuna": "Vicuña",
-                "region": "Coquimbo",
-                "pais": "Chile"
-            },
-            "calificacion": 4.9,
-            "resenas": 200,
-            "precio": "$75.000",
-            "intereses": false,
-            "descuentos": true,
-            "zona": "Zona centro",
-            "ideal": "Parejas",
-            "actividad": "Turismo escénico"
-        },
-        {
-            "id": 5,
-            "imagenes": [
-                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
-                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
-                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
-            ],
-            "titulo": "Cabalgata por el Valle del Elqui",
-            "ubicacion": {
-                "comuna": "Vicuña",
-                "region": "Coquimbo",
-                "pais": "Chile"
-            },
-            "calificacion": 4.9,
-            "resenas": 200,
-            "precio": "$75.000",
-            "intereses": true,
-            "descuentos": false,
-            "zona": "Zona centro",
-            "ideal": "Parejas",
-            "actividad": "Turismo escénico"
-        },
-        {
-            "id": 6,
-            "imagenes": [
-                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
-                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
-                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
-            ],
-            "titulo": "Cabalgata por el Valle del Elqui",
-            "ubicacion": {
-                "comuna": "Vicuña",
-                "region": "Coquimbo",
-                "pais": "Chile"
-            },
-            "calificacion": 4.9,
-            "resenas": 200,
-            "precio": "$75.000",
-            "intereses": true,
-            "descuentos": false,
-            "zona": "Zona centro",
-            "ideal": "Parejas",
-            "actividad": "Turismo escénico"
-        },
-        {
-            "id": 7,
-            "imagenes": [
-                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
-                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
-                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
-            ],
-            "titulo": "Cabalgata por el Valle del Elqui",
-            "ubicacion": {
-                "comuna": "Vicuña",
-                "region": "Coquimbo",
-                "pais": "Chile"
-            },
-            "calificacion": 4.9,
-            "resenas": 200,
-            "precio": "$75.000",
-            "intereses": true,
-            "descuentos": false,
-            "zona": "Zona centro",
-            "ideal": "Parejas",
-            "actividad": "Turismo escénico"
-        },
-        {
-            "id": 8,
-            "imagenes": [
-                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
-                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
-                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
-            ],
-            "titulo": ";) Cabalgata por el Valle del Elqui",
-            "ubicacion": {
-                "comuna": "Vicuña",
-                "region": "Coquimbo",
-                "pais": "Chile"
-            },
-            "calificacion": 4.9,
-            "resenas": 200,
-            "precio": "$75.000",
-            "intereses": true,
-            "descuentos": false,
-            "zona": "Zona centro",
-            "ideal": "Parejas",
-            "actividad": "Turismo escénico"
-        }
-    ]
+  "servicios": [
+    {
+      "id": "3a4a5fc8-63eb-4c46-9a86-cfe41a79a9a1",
+      "imagenes": [
+        "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+        "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+        "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+      ],
+      "titulo": "(1) Cabalgata por el Valle del Elqui",
+      "ubicacion": {
+        "comuna": "Vicuña",
+        "region": "Coquimbo",
+        "pais": "Chile"
+      },
+      "calificacion": 4.9,
+      "resenas": 200,
+      "precio": "$75.000",
+      "intereses": false,
+      "descuentos": true,
+      "zona": "Zona centro",
+      "ideal": "Parejas",
+      "actividad": "Turismo escénico",
+      "descripcion": "Descubre el Valle del Elqui desde una perspectiva única, dejándote llevar por el ritmo del caballo y la inmensidad del paisaje. Una experiencia pensada para desconectarte, respirar aire puro y disfrutar el entorno con calma, guiado por expertos que hacen de cada recorrido un momento especial, ideal para compartir y crear recuerdos memorables.",
+      "consiste": "Un recorrido guiado a caballo por los paisajes más característicos del Valle del Elqui, donde avanzarás por senderos naturales a un ritmo tranquilo, disfrutando vistas abiertas de cerros, ríos y viñedos. La experiencia está pensada para conectar con el entorno y vivir el valle desde una perspectiva auténtica, con el acompañamiento permanente de guías especializados.",
+      "incluye": [
+        "Guía local especializado en cabalgatas",
+        "Caballo entrenado y equipo básico de seguridad",
+        "Inducción inicial y acompañamiento durante el recorrido",
+        "Botella de agua",
+        "Seguro básico de accidentes",
+        "Registro fotográfico digital de la experiencia"
+      ],
+      "excluye": [
+        "Alimentación o bebidas adicionales",
+        "Propinas para el guía (opcional)",
+        "Ropa cómoda o calzado adecuado para la actividad",
+        "Gastos personales no especificados"
+      ],
+      "informacion": {
+        "duracion": "Entre 2 y 3 horas",
+        "inicio": "9:00 AM",
+        "edad": "6 años",
+        "requisitos": "Capacidad para montar y seguir instrucciones básicas",
+        "idiomas": "Español e inglés"
+      },
+      "politicas": "Las reservas pueden modificarse o cancelarse sin costo hasta 48 horas antes de la fecha del tour."
+    },
+    {
+      "id": "3a4a5fc8-63eb-4c46-9a86-cfe41a79a9a2",
+      "imagenes": [
+        "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+        "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+        "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+      ],
+      "titulo": "(2) Cabalgata por el Valle del Elqui",
+      "ubicacion": {
+        "comuna": "Vicuña",
+        "region": "Coquimbo",
+        "pais": "Chile"
+      },
+      "calificacion": 4.9,
+      "resenas": 200,
+      "precio": "$75.000",
+      "intereses": false,
+      "descuentos": true,
+      "zona": "Zona centro",
+      "ideal": "Parejas",
+      "actividad": "Turismo escénico",
+      "descripcion": "Descubre el Valle del Elqui desde una perspectiva única, dejándote llevar por el ritmo del caballo y la inmensidad del paisaje. Una experiencia pensada para desconectarte, respirar aire puro y disfrutar el entorno con calma, guiado por expertos que hacen de cada recorrido un momento especial, ideal para compartir y crear recuerdos memorables.",
+      "consiste": "Un recorrido guiado a caballo por los paisajes más característicos del Valle del Elqui, donde avanzarás por senderos naturales a un ritmo tranquilo, disfrutando vistas abiertas de cerros, ríos y viñedos. La experiencia está pensada para conectar con el entorno y vivir el valle desde una perspectiva auténtica, con el acompañamiento permanente de guías especializados.",
+      "incluye": [
+        "Guía local especializado en cabalgatas",
+        "Caballo entrenado y equipo básico de seguridad",
+        "Inducción inicial y acompañamiento durante el recorrido",
+        "Botella de agua",
+        "Seguro básico de accidentes",
+        "Registro fotográfico digital de la experiencia"
+      ],
+      "excluye": [
+        "Alimentación o bebidas adicionales",
+        "Propinas para el guía (opcional)",
+        "Ropa cómoda o calzado adecuado para la actividad",
+        "Gastos personales no especificados"
+      ],
+      "informacion": {
+        "duracion": "Entre 2 y 3 horas",
+        "inicio": "9:00 AM",
+        "edad": "6 años",
+        "requisitos": "Capacidad para montar y seguir instrucciones básicas",
+        "idiomas": "Español e inglés"
+      },
+      "politicas": "Las reservas pueden modificarse o cancelarse sin costo hasta 48 horas antes de la fecha del tour."
+    },
+    {
+      "id": "3a4a5fc8-63eb-4c46-9a86-cfe41a79a9a3",
+      "imagenes": [
+        "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+        "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+        "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+      ],
+      "titulo": "(3) Cabalgata por el Valle del Elqui",
+      "ubicacion": {
+        "comuna": "Vicuña",
+        "region": "Coquimbo",
+        "pais": "Chile"
+      },
+      "calificacion": 4.9,
+      "resenas": 200,
+      "precio": "$75.000",
+      "intereses": false,
+      "descuentos": true,
+      "zona": "Zona centro",
+      "ideal": "Parejas",
+      "actividad": "Turismo escénico",
+      "descripcion": "Descubre el Valle del Elqui desde una perspectiva única, dejándote llevar por el ritmo del caballo y la inmensidad del paisaje. Una experiencia pensada para desconectarte, respirar aire puro y disfrutar el entorno con calma, guiado por expertos que hacen de cada recorrido un momento especial, ideal para compartir y crear recuerdos memorables.",
+      "consiste": "Un recorrido guiado a caballo por los paisajes más característicos del Valle del Elqui, donde avanzarás por senderos naturales a un ritmo tranquilo, disfrutando vistas abiertas de cerros, ríos y viñedos. La experiencia está pensada para conectar con el entorno y vivir el valle desde una perspectiva auténtica, con el acompañamiento permanente de guías especializados.",
+      "incluye": [
+        "Guía local especializado en cabalgatas",
+        "Caballo entrenado y equipo básico de seguridad",
+        "Inducción inicial y acompañamiento durante el recorrido",
+        "Botella de agua",
+        "Seguro básico de accidentes",
+        "Registro fotográfico digital de la experiencia"
+      ],
+      "excluye": [
+        "Alimentación o bebidas adicionales",
+        "Propinas para el guía (opcional)",
+        "Ropa cómoda o calzado adecuado para la actividad",
+        "Gastos personales no especificados"
+      ],
+      "informacion": {
+        "duracion": "Entre 2 y 3 horas",
+        "inicio": "9:00 AM",
+        "edad": "6 años",
+        "requisitos": "Capacidad para montar y seguir instrucciones básicas",
+        "idiomas": "Español e inglés"
+      },
+      "politicas": "Las reservas pueden modificarse o cancelarse sin costo hasta 48 horas antes de la fecha del tour."
+    },
+    {
+      "id": "3a4a5fc8-63eb-4c46-9a86-cfe41a79a9a4",
+      "imagenes": [
+        "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+        "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+        "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+      ],
+      "titulo": "(4) Cabalgata por el Valle del Elqui",
+      "ubicacion": {
+        "comuna": "Vicuña",
+        "region": "Coquimbo",
+        "pais": "Chile"
+      },
+      "calificacion": 4.9,
+      "resenas": 200,
+      "precio": "$75.000",
+      "intereses": false,
+      "descuentos": true,
+      "zona": "Zona centro",
+      "ideal": "Parejas",
+      "actividad": "Turismo escénico",
+      "descripcion": "Descubre el Valle del Elqui desde una perspectiva única, dejándote llevar por el ritmo del caballo y la inmensidad del paisaje. Una experiencia pensada para desconectarte, respirar aire puro y disfrutar el entorno con calma, guiado por expertos que hacen de cada recorrido un momento especial, ideal para compartir y crear recuerdos memorables.",
+      "consiste": "Un recorrido guiado a caballo por los paisajes más característicos del Valle del Elqui, donde avanzarás por senderos naturales a un ritmo tranquilo, disfrutando vistas abiertas de cerros, ríos y viñedos. La experiencia está pensada para conectar con el entorno y vivir el valle desde una perspectiva auténtica, con el acompañamiento permanente de guías especializados.",
+      "incluye": [
+        "Guía local especializado en cabalgatas",
+        "Caballo entrenado y equipo básico de seguridad",
+        "Inducción inicial y acompañamiento durante el recorrido",
+        "Botella de agua",
+        "Seguro básico de accidentes",
+        "Registro fotográfico digital de la experiencia"
+      ],
+      "excluye": [
+        "Alimentación o bebidas adicionales",
+        "Propinas para el guía (opcional)",
+        "Ropa cómoda o calzado adecuado para la actividad",
+        "Gastos personales no especificados"
+      ],
+      "informacion": {
+        "duracion": "Entre 2 y 3 horas",
+        "inicio": "9:00 AM",
+        "edad": "6 años",
+        "requisitos": "Capacidad para montar y seguir instrucciones básicas",
+        "idiomas": "Español e inglés"
+      },
+      "politicas": "Las reservas pueden modificarse o cancelarse sin costo hasta 48 horas antes de la fecha del tour."
+    },
+    {
+      "id": "3a4a5fc8-63eb-4c46-9a86-cfe41a79a9a5",
+      "imagenes": [
+        "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+        "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+        "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+      ],
+      "titulo": "(5) Cabalgata por el Valle del Elqui",
+      "ubicacion": {
+        "comuna": "Vicuña",
+        "region": "Coquimbo",
+        "pais": "Chile"
+      },
+      "calificacion": 4.9,
+      "resenas": 200,
+      "precio": "$75.000",
+      "intereses": true,
+      "descuentos": false,
+      "zona": "Zona centro",
+      "ideal": "Parejas",
+      "actividad": "Turismo escénico",
+      "descripcion": "Descubre el Valle del Elqui desde una perspectiva única, dejándote llevar por el ritmo del caballo y la inmensidad del paisaje. Una experiencia pensada para desconectarte, respirar aire puro y disfrutar el entorno con calma, guiado por expertos que hacen de cada recorrido un momento especial, ideal para compartir y crear recuerdos memorables.",
+      "consiste": "Un recorrido guiado a caballo por los paisajes más característicos del Valle del Elqui, donde avanzarás por senderos naturales a un ritmo tranquilo, disfrutando vistas abiertas de cerros, ríos y viñedos. La experiencia está pensada para conectar con el entorno y vivir el valle desde una perspectiva auténtica, con el acompañamiento permanente de guías especializados.",
+      "incluye": [
+        "Guía local especializado en cabalgatas",
+        "Caballo entrenado y equipo básico de seguridad",
+        "Inducción inicial y acompañamiento durante el recorrido",
+        "Botella de agua",
+        "Seguro básico de accidentes",
+        "Registro fotográfico digital de la experiencia"
+      ],
+      "excluye": [
+        "Alimentación o bebidas adicionales",
+        "Propinas para el guía (opcional)",
+        "Ropa cómoda o calzado adecuado para la actividad",
+        "Gastos personales no especificados"
+      ],
+      "informacion": {
+        "duracion": "Entre 2 y 3 horas",
+        "inicio": "9:00 AM",
+        "edad": "6 años",
+        "requisitos": "Capacidad para montar y seguir instrucciones básicas",
+        "idiomas": "Español e inglés"
+      },
+      "politicas": "Las reservas pueden modificarse o cancelarse sin costo hasta 48 horas antes de la fecha del tour."
+    },
+    {
+      "id": "3a4a5fc8-63eb-4c46-9a86-cfe41a79a9a6",
+      "imagenes": [
+        "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+        "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+        "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+      ],
+      "titulo": "(6) Cabalgata por el Valle del Elqui",
+      "ubicacion": {
+        "comuna": "Vicuña",
+        "region": "Coquimbo",
+        "pais": "Chile"
+      },
+      "calificacion": 4.9,
+      "resenas": 200,
+      "precio": "$75.000",
+      "intereses": true,
+      "descuentos": false,
+      "zona": "Zona centro",
+      "ideal": "Parejas",
+      "actividad": "Turismo escénico",
+      "descripcion": "Descubre el Valle del Elqui desde una perspectiva única, dejándote llevar por el ritmo del caballo y la inmensidad del paisaje. Una experiencia pensada para desconectarte, respirar aire puro y disfrutar el entorno con calma, guiado por expertos que hacen de cada recorrido un momento especial, ideal para compartir y crear recuerdos memorables.",
+      "consiste": "Un recorrido guiado a caballo por los paisajes más característicos del Valle del Elqui, donde avanzarás por senderos naturales a un ritmo tranquilo, disfrutando vistas abiertas de cerros, ríos y viñedos. La experiencia está pensada para conectar con el entorno y vivir el valle desde una perspectiva auténtica, con el acompañamiento permanente de guías especializados.",
+      "incluye": [
+        "Guía local especializado en cabalgatas",
+        "Caballo entrenado y equipo básico de seguridad",
+        "Inducción inicial y acompañamiento durante el recorrido",
+        "Botella de agua",
+        "Seguro básico de accidentes",
+        "Registro fotográfico digital de la experiencia"
+      ],
+      "excluye": [
+        "Alimentación o bebidas adicionales",
+        "Propinas para el guía (opcional)",
+        "Ropa cómoda o calzado adecuado para la actividad",
+        "Gastos personales no especificados"
+      ],
+      "informacion": {
+        "duracion": "Entre 2 y 3 horas",
+        "inicio": "9:00 AM",
+        "edad": "6 años",
+        "requisitos": "Capacidad para montar y seguir instrucciones básicas",
+        "idiomas": "Español e inglés"
+      },
+      "politicas": "Las reservas pueden modificarse o cancelarse sin costo hasta 48 horas antes de la fecha del tour."
+    },
+    {
+      "id": "3a4a5fc8-63eb-4c46-9a86-cfe41a79a9a7",
+      "imagenes": [
+        "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+        "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+        "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+      ],
+      "titulo": "(7) Cabalgata por el Valle del Elqui",
+      "ubicacion": {
+        "comuna": "Vicuña",
+        "region": "Coquimbo",
+        "pais": "Chile"
+      },
+      "calificacion": 4.9,
+      "resenas": 200,
+      "precio": "$75.000",
+      "intereses": true,
+      "descuentos": false,
+      "zona": "Zona centro",
+      "ideal": "Parejas",
+      "actividad": "Turismo escénico",
+      "descripcion": "Descubre el Valle del Elqui desde una perspectiva única, dejándote llevar por el ritmo del caballo y la inmensidad del paisaje. Una experiencia pensada para desconectarte, respirar aire puro y disfrutar el entorno con calma, guiado por expertos que hacen de cada recorrido un momento especial, ideal para compartir y crear recuerdos memorables.",
+      "consiste": "Un recorrido guiado a caballo por los paisajes más característicos del Valle del Elqui, donde avanzarás por senderos naturales a un ritmo tranquilo, disfrutando vistas abiertas de cerros, ríos y viñedos. La experiencia está pensada para conectar con el entorno y vivir el valle desde una perspectiva auténtica, con el acompañamiento permanente de guías especializados.",
+      "incluye": [
+        "Guía local especializado en cabalgatas",
+        "Caballo entrenado y equipo básico de seguridad",
+        "Inducción inicial y acompañamiento durante el recorrido",
+        "Botella de agua",
+        "Seguro básico de accidentes",
+        "Registro fotográfico digital de la experiencia"
+      ],
+      "excluye": [
+        "Alimentación o bebidas adicionales",
+        "Propinas para el guía (opcional)",
+        "Ropa cómoda o calzado adecuado para la actividad",
+        "Gastos personales no especificados"
+      ],
+      "informacion": {
+        "duracion": "Entre 2 y 3 horas",
+        "inicio": "9:00 AM",
+        "edad": "6 años",
+        "requisitos": "Capacidad para montar y seguir instrucciones básicas",
+        "idiomas": "Español e inglés"
+      },
+      "politicas": "Las reservas pueden modificarse o cancelarse sin costo hasta 48 horas antes de la fecha del tour."
+    },
+    {
+      "id": "3a4a5fc8-63eb-4c46-9a86-cfe41a79a9a8",
+      "imagenes": [
+        "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+        "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+        "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+      ],
+      "titulo": "(8) Cabalgata por el Valle del Elqui",
+      "ubicacion": {
+        "comuna": "Vicuña",
+        "region": "Coquimbo",
+        "pais": "Chile"
+      },
+      "calificacion": 4.9,
+      "resenas": 200,
+      "precio": "$75.000",
+      "intereses": true,
+      "descuentos": false,
+      "zona": "Zona centro",
+      "ideal": "Parejas",
+      "actividad": "Turismo escénico",
+      "descripcion": "Descubre el Valle del Elqui desde una perspectiva única, dejándote llevar por el ritmo del caballo y la inmensidad del paisaje. Una experiencia pensada para desconectarte, respirar aire puro y disfrutar el entorno con calma, guiado por expertos que hacen de cada recorrido un momento especial, ideal para compartir y crear recuerdos memorables.",
+      "consiste": "Un recorrido guiado a caballo por los paisajes más característicos del Valle del Elqui, donde avanzarás por senderos naturales a un ritmo tranquilo, disfrutando vistas abiertas de cerros, ríos y viñedos. La experiencia está pensada para conectar con el entorno y vivir el valle desde una perspectiva auténtica, con el acompañamiento permanente de guías especializados.",
+      "incluye": [
+        "Guía local especializado en cabalgatas",
+        "Caballo entrenado y equipo básico de seguridad",
+        "Inducción inicial y acompañamiento durante el recorrido",
+        "Botella de agua",
+        "Seguro básico de accidentes",
+        "Registro fotográfico digital de la experiencia"
+      ],
+      "excluye": [
+        "Alimentación o bebidas adicionales",
+        "Propinas para el guía (opcional)",
+        "Ropa cómoda o calzado adecuado para la actividad",
+        "Gastos personales no especificados"
+      ],
+      "informacion": {
+        "duracion": "Entre 2 y 3 horas",
+        "inicio": "9:00 AM",
+        "edad": "6 años",
+        "requisitos": "Capacidad para montar y seguir instrucciones básicas",
+        "idiomas": "Español e inglés"
+      },
+      "politicas": "Las reservas pueden modificarse o cancelarse sin costo hasta 48 horas antes de la fecha del tour."
+    }
+  ],
+  "resenas": [
+    {
+      "id": "3a4a5fc8-63eb-4c46-9a86-cfe41a79a9a9",
+      "titulo": "Hola hola",
+      "contenido": "Hola hola",
+      "calificacion": 3,
+      "perfil": true,
+      "guias": true
+    },
+    {
+      "id": "0dbf49cd-8ec1-4ae4-b918-c14d1b45c3eb",
+      "titulo": "Hola hola hola",
+      "contenido": "Hola hola hola",
+      "calificacion": 3,
+      "perfil": true,
+      "guias": true
+    }
+  ]
 }

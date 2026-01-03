@@ -1,10 +1,11 @@
 import "./EntradaVerificacionSecundaria.css";
 import Iconos from "../../Iconos/Indice";
+import type { ChangeEvent } from "react";
 
 type EntradaVerificacionSecundariaProps = {
     texto: string;
     checked: boolean;
-    onChange: () => void;
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export default function EntradaVerificacionSecundaria({ texto, checked, onChange }: EntradaVerificacionSecundariaProps) {

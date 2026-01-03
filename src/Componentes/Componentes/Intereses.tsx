@@ -2,9 +2,7 @@ import { useEffect, useState } from "react"
 import { Tarjeta } from "../Componentes/Tarjeta"
 import "./Intereses.css"
 import "../../index.css"
-
-type Ubicacion = { comuna: string; region: string; pais: string }
-type Servicio = { id: number, imagenes: string[], titulo: string, ubicacion: Ubicacion, calificacion: number, resenas: number, precio: string, descuentos?: boolean, intereses?: boolean }
+import type { Servicio } from "../../Tipos/Servicio";
 
 export default function Intereses() {
     const [servicios, setServicios] = useState<Servicio[]>([])
@@ -19,7 +17,7 @@ export default function Intereses() {
     return (
         <section className="Intereses">
             {servicios.filter(servicio => servicio.intereses).slice(0,4).map(servicio => (
-                <Tarjeta key={servicio.id} id={servicio.id} imagenes={servicio.imagenes} titulo={servicio.titulo} ubicacion={servicio.ubicacion} calificacion={servicio.calificacion} resenas={servicio.resenas} precio={servicio.precio}/>
+                <Tarjeta key={servicio.id} imagenes={servicio.imagenes} titulo={servicio.titulo} ubicacion={servicio.ubicacion} calificacion={servicio.calificacion} resenas={servicio.resenas} precio={servicio.precio} />
             ))}
         </section>
     )

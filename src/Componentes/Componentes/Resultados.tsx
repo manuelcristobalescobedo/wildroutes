@@ -1,9 +1,7 @@
 import "./Resultados.css"
 import "../../index.css"
 import { Tarjeta } from "../Componentes/Tarjeta"
-
-type Ubicacion = { comuna: string; region: string; pais: string }
-type Servicio = { id: number; imagenes: string[]; titulo: string; ubicacion: Ubicacion; calificacion: number; resenas: number; precio: string; descuentos?: boolean }
+import type { Servicio } from "../../Tipos/Servicio";
 
 type ResultadosProps = { servicios: Servicio[] }
 
@@ -11,7 +9,7 @@ export default function Resultados({ servicios }: ResultadosProps) {
     return (
         <section className="Resultados">
             {servicios.map(servicio => (
-                <Tarjeta key={servicio.id} id={servicio.id} imagenes={servicio.imagenes} titulo={servicio.titulo} ubicacion={servicio.ubicacion} calificacion={servicio.calificacion} resenas={servicio.resenas} precio={servicio.precio} descuentos={servicio.descuentos} />
+                <Tarjeta key={servicio.id} imagenes={servicio.imagenes} titulo={servicio.titulo} ubicacion={servicio.ubicacion} calificacion={servicio.calificacion} resenas={servicio.resenas} precio={servicio.precio} descuentos={servicio.descuentos} />
             ))}
         </section>
     )

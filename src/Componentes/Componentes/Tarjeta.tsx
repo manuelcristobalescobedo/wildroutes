@@ -2,11 +2,11 @@ import "./Tarjeta.css";
 import "../../index.css";
 import Elementos from "../Elementos/Indice";
 import Iconos from "../../Iconos/Indice";
+import type { Servicio } from "../../Tipos/Servicio";
 
-type Ubicacion = { comuna: string; region: string; pais: string }
-type Props = { id: number, imagenes: string[], titulo: string, ubicacion: Ubicacion, calificacion: number, resenas: number, precio: string, descuentos?: boolean, intereses?: boolean }
+type TarjetaProps = Pick< Servicio, | "imagenes" | "titulo" | "ubicacion" | "calificacion" | "resenas" | "precio" > & { descuentos?: boolean; };
 
-export function Tarjeta({ imagenes, titulo, ubicacion, calificacion, resenas, precio, descuentos }: Props) {
+export function Tarjeta({ imagenes, titulo, ubicacion, calificacion, resenas, precio, descuentos }: TarjetaProps) {
     return (
         <div className="Tarjeta">
             <img src={imagenes?.[0] ?? "https://i.postimg.cc/vTMyTwF6/imagen-0.png"} alt={titulo} />
