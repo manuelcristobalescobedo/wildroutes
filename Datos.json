@@ -2,7 +2,11 @@
     "servicios": [
         {
             "id": 1,
-            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "imagenes": [
+                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+            ],
             "titulo": ":) Cabalgata por el Valle del Elqui",
             "ubicacion": {
                 "comuna": "Vicuña",
@@ -11,7 +15,7 @@
             },
             "calificacion": 4.9,
             "resenas": 200,
-            "precio": "$500.000",
+            "precio": "$75.000",
             "intereses": false,
             "descuentos": true,
             "zona": "Zona centro",
@@ -20,7 +24,11 @@
         },
         {
             "id": 2,
-            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "imagenes": [
+                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+            ],
             "titulo": "Cabalgata por el Valle del Elqui",
             "ubicacion": {
                 "comuna": "Vicuña",
@@ -29,7 +37,7 @@
             },
             "calificacion": 4.9,
             "resenas": 200,
-            "precio": "$500.000",
+            "precio": "$75.000",
             "intereses": false,
             "descuentos": true,
             "zona": "Zona centro",
@@ -38,7 +46,11 @@
         },
         {
             "id": 3,
-            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "imagenes": [
+                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+            ],
             "titulo": "Cabalgata por el Valle del Elqui",
             "ubicacion": {
                 "comuna": "Vicuña",
@@ -47,7 +59,7 @@
             },
             "calificacion": 4.9,
             "resenas": 200,
-            "precio": "$500.000",
+            "precio": "$75.000",
             "intereses": false,
             "descuentos": true,
             "zona": "Zona centro",
@@ -56,7 +68,11 @@
         },
         {
             "id": 4,
-            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "imagenes": [
+                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+            ],
             "titulo": "Cabalgata por el Valle del Elqui",
             "ubicacion": {
                 "comuna": "Vicuña",
@@ -65,7 +81,7 @@
             },
             "calificacion": 4.9,
             "resenas": 200,
-            "precio": "$500.000",
+            "precio": "$75.000",
             "intereses": false,
             "descuentos": true,
             "zona": "Zona centro",
@@ -74,7 +90,11 @@
         },
         {
             "id": 5,
-            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "imagenes": [
+                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+            ],
             "titulo": "Cabalgata por el Valle del Elqui",
             "ubicacion": {
                 "comuna": "Vicuña",
@@ -83,7 +103,7 @@
             },
             "calificacion": 4.9,
             "resenas": 200,
-            "precio": "$500.000",
+            "precio": "$75.000",
             "intereses": true,
             "descuentos": false,
             "zona": "Zona centro",
@@ -92,7 +112,11 @@
         },
         {
             "id": 6,
-            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "imagenes": [
+                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+            ],
             "titulo": "Cabalgata por el Valle del Elqui",
             "ubicacion": {
                 "comuna": "Vicuña",
@@ -101,7 +125,7 @@
             },
             "calificacion": 4.9,
             "resenas": 200,
-            "precio": "$500.000",
+            "precio": "$75.000",
             "intereses": true,
             "descuentos": false,
             "zona": "Zona centro",
@@ -110,7 +134,11 @@
         },
         {
             "id": 7,
-            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "imagenes": [
+                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+            ],
             "titulo": "Cabalgata por el Valle del Elqui",
             "ubicacion": {
                 "comuna": "Vicuña",
@@ -119,7 +147,7 @@
             },
             "calificacion": 4.9,
             "resenas": 200,
-            "precio": "$500.000",
+            "precio": "$75.000",
             "intereses": true,
             "descuentos": false,
             "zona": "Zona centro",
@@ -128,7 +156,11 @@
         },
         {
             "id": 8,
-            "imagen": "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+            "imagenes": [
+                "https://i.postimg.cc/zGZfHP83/imagen-6.jpg",
+                "https://i.postimg.cc/XX6SBc6D/imagen-8.jpg",
+                "https://i.postimg.cc/BtfbZKY8/imagen-9.jpg"
+            ],
             "titulo": ";) Cabalgata por el Valle del Elqui",
             "ubicacion": {
                 "comuna": "Vicuña",
@@ -137,7 +169,7 @@
             },
             "calificacion": 4.9,
             "resenas": 200,
-            "precio": "$500.000",
+            "precio": "$75.000",
             "intereses": true,
             "descuentos": false,
             "zona": "Zona centro",

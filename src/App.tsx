@@ -15,6 +15,7 @@ import GestionProductos from './Paginas/GestionProductos';
 import AgregarNuevaActividad from './Paginas/AgregarNuevaActividad';
 import EditarActividad from './Paginas/EditarActividad';
 import NuevoCatalogo from './Paginas/NuevoCatalogo';
+import NuevoServicio from './Paginas/NuevoServicio';
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/elementos" element={<PaginaElementos />} />
             <Route path="/nueva-principal" element={<NuevaPrincipal />} />
             <Route path="/nuevo-catalogo" element={<NuevoCatalogo />} />
+            <Route path="/nuevo-servicio" element={<NuevoServicio />} />
             <Route path="/recuperar-cuenta" element={<RecuperarCuenta />} />
             <Route path="/restablecer-contraseña" element={<RestablecerContrasena />} />
             <Route path="/registro-usuario" element={<RegistroUsuario />} />

@@ -1,0 +1,224 @@
+.Nombre {
+    max-height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 48px;
+    display: flex;
+    margin-bottom: 8px;
+    margin-top: 24px;
+}
+
+.Lugar {
+    max-height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 48px;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.Lugar > p {
+    gap: 4px !important;
+}
+
+.Etiquetas {
+    max-height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    margin-bottom: 52px;
+}
+
+.Etiquetas > span {
+    color: var(--color-neutro-mas-mas-mas-bajo);
+    background-color: var(--color-primario-alto);
+    border: solid 1.5px var(--color-primario-alto);
+    transition: all 0.1s ease;
+}
+
+.Galeria {
+    max-height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 52px;
+}
+
+.Galeria > img {
+    grid-column: 1 / 3;
+    aspect-ratio: 3 / 2;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 4px;
+}
+
+.Galeria > div {
+    grid-column: 3 / 4;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Galeria > div > div {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.Galeria > div > div > img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 4px;
+}
+
+.Detalles {
+    max-height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 96px;
+}
+
+.Detalles > div:nth-of-type(1) {
+    max-height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Detalles > div:nth-of-type(1) > p {
+    max-width: 55ch !important;
+    margin-bottom: 56px;
+}
+
+.Detalles > div:nth-of-type(1) > ul {
+    max-width: 55ch !important;
+    margin-bottom: 56px;
+}
+
+.Detalles > div:nth-of-type(1) > div {
+    margin-bottom: 56px;
+}
+
+.Detalles > div:nth-of-type(1) > h1 {
+    margin-bottom: 24px;
+}
+
+.Detalles > div:nth-of-type(1) > p:first-of-type {
+    margin-bottom: 80px;
+}
+
+.Detalles > div:nth-of-type(1) > p:last-of-type {
+    margin-bottom: 0;
+}
+
+.Detalles > div:nth-of-type(2) {
+    position: sticky;
+    top: 197px;
+    max-height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--color-neutro-opaco-mas-bajo);
+    padding: 28px 28px;
+    border-radius: 8px;
+}
+
+.Detalles > div:nth-of-type(2) > div {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.Detalles > div:nth-of-type(2) > div > img {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: var(--color-neutro-mas-bajo);
+    border: var(--color-neutro-mas-bajo);
+}
+
+.Detalles > div:nth-of-type(2) > h1 {
+    margin-bottom: 4px;
+}
+
+.Informacion {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Informacion > div {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 0 8px 0;
+    border-bottom: 1.5px solid var(--color-secundario-bajo);
+}
+
+.Informacion > div:first-of-type > p > span {
+    font-weight: 700;
+}
+
+.Resenas {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 64px 48px;
+    margin-bottom: 80px;
+    background-color: var(--color-primario-opaco-mas-bajo);
+}
+
+.Resenas > h1 {
+    margin-bottom: 16px;
+}
+
+.Resenas > div {
+    max-height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+
+.Resenas > div > div {
+    max-height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.Resenas > div > div:nth-of-type(2) > label:first-of-type {
+    margin-bottom: 8px;
+}
+
+.Resenas > div > div:nth-of-type(2) > label:last-of-type {
+    margin-bottom: 32px;
+}
