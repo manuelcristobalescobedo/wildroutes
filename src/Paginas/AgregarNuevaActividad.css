@@ -1,0 +1,3 @@
+.TituloActividad > h1 > span > svg {
+    color: var(--color-primario);
+}

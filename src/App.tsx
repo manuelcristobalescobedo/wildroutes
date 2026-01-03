@@ -29,7 +29,7 @@ function App() {
             <Route path="/elementos" element={<PaginaElementos />} />
             <Route path="/nueva-principal" element={<NuevaPrincipal />} />
             <Route path="/nuevo-catalogo" element={<NuevoCatalogo />} />
-            <Route path="/nuevo-servicio" element={<NuevoServicio />} />
+            <Route path="/nuevo-servicio/:id" element={<NuevoServicio />} />
             <Route path="/recuperar-cuenta" element={<RecuperarCuenta />} />
             <Route path="/restablecer-contraseña" element={<RestablecerContrasena />} />
             <Route path="/registro-usuario" element={<RegistroUsuario />} />

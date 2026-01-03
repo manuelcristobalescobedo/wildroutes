@@ -1,12 +1,11 @@
-
+import "./AgregarNuevaActividad.css"
 import Encabezado from "../Componentes/Componentes/Encabezado";
 import Pie from "../Componentes/Componentes/Pie";
-import TituloPrimario from "../Componentes/Elementos/TituloPrimario";
-import Actividad from "../Iconos/Actividad";
 import Elementos, { BotonPrimario } from "../Componentes/Elementos/Indice";
 import { useState } from "react";
 import Anadir from "../Iconos/Anadir";
 import { useNavigate } from "react-router-dom";
+import Iconos from "../Iconos/Indice";
 
 export default function AgregarNuevaActividad() {
     const navigate = useNavigate();
@@ -42,8 +41,8 @@ export default function AgregarNuevaActividad() {
         <>
             <main>
                 <Encabezado />
-                    <section style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingTop: "2rem", }}>
-                        <TituloPrimario texto="Agregar Nueva Actividad" color="#000000ff" icono={<Actividad />} />
+                    <section className="TituloActividad" style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingTop: "2rem", }}>
+                        <Elementos.TituloTerciario texto="Agregar Nueva Actividad" color="var(--color-neutro-mas-mas-mas-mas-alto)" icono={<Iconos.Actividad />} />
                     </section>
                     <section style={{paddingRight: "2rem", paddingLeft: "2rem", gap: "1rem"}}>
                         <Elementos.EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Nombre de actividad:" nombre="nombre" valor={entrada.nombre} accion={handleChange} marcador="" informacion="" tipo="text"/>

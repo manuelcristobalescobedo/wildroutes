@@ -17,7 +17,7 @@ export default function Descuentos() {
     return (
         <section className="Descuentos">
             {servicios.filter(servicio => servicio.descuentos).slice(0,4).map(servicio => (
-                <Tarjeta key={servicio.id} imagenes={servicio.imagenes} titulo={servicio.titulo} ubicacion={servicio.ubicacion} calificacion={servicio.calificacion} resenas={servicio.resenas} precio={servicio.precio} descuentos={servicio.descuentos} />
+                <Tarjeta key={servicio.id} id={servicio.id} imagenes={servicio.imagenes} titulo={servicio.titulo} ubicacion={servicio.ubicacion} calificacion={servicio.calificacion} resenas={servicio.resenas} precio={servicio.precio} descuentos={servicio.descuentos} />
             ))}
         </section>
     )

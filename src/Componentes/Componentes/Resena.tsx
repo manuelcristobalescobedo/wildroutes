@@ -3,15 +3,17 @@ import Elementos from "../Elementos/Indice";
 import Calificacion from "../Componentes/Calificacion";
 import { v4 as uuidv4 } from "uuid";
 import type { Resena } from "../../Tipos/Resena";
-
+import { useParams } from "react-router-dom";
 
 export default function Resena() {
-    const [resena, setResena] = useState<Omit<Resena, "id">>({ titulo: "", contenido: "", calificacion: 0, perfil: false, guias: false });
+    const { id: servicio } = useParams<{ id: string }>();
+
+    const [resena, setResena] = useState<Omit<Resena, "id" | "servicio">>({ titulo: "", contenido: "", calificacion: 0, perfil: false, guias: false });
 
     const publicarResena = async () => {
         if (!resena.guias) return;
 
-        const resenaConId = { id: uuidv4(), ...resena };
+        const resenaConId = { id: uuidv4(), servicio, ...resena };
 
         await fetch("http://localhost:3001/resenas", {
             method: "POST",

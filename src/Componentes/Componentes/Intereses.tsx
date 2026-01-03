@@ -17,7 +17,7 @@ export default function Intereses() {
     return (
         <section className="Intereses">
             {servicios.filter(servicio => servicio.intereses).slice(0,4).map(servicio => (
-                <Tarjeta key={servicio.id} imagenes={servicio.imagenes} titulo={servicio.titulo} ubicacion={servicio.ubicacion} calificacion={servicio.calificacion} resenas={servicio.resenas} precio={servicio.precio} />
+                <Tarjeta key={servicio.id} id={servicio.id} imagenes={servicio.imagenes} titulo={servicio.titulo} ubicacion={servicio.ubicacion} calificacion={servicio.calificacion} resenas={servicio.resenas} precio={servicio.precio} />
             ))}
         </section>
     )

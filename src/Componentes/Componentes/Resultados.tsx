@@ -9,7 +9,7 @@ export default function Resultados({ servicios }: ResultadosProps) {
     return (
         <section className="Resultados">
             {servicios.map(servicio => (
-                <Tarjeta key={servicio.id} imagenes={servicio.imagenes} titulo={servicio.titulo} ubicacion={servicio.ubicacion} calificacion={servicio.calificacion} resenas={servicio.resenas} precio={servicio.precio} descuentos={servicio.descuentos} />
+                <Tarjeta key={servicio.id} id={servicio.id} imagenes={servicio.imagenes} titulo={servicio.titulo} ubicacion={servicio.ubicacion} calificacion={servicio.calificacion} resenas={servicio.resenas} precio={servicio.precio} descuentos={servicio.descuentos} />
             ))}
         </section>
     )
