@@ -48,18 +48,19 @@ export default function EditarActividad() {
 
   /* ================== cargar actividad ================== */
   useEffect(() => {
-    const actividades = JSON.parse(
-      localStorage.getItem("actividades") || "[]"
+  if (!id) return;
+
+  const cargarActividad = async () => {
+    const response = await fetch(
+      `http://localhost:3001/actividades/${id}`
     );
 
-    const actividadEditar = actividades.find(
-      (act: any) => act.id === Number(id)
-    );
-
-    if (!actividadEditar) {
+    if (!response.ok) {
       navigate("/gestion-productos");
       return;
     }
+
+    const actividadEditar = await response.json();
 
     setEntrada({
       nombre: actividadEditar.nombre || "",
@@ -77,7 +78,11 @@ export default function EditarActividad() {
       act3: actividadEditar.act3 || "",
       act4: actividadEditar.act4 || ""
     });
-  }, [id, navigate]);
+  };
+
+  cargarActividad();
+}, [id, navigate]);
+
 
   /* ================== handlers ================== */
   const handleChange = (
@@ -87,20 +92,23 @@ export default function EditarActividad() {
     setEntrada(prev => ({ ...prev, [name]: value }));
   };
 
-  const guardarCambios = () => {
-    const actividades = JSON.parse(
-      localStorage.getItem("actividades") || "[]"
-    );
+  const guardarCambios = async () => {
+  if (!id) return;
 
-    const actualizadas = actividades.map((act: any) =>
-      act.id === Number(id)
-        ? { ...act, ...entrada }
-        : act
-    );
+  await fetch(`http://localhost:3001/actividades/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      id,
+      ...entrada
+    })
+  });
 
-    localStorage.setItem("actividades", JSON.stringify(actualizadas));
-    navigate("/gestion-productos");
-  };
+  navigate("/gestion-productos");
+};
+
 
   /* ================== UI ================== */
   return (

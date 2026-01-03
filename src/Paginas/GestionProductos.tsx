@@ -13,7 +13,7 @@ import Borrar from "../Iconos/Borrar";
 import Visibilidad from "../Iconos/Visibilidad";
 
 interface ActividadItem {
-  id: number;
+  id: string;
   nombre: string;
   descripcion: string;
 }
@@ -23,16 +23,23 @@ export default function GestionProductos() {
   const [actividades, setActividades] = useState<ActividadItem[]>([]);
 
   useEffect(() => {
-    const data: ActividadItem[] = JSON.parse(
-      localStorage.getItem("actividades") || "[]"
-    );
-    setActividades(data);
+    const cargarActividades = async () => {
+      const response = await fetch("http://localhost:3001/actividades");
+      const data: ActividadItem[] = await response.json();
+      setActividades(data);
+    };
+
+    cargarActividades();
   }, []);
 
-  const eliminarActividad = (id: number) => {
-    const filtradas = actividades.filter(act => act.id !== id);
-    setActividades(filtradas);
-    localStorage.setItem("actividades", JSON.stringify(filtradas));
+  const eliminarActividad = async (id: string) => {
+    await fetch(`http://localhost:3001/actividades/${id}`, {
+      method: "DELETE"
+    });
+
+    setActividades(prev =>
+      prev.filter(actividad => actividad.id !== id)
+    );
   };
 
   return (

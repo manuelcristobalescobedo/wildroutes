@@ -6,6 +6,7 @@ import { useState } from "react";
 import Anadir from "../Iconos/Anadir";
 import { useNavigate } from "react-router-dom";
 import Iconos from "../Iconos/Indice";
+import {v4 as uuidv4} from "uuid";
 
 export default function AgregarNuevaActividad() {
     const navigate = useNavigate();
@@ -17,25 +18,23 @@ export default function AgregarNuevaActividad() {
     setEntrada(prev => ({ ...prev, [name]: value }));
   };
 
-  const guardarActividad = () => {
-    const actividadesGuardadas = JSON.parse(
-      localStorage.getItem("actividades") || "[]"
-    );
-
-    const nuevaActividad = {
-      id: Date.now(),
-      ...entrada
-    };
-
-    actividadesGuardadas.push(nuevaActividad);
-
-    localStorage.setItem(
-      "actividades",
-      JSON.stringify(actividadesGuardadas)
-    );
-
-    navigate("/gestion-productos");
+  const guardarActividad = async () => {
+  const nuevaActividad = {
+    id: uuidv4(),
+    ...entrada,
   };
+
+  await fetch("http://localhost:3001/actividades", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(nuevaActividad),
+  });
+
+  navigate("/gestion-productos");
+};
+
 
     return(
         <>
@@ -111,4 +110,4 @@ export default function AgregarNuevaActividad() {
             </main>        
         </>
     )
-}
+  }
