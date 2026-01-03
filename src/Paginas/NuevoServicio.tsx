@@ -11,7 +11,7 @@ import Resena from "../Componentes/Componentes/Resena";
 import type { Servicio } from "../Tipos/Servicio";
 import { useParams } from "react-router-dom";
 import Opiniones from "../Componentes/Componentes/Opiniones";
-import Reservas from "../Componentes/Reservas";
+import Reservas from "../Componentes/Componentes/Reservas";
 
 export default function NuevoServicio() {
     const { id } = useParams<{ id: string }>();
