@@ -7,6 +7,8 @@ import Anadir from "../Iconos/Anadir";
 import { useNavigate } from "react-router-dom";
 import Iconos from "../Iconos/Indice";
 import {v4 as uuidv4} from "uuid";
+import DisponibilidadForm from "../Componentes/Componentes/Disponibilidad";
+import type { Disponibilidad } from "../Tipos/Servicio";
 
 export default function AgregarNuevaActividad() {
     const navigate = useNavigate();
@@ -36,6 +38,10 @@ export default function AgregarNuevaActividad() {
 };
 
     const [incluye, setIncluye] = useState<string[]>([""]);
+
+    const [disponibilidad, setDisponibilidad] = useState<Disponibilidad[]>([
+        { fecha: "", horarios: [""] }
+    ]);
 
     return(
         <>
@@ -98,6 +104,7 @@ export default function AgregarNuevaActividad() {
 
                         <Elementos.EntradaLista value={incluye} onChange={setIncluye} />
 
+                        <DisponibilidadForm value={disponibilidad} onChange={setDisponibilidad} />
 
                         <section>
                             <BotonPrimario texto="Cargar Imagen" icono={<Anadir />} nivel="alto"/>

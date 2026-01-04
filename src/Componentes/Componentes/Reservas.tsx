@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import type { Servicio } from "../../Tipos/Servicio";
+
 import "./Reservas.css";
+import Elementos from "../Elementos/Indice";
+import Iconos from "../../Iconos/Indice";
 
 type Props = { servicio: Servicio };
 
@@ -16,34 +19,28 @@ export default function Reservas({ servicio }: Props) {
     const reservar = async () => {
         if (!fecha || !hora) return;
 
-        const reserva = { id: uuidv4(), servicio: servicio.id, fecha, hora, cupos };
+        const reserva = {
+            id: uuidv4(),
+            servicio: servicio.id,
+            fecha,
+            hora,
+            cupos,
+        };
 
         await fetch("http://localhost:3001/reservas", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(reserva)
+            body: JSON.stringify(reserva),
         });
     };
 
     return (
         <section className="Reservas">
-            <select value={fecha} onChange={e => setFecha(e.target.value)}>
-                <option value="">Fecha</option>
-                {fechas.map(f => (
-                    <option key={f.fecha} value={f.fecha}>{f.fecha}</option>
-                ))}
-            </select>
+            <Elementos.EntradaSeleccion etiqueta="Fecha" nombre="fecha" valor={fecha} opciones={[ { valor: "", texto: "Selecciona fecha" }, ...fechas.map(f => ({ valor: f.fecha, texto: f.fecha })), ]} accion={e => setFecha(e.target.value)} requerido />
             <div>
-                <select value={hora} onChange={e => setHora(e.target.value)}>
-                    <option value="">Hora</option>
-                    {horarios.map(h => (
-                        <option key={h.hora} value={h.hora}>
-                            {h.hora} ({h.cupos} cupos)
-                        </option>
-                    ))}
-                </select>
-                <input type="number" min={1} value={cupos} onChange={e => setCupos(Number(e.target.value))}/>
-                <button onClick={reservar}>Agregar al carrito</button>
+                <Elementos.EntradaSeleccion etiqueta="Hora" nombre="hora" valor={hora} opciones={[ { valor: "", texto: "Selecciona hora" }, ...horarios.map(h => ({ valor: h, texto: h })), ]} accion={e => setHora(e.target.value)} requerido />
+                <Elementos.EntradaNumero nombre="cupos" etiqueta="Cupos" min={1} max={servicio.cupos} value={cupos} onChange={setCupos} />
+                <Elementos.BotonPrimario texto="Agregar al carrito" nivel="alto" accion={reservar} icono={<Iconos.Carro />} />
             </div>
         </section>
     );

@@ -48,31 +48,14 @@
       "disponibilidad": [
         {
           "fecha": "2026-01-15",
-          "horarios": [
-            {
-              "hora": "09:00",
-              "cupos": 6
-            },
-            {
-              "hora": "15:00",
-              "cupos": 8
-            }
-          ]
+          "horarios": ["09:00", "15:00"]
         },
         {
           "fecha": "2026-01-16",
-          "horarios": [
-            {
-              "hora": "10:00",
-              "cupos": 5
-            },
-            {
-              "hora": "16:00",
-              "cupos": 10
-            }
-          ]
+          "horarios": ["10:00", "16:00"]
         }
-      ]
+      ],
+      "cupos": 8
     },
     {
       "id": "2a9e6d1c-8f54-4b7a-bd3a-1f0e5c9a7e42",
@@ -122,31 +105,14 @@
       "disponibilidad": [
         {
           "fecha": "2026-01-15",
-          "horarios": [
-            {
-              "hora": "09:00",
-              "cupos": 6
-            },
-            {
-              "hora": "15:00",
-              "cupos": 8
-            }
-          ]
+          "horarios": ["09:00", "15:00"]
         },
         {
           "fecha": "2026-01-16",
-          "horarios": [
-            {
-              "hora": "10:00",
-              "cupos": 5
-            },
-            {
-              "hora": "16:00",
-              "cupos": 10
-            }
-          ]
+          "horarios": ["10:00", "16:00"]
         }
-      ]
+      ],
+      "cupos": 8
     },
     {
       "id": "f4d1b8e3-9c62-4a0f-8e7b-5c3a2d1f9b64",
@@ -196,31 +162,14 @@
       "disponibilidad": [
         {
           "fecha": "2026-01-15",
-          "horarios": [
-            {
-              "hora": "09:00",
-              "cupos": 6
-            },
-            {
-              "hora": "15:00",
-              "cupos": 8
-            }
-          ]
+          "horarios": ["09:00", "15:00"]
         },
         {
           "fecha": "2026-01-16",
-          "horarios": [
-            {
-              "hora": "10:00",
-              "cupos": 5
-            },
-            {
-              "hora": "16:00",
-              "cupos": 10
-            }
-          ]
+          "horarios": ["10:00", "16:00"]
         }
-      ]
+      ],
+      "cupos": 8
     },
     {
       "id": "6e3a9c7f-1d4b-4e2a-9f85-0c8b6d5a1e73",
@@ -270,31 +219,14 @@
       "disponibilidad": [
         {
           "fecha": "2026-01-15",
-          "horarios": [
-            {
-              "hora": "09:00",
-              "cupos": 6
-            },
-            {
-              "hora": "15:00",
-              "cupos": 8
-            }
-          ]
+          "horarios": ["09:00", "15:00"]
         },
         {
           "fecha": "2026-01-16",
-          "horarios": [
-            {
-              "hora": "10:00",
-              "cupos": 5
-            },
-            {
-              "hora": "16:00",
-              "cupos": 10
-            }
-          ]
+          "horarios": ["10:00", "16:00"]
         }
-      ]
+      ],
+      "cupos": 8
     },
     {
       "id": "9a2c4e7d-5f8b-4c1e-a3d6-7b0f9e1c2a84",
@@ -344,31 +276,14 @@
       "disponibilidad": [
         {
           "fecha": "2026-01-15",
-          "horarios": [
-            {
-              "hora": "09:00",
-              "cupos": 6
-            },
-            {
-              "hora": "15:00",
-              "cupos": 8
-            }
-          ]
+          "horarios": ["09:00", "15:00"]
         },
         {
           "fecha": "2026-01-16",
-          "horarios": [
-            {
-              "hora": "10:00",
-              "cupos": 5
-            },
-            {
-              "hora": "16:00",
-              "cupos": 10
-            }
-          ]
+          "horarios": ["10:00", "16:00"]
         }
-      ]
+      ],
+      "cupos": 8
     },
     {
       "id": "1c7e5b9a-4d3f-4a8e-8c2b-6f0e1d9a7b35",
@@ -418,31 +333,14 @@
       "disponibilidad": [
         {
           "fecha": "2026-01-15",
-          "horarios": [
-            {
-              "hora": "09:00",
-              "cupos": 6
-            },
-            {
-              "hora": "15:00",
-              "cupos": 8
-            }
-          ]
+          "horarios": ["09:00", "15:00"]
         },
         {
           "fecha": "2026-01-16",
-          "horarios": [
-            {
-              "hora": "10:00",
-              "cupos": 5
-            },
-            {
-              "hora": "16:00",
-              "cupos": 10
-            }
-          ]
+          "horarios": ["10:00", "16:00"]
         }
-      ]
+      ],
+      "cupos": 8
     },
     {
       "id": "e8f3a1d6-2c9b-4f7a-9e5b-0c4d6a1b8f92",
@@ -492,31 +390,14 @@
       "disponibilidad": [
         {
           "fecha": "2026-01-15",
-          "horarios": [
-            {
-              "hora": "09:00",
-              "cupos": 6
-            },
-            {
-              "hora": "15:00",
-              "cupos": 8
-            }
-          ]
+          "horarios": ["09:00", "15:00"]
         },
         {
           "fecha": "2026-01-16",
-          "horarios": [
-            {
-              "hora": "10:00",
-              "cupos": 5
-            },
-            {
-              "hora": "16:00",
-              "cupos": 10
-            }
-          ]
+          "horarios": ["10:00", "16:00"]
         }
-      ]
+      ],
+      "cupos": 8
     },
     {
       "id": "4d6a9f1e-3b8c-4e7d-a2f5-1c0b9a8e6d47",
@@ -566,31 +447,14 @@
       "disponibilidad": [
         {
           "fecha": "2026-01-15",
-          "horarios": [
-            {
-              "hora": "09:00",
-              "cupos": 6
-            },
-            {
-              "hora": "15:00",
-              "cupos": 8
-            }
-          ]
+          "horarios": ["09:00", "15:00"]
         },
         {
           "fecha": "2026-01-16",
-          "horarios": [
-            {
-              "hora": "10:00",
-              "cupos": 5
-            },
-            {
-              "hora": "16:00",
-              "cupos": 10
-            }
-          ]
+          "horarios": ["10:00", "16:00"]
         }
-      ]
+      ],
+      "cupos": 8
     }
   ],
   "resenas": [

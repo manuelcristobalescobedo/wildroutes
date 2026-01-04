@@ -12,14 +12,9 @@ export type Informacion = {
     idiomas: string;
 };
 
-export type Horario = {
-    hora: string;
-    cupos: number;
-};
-
 export type Disponibilidad = {
     fecha: string;
-    horarios: Horario[];
+    horarios: string[];
 };
 
 export type Servicio = {
@@ -42,4 +37,5 @@ export type Servicio = {
     informacion: Informacion;
     politicas: string;
     disponibilidad: Disponibilidad[];
+    cupos: number;
 };
