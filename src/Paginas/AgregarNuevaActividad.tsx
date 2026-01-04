@@ -34,10 +34,25 @@ export default function AgregarNuevaActividad() {
   const guardarActividad = async () => {
   const nuevaActividad = {
     id: uuidv4(),
-    ...entrada,
-    imagenes: imagenes.filter(img => img.trim() !== ""),
-    incluye,
-    disponibilidad
+    imagenes: imagenes,                 
+    titulo: entrada.titulo,
+    descripcion: entrada.descripcion,
+    consiste: entrada.consiste,
+    ubicacion: entrada.ubicacion,
+    calificacion: 0,
+    resenas: 0,
+    precio: entrada.precio,
+    intereses: false,
+    descuentos: false,
+    zona: entrada.zona,
+    ideal: entrada.ideal,
+    actividad: entrada.actividad,
+    incluye: incluye,
+    excluye: [],                         // default empty
+    informacion: entrada.informacion,
+    politicas: entrada.politicas,
+    disponibilidad: disponibilidad,
+    cupos: entrada.cupos
   };
 
   await fetch("http://localhost:3001/actividades", {

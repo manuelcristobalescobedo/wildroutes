@@ -616,5 +616,49 @@
     }
   ],
   "reservas": [],
-  "actividades": []
+  "actividades": [
+    {
+      "id": "1d41dd78-d9de-4200-893c-827a5bac4438",
+      "imagenes": [
+        "https://i.postimg.cc/zGZfHP83/imagen-6.jpg"
+      ],
+      "titulo": "asdasdasda",
+      "descripcion": "",
+      "consiste": "",
+      "ubicacion": {
+        "comuna": "",
+        "region": "",
+        "pais": ""
+      },
+      "calificacion": 0,
+      "resenas": 0,
+      "precio": "10.000",
+      "intereses": false,
+      "descuentos": false,
+      "zona": "",
+      "ideal": "",
+      "actividad": "",
+      "incluye": [
+        "asdasd"
+      ],
+      "excluye": [],
+      "informacion": {
+        "duracion": "",
+        "inicio": "",
+        "edad": "",
+        "requisitos": "",
+        "idiomas": ""
+      },
+      "politicas": "",
+      "disponibilidad": [
+        {
+          "fecha": "2026-01-26",
+          "horarios": [
+            "22:30"
+          ]
+        }
+      ],
+      "cupos": 0
+    }
+  ]
 }
