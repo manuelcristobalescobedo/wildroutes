@@ -9,6 +9,7 @@ import {v4 as uuidv4} from "uuid";
 import DisponibilidadForm from "../Componentes/Componentes/Disponibilidad";
 import type { Disponibilidad } from "../Tipos/Servicio";
 import Iconos from "../Iconos/Indice";
+import Espacios from "../Componentes/Componentes/Espacios";
 
 export default function AgregarNuevaActividad() {
     const navigate = useNavigate();
@@ -136,6 +137,8 @@ export default function AgregarNuevaActividad() {
                         <h4 style={{ fontFamily: "sans-serif" }}>Disponibilidad</h4>
 
                         <DisponibilidadForm value={disponibilidad} onChange={setDisponibilidad} />
+
+                        <Espacios />
 
                         <section>
                             <BotonPrimario texto="Cargar Imagen" icono={<Anadir />} nivel="alto"/>
