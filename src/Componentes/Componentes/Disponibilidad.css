@@ -1,0 +1,56 @@
+.Disponibilidad {
+    width: 100%;
+}
+
+/* Nivel 1 */
+.DisponibilidadLayout {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.DisponibilidadGrupos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+}
+
+/* Nivel 2 */
+.GrupoLayout {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.GrupoCampos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+/* Nivel 3 */
+.Horarios {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Inputs */
+input {
+    padding: 8px 12px;
+    box-sizing: border-box;
+}
+
+/* Botones */
+.BotonAgregar {
+    all: unset;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 9999px;
+    border: 1px solid currentColor;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
