@@ -618,11 +618,11 @@
   "reservas": [],
   "actividades": [
     {
-      "id": "1d41dd78-d9de-4200-893c-827a5bac4438",
+      "id": "6100e768-8c07-4786-a600-97181e1591b4",
       "imagenes": [
-        "https://i.postimg.cc/zGZfHP83/imagen-6.jpg"
+        ""
       ],
-      "titulo": "asdasdasda",
+      "titulo": "asdasda",
       "descripcion": "",
       "consiste": "",
       "ubicacion": {
@@ -632,14 +632,14 @@
       },
       "calificacion": 0,
       "resenas": 0,
-      "precio": "10.000",
+      "precio": "",
       "intereses": false,
       "descuentos": false,
       "zona": "",
       "ideal": "",
       "actividad": "",
       "incluye": [
-        "asdasd"
+        ""
       ],
       "excluye": [],
       "informacion": {
@@ -652,9 +652,9 @@
       "politicas": "",
       "disponibilidad": [
         {
-          "fecha": "2026-01-26",
+          "fecha": "",
           "horarios": [
-            "22:30"
+            ""
           ]
         }
       ],
