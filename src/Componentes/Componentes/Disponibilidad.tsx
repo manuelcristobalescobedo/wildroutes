@@ -1,16 +1,14 @@
 import type { Disponibilidad } from "../../Tipos/Servicio";
+import "./Disponibilidad.css";
 
 type Props = {
-  value: Disponibilidad[];
-  onChange: (value: Disponibilidad[]) => void;
+    value: Disponibilidad[];
+    onChange: (value: Disponibilidad[]) => void;
 };
 
 export default function DisponibilidadForm({ value, onChange }: Props) {
     const agregarGrupo = () => {
-        onChange([
-        ...value,
-        { fecha: "", horarios: [""] }
-        ]);
+        onChange([...value, { fecha: "", horarios: [""] }]);
     };
 
     const actualizarFecha = (i: number, fecha: string) => {
@@ -32,50 +30,59 @@ export default function DisponibilidadForm({ value, onChange }: Props) {
     };
 
     return (
-        <div>
-        {value.map((disp, grupoIndex) => (
-            <div key={grupoIndex} style={{ marginBottom: 16 }}>
-            {/* Fecha */}
-            <input
-                type="date"
-                value={disp.fecha}
-                onChange={(e) => actualizarFecha(grupoIndex, e.target.value)}
-            />
+        <div className="Disponibilidad">
+            <div className="DisponibilidadLayout">
+                <div className="DisponibilidadGrupos">
+                    {value.map((disp, grupoIndex) => (
+                        <div key={grupoIndex} className="DisponibilidadGrupo">
+                            <div className="GrupoLayout">
+                                <div className="GrupoCampos">
+                                    <input
+                                        type="date"
+                                        value={disp.fecha}
+                                        onChange={(e) =>
+                                            actualizarFecha(grupoIndex, e.target.value)
+                                        }
+                                    />
 
-            {/* Horarios */}
-            {disp.horarios.map((hora, horaIndex) => (
-                <div key={horaIndex} style={{ display: "flex", gap: 8, marginTop: 8 }}>
-                <input
-                    type="time"
-                    value={hora}
-                    onChange={(e) =>
-                    actualizarHorario(grupoIndex, horaIndex, e.target.value)
-                    }
-                />
+                                    <div className="Horarios">
+                                        {disp.horarios.map((hora, horaIndex) => (
+                                            <input
+                                                key={horaIndex}
+                                                type="time"
+                                                value={hora}
+                                                onChange={(e) =>
+                                                    actualizarHorario(
+                                                        grupoIndex,
+                                                        horaIndex,
+                                                        e.target.value
+                                                    )
+                                                }
+                                            />
+                                        ))}
+                                    </div>
+                                </div>
 
-                {horaIndex === disp.horarios.length - 1 && (
-                    <button
-                    type="button"
-                    onClick={() => agregarHorario(grupoIndex)}
-                    >
-                    +
-                    </button>
-                )}
+                                <button
+                                    type="button"
+                                    className="BotonAgregar"
+                                    onClick={() => agregarHorario(grupoIndex)}
+                                >
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-            ))}
 
-            {/* Botón + del grupo */}
-            {grupoIndex === value.length - 1 && (
                 <button
-                type="button"
-                style={{ marginTop: 8 }}
-                onClick={agregarGrupo}
+                    type="button"
+                    className="BotonAgregar"
+                    onClick={agregarGrupo}
                 >
-                +
+                    +
                 </button>
-            )}
             </div>
-        ))}
         </div>
     );
 }
