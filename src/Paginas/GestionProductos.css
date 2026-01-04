@@ -1,0 +1,40 @@
+.header .header-dos svg {
+    color: var(--color-primario);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 21.5rem;
+}
+
+
+.thStyle {
+  padding: 0.80rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.tdStyle {
+  padding: 0.75rem;
+}
+
+.accionesStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconButtonStyle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #4a4a4a;
+}
+
+

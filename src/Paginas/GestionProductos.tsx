@@ -11,6 +11,8 @@ import Anadir from "../Iconos/Anadir";
 import Editar from "../Iconos/Editar";
 import Borrar from "../Iconos/Borrar";
 import Visibilidad from "../Iconos/Visibilidad";
+import "./GestionProductos.css";
+
 
 interface ActividadItem {
   id: string;
@@ -47,20 +49,14 @@ export default function GestionProductos() {
       <Encabezado />
 
       {/* Header */}
-      <section
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "2.5rem 21.5rem"
-        }}
-      >
+      <section className="header">
+        <div className="header-dos">
         <TituloPrimario
           texto="Mis Actividades"
           icono={<Actividad />}
           color="#000000ff"
         />
-
+        </div>
         <BotonPrimario
           texto="Nueva Actividad"
           icono={<Anadir />}

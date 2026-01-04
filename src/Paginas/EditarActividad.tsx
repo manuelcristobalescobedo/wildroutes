@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
 import Encabezado from "../Componentes/Componentes/Encabezado";
 import Pie from "../Componentes/Componentes/Pie";
 import TituloPrimario from "../Componentes/Elementos/TituloPrimario";
 import Elementos from "../Componentes/Elementos/Indice";
-
 import Actividad from "../Iconos/Actividad";
+import "./EditarActividad.css";
+
 
 interface ActividadForm {
   nombre: string;
@@ -115,13 +115,7 @@ export default function EditarActividad() {
     <main>
       <Encabezado />
 
-      <section
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          paddingTop: "2rem"
-        }}
-      >
+      <section className="seccion-encabezado">
         <TituloPrimario
           texto="Editar Actividad"
           icono={<Actividad />}

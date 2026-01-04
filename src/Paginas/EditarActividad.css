@@ -1,0 +1,10 @@
+.seccion-encabezado {
+    display: "flex";
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+.seccion-encabezado svg {
+    color: var(--color-primario);
+}
