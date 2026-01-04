@@ -14,6 +14,7 @@ import EnlacePrimario from "./EnlacePrimario";
 import EnlaceSecundario from "./EnlaceSecundario";
 import EnlaceTerciario from "./EnlaceTerciario";
 import EntradaCampo from "./EntradaCampo";
+import EntradaLista from "./EntradaLista";
 import EntradaNumero from "./EntradaNumero";
 import EntradaRadioPrimaria from "./EntradaRadioPrimaria";
 import EntradaRadioSecundaria from "./EntradaRadioSecundaria";
@@ -37,8 +38,8 @@ import TituloQuinario from "./TituloQuinario";
 import TituloSextario from "./TituloSextario";
 import TituloSeptenario from "./TituloSeptenario";
 
-export { AccionCuaternaria, AccionPrimaria, AccionQuinaria, AccionSecundaria, AccionTerciaria, BotonCuaternario, BotonPrimario, BotonSecundario, BotonTerciario, EnlaceAlternativoPrimario, EnlaceAlternativoSecundario, EnlaceCuaternario, EnlacePrimario, EnlaceSecundario, EnlaceTerciario, EntradaCampo, EntradaNumero, EntradaRadioPrimaria, EntradaRadioSecundaria, EntradaSeleccion, EntradaTexto, EntradaVerificacionPrimaria, EntradaVerificacionSecundaria, EtiquetaPrimaria, EtiquetaSecundaria, EtiquetaTerciaria, ListaPrimaria, ParrafoCuaternario, ParrafoPrimario, ParrafoSecundario, ParrafoTerciario, TituloPrimario, TituloSecundario, TituloTerciario, TituloCuaternario, TituloQuinario, TituloSextario, TituloSeptenario, };
+export { AccionCuaternaria, AccionPrimaria, AccionQuinaria, AccionSecundaria, AccionTerciaria, BotonCuaternario, BotonPrimario, BotonSecundario, BotonTerciario, EnlaceAlternativoPrimario, EnlaceAlternativoSecundario, EnlaceCuaternario, EnlacePrimario, EnlaceSecundario, EnlaceTerciario, EntradaCampo, EntradaLista, EntradaNumero, EntradaRadioPrimaria, EntradaRadioSecundaria, EntradaSeleccion, EntradaTexto, EntradaVerificacionPrimaria, EntradaVerificacionSecundaria, EtiquetaPrimaria, EtiquetaSecundaria, EtiquetaTerciaria, ListaPrimaria, ParrafoCuaternario, ParrafoPrimario, ParrafoSecundario, ParrafoTerciario, TituloPrimario, TituloSecundario, TituloTerciario, TituloCuaternario, TituloQuinario, TituloSextario, TituloSeptenario, };
 
-const Elementos = { AccionCuaternaria, AccionPrimaria, AccionQuinaria, AccionSecundaria, AccionTerciaria, BotonCuaternario, BotonPrimario, BotonSecundario, BotonTerciario, EnlaceAlternativoPrimario, EnlaceAlternativoSecundario, EnlaceCuaternario, EnlacePrimario, EnlaceSecundario, EnlaceTerciario, EntradaCampo, EntradaNumero, EntradaRadioPrimaria, EntradaRadioSecundaria, EntradaSeleccion, EntradaTexto, EntradaVerificacionPrimaria, EntradaVerificacionSecundaria, EtiquetaPrimaria, EtiquetaSecundaria, EtiquetaTerciaria, ListaPrimaria, ParrafoCuaternario, ParrafoPrimario, ParrafoSecundario, ParrafoTerciario, TituloPrimario, TituloSecundario, TituloTerciario, TituloCuaternario, TituloQuinario, TituloSextario, TituloSeptenario, };
+const Elementos = { AccionCuaternaria, AccionPrimaria, AccionQuinaria, AccionSecundaria, AccionTerciaria, BotonCuaternario, BotonPrimario, BotonSecundario, BotonTerciario, EnlaceAlternativoPrimario, EnlaceAlternativoSecundario, EnlaceCuaternario, EnlacePrimario, EnlaceSecundario, EnlaceTerciario, EntradaCampo, EntradaLista, EntradaNumero, EntradaRadioPrimaria, EntradaRadioSecundaria, EntradaSeleccion, EntradaTexto, EntradaVerificacionPrimaria, EntradaVerificacionSecundaria, EtiquetaPrimaria, EtiquetaSecundaria, EtiquetaTerciaria, ListaPrimaria, ParrafoCuaternario, ParrafoPrimario, ParrafoSecundario, ParrafoTerciario, TituloPrimario, TituloSecundario, TituloTerciario, TituloCuaternario, TituloQuinario, TituloSextario, TituloSeptenario, };
 
 export default Elementos;

@@ -35,6 +35,7 @@ export default function AgregarNuevaActividad() {
   navigate("/gestion-productos");
 };
 
+    const [incluye, setIncluye] = useState<string[]>([""]);
 
     return(
         <>
@@ -94,6 +95,8 @@ export default function AgregarNuevaActividad() {
 
                         <Elementos.EntradaCampo estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="" nombre="photo" valor={""} accion={handleChange} marcador="" informacion="" tipo="file"/>
                         <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}></p>
+
+                        <Elementos.EntradaLista value={incluye} onChange={setIncluye} />
 
 
                         <section>

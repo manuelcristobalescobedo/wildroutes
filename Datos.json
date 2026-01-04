@@ -704,5 +704,23 @@
     }
   ],
   "reservas": [],
-  "actividades": []
+  "actividades": [
+    {
+      "id": "63f7b35e-fb02-43c1-8dc2-a075bd7a65ae",
+      "nombre": "hola hola chao",
+      "descripcion": "hola hola hola",
+      "precio": "20000",
+      "maxPersonas": "10",
+      "minPersonas": "1",
+      "zona": "Norte",
+      "region": "Atacama",
+      "comuna": "Antofagasta",
+      "devolucion": "hogar",
+      "reembolso": "electronica",
+      "actividad": "sdvfbreberberb",
+      "act2": "rgegegerg",
+      "act3": "vregrwg",
+      "act4": "dfbnrytmuy,ilkujy"
+    }
+  ]
 }
