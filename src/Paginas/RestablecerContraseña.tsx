@@ -7,12 +7,76 @@ import BotonPrimario from "../Componentes/Elementos/BotonPrimario"
 import EnlaceAlternativoPrimario from "../Componentes/Elementos/EnlaceAlternativoPrimario"
 import { useState } from "react"
 import Elementos from "../Componentes/Elementos/Indice"
-
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 
 export default function RestablecerContrasena() {
+  const [entrada, setEntrada] = useState({
+    contrasena: "",
+    confirmar: "",
+  });
 
-         const [entrada, setEntrada] = useState({ nombre: "", apellido: "", telefono: "+56 9 ", rut: "", correo: "", contrasena: "",  confirmar: "", mensaje: "", });
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  const correo = searchParams.get("correo");
+
+  const restablecer = async () => {
+    setError("");
+
+    if (!correo) {
+      setError("Enlace inválido o expirado");
+      return;
+    }
+
+    if (!entrada.contrasena || !entrada.confirmar) {
+      setError("Todos los campos son obligatorios");
+      return;
+    }
+
+    if (entrada.contrasena.length < 8) {
+      setError("La contraseña debe tener al menos 8 caracteres");
+      return;
+    }
+
+    if (entrada.contrasena !== entrada.confirmar) {
+      setError("Las contraseñas no coinciden");
+      return;
+    }
+
+    try {
+      // 1️⃣ Buscar usuario
+      const response = await fetch(
+        `http://localhost:3001/clientes?correo=${encodeURIComponent(correo)}`
+      );
+
+      const data = await response.json();
+
+      if (data.length === 0) {
+        setError("Usuario no encontrado");
+        return;
+      }
+
+      const usuario = data[0];
+
+      // 2️⃣ Actualizar contraseña
+      await fetch(`http://localhost:3001/clientes/${usuario.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          contrasena: entrada.contrasena,
+        }),
+      });
+
+      alert("Contraseña actualizada correctamente");
+      navigate("/login");
+    } catch (err) {
+      setError("Error al conectar con el servidor");
+    }
+  };
 
     return(
         <>
@@ -36,7 +100,7 @@ export default function RestablecerContrasena() {
                 </div>
                 <div>
                     <section style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem", paddingBottom: "2rem"}}>
-                        <BotonPrimario texto="Aceptar" icono="" nivel="alto"/>
+                        <BotonPrimario texto="Aceptar" icono="" nivel="alto" accion={restablecer}/>
 
                         <EnlaceAlternativoPrimario texto="Volver atrás" icono={<FlechaIzquierda/>} enlace="/nueva-principal"/>
                     </section>

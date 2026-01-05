@@ -2,20 +2,51 @@ import Encabezado from "../Componentes/Componentes/Encabezado"
 import Pie from "../Componentes/Componentes/Pie"
 import BotonCuaternario from "../Componentes/Elementos/BotonCuaternario"
 import EnlaceAlternativoSecundario from "../Componentes/Elementos/EnlaceAlternativoSecundario"
-import EnlacePrimario from "../Componentes/Elementos/EnlacePrimario"
 import ParrafoSecundario from "../Componentes/Elementos/ParrafoSecundario"
 import TituloPrimario from "../Componentes/Elementos/TituloPrimario"
 import TituloQuinario from "../Componentes/Elementos/TituloQuinario"
 import Apple from "../Iconos/Apple"
 import Google from "../Iconos/Google"
-import Elementos from "../Componentes/Elementos/Indice"
+import Elementos, { BotonPrimario } from "../Componentes/Elementos/Indice"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import type { Usuario } from "../Tipos/NuevosUsuarios"
 
-
+type LoginForm = Pick<Usuario, "correo" | "contrasena">;
 
 export default function LoginUsuario() {
 
-    const [entrada, setEntrada] = useState({ nombre: "", apellido: "", telefono: "+56 9 ", rut: "", correo: "", contrasena: "",  confirmar: "", mensaje: "", });
+    const [entrada, setEntrada] = useState({correo: "", contrasena: ""});
+
+    const navigate = useNavigate();
+
+    const iniciarSesion = async () => {
+    const response = await fetch(
+    `http://localhost:3001/clientes?correo=${encodeURIComponent(
+      entrada.correo
+    )}&contrasena=${encodeURIComponent(entrada.contrasena)}`
+  );
+
+  if (!entrada.correo || !entrada.contrasena) {
+  alert("Completa todos los campos");
+  return;
+}
+
+  if (!response.ok) {
+    alert("Error al conectar con el servidor");
+    return;
+  }
+
+  const data = await response.json();
+
+  if (data.length === 0) {
+    alert("Correo o contraseña incorrectos");
+    return;
+  }
+
+  // Login OK
+  navigate("/nueva-principal"); // or /gestion-productos
+};
 
     return(
         <>
@@ -76,12 +107,12 @@ export default function LoginUsuario() {
 
                                 <section>
                                     <div>
-                                        <EnlacePrimario texto="Iniciar Sesión" enlace="" icono="" nivel="alto"/>
+                                        <BotonPrimario texto="Iniciar Sesión" accion={iniciarSesion} icono="" nivel="alto"/>
                                     </div>
                                     <div>
-                                        <EnlaceAlternativoSecundario texto="¿Olvidaste tu contraseña?" enlace="" />
+                                        <EnlaceAlternativoSecundario texto="¿Olvidaste tu contraseña?" enlace="/recuperar-contraseña" />
                                         <ParrafoSecundario texto="¿Eres nuevo?" color="#000000ff" icono="" />
-                                        <EnlaceAlternativoSecundario texto="Crear cuenta" enlace="" />
+                                        <EnlaceAlternativoSecundario texto="Crear cuenta" enlace="/registro-usuario" />
                                     </div>
                                 </section>
 

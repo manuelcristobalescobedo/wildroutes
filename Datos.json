@@ -616,49 +616,22 @@
     }
   ],
   "reservas": [],
-  "actividades": [
+  "actividades": [],
+  "clientes": [
     {
-      "id": "6100e768-8c07-4786-a600-97181e1591b4",
-      "imagenes": [
-        ""
-      ],
-      "titulo": "asdasda",
-      "descripcion": "",
-      "consiste": "",
-      "ubicacion": {
-        "comuna": "",
-        "region": "",
-        "pais": ""
-      },
-      "calificacion": 0,
-      "resenas": 0,
-      "precio": "",
-      "intereses": false,
-      "descuentos": false,
-      "zona": "",
-      "ideal": "",
-      "actividad": "",
-      "incluye": [
-        ""
-      ],
-      "excluye": [],
-      "informacion": {
-        "duracion": "",
-        "inicio": "",
-        "edad": "",
-        "requisitos": "",
-        "idiomas": ""
-      },
-      "politicas": "",
-      "disponibilidad": [
-        {
-          "fecha": "",
-          "horarios": [
-            ""
-          ]
-        }
-      ],
-      "cupos": 0
+      "id": "f504",
+      "correo": "asdasd",
+      "contrasena": "asdasd"
+    },
+    {
+      "id": "607d",
+      "correo": "asda",
+      "contrasena": "asdasd"
+    },
+    {
+      "id": "0f83",
+      "correo": "",
+      "contrasena": ""
     }
   ]
 }

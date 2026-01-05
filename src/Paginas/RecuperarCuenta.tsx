@@ -9,10 +9,39 @@ import Elementos, { EnlaceAlternativoPrimario} from "../Componentes/Elementos/In
 import { useState } from "react"
 
 
-
 export default function RecuperarCuenta() {
-     const [entrada, setEntrada] = useState({ nombre: "", apellido: "", telefono: "+56 9 ", rut: "", correo: "", contrasena: "",  confirmar: "", mensaje: "", });
-     
+
+    const [entrada, setEntrada] = useState({ correo: ""});
+    const [error, setError] = useState("");
+
+    const enviarCorreo = async () => {
+  setError("");
+
+  if (!entrada.correo) {
+    setError("El correo es obligatorio");
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      `http://localhost:3001/clientes?correo=${encodeURIComponent(
+        entrada.correo
+      )}`
+    );
+
+    const data = await response.json();
+
+    if (data.length === 0) {
+      setError("No se encontró una cuenta con ese correo");
+      return;
+    }
+
+    alert("Enlace enviado (simulado)");
+  } catch (err) {
+    setError("Error al conectar con el servidor");
+  }
+};
+
     return(
         <>
             <main>
@@ -31,10 +60,9 @@ export default function RecuperarCuenta() {
                         </section>
 
                         <section style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem", paddingBottom: "2rem"}}>       
-                            <BotonSecundario texto="Enviame el enlace mágico" icono={<CirculoAprobado />} nivel="alto"/>
+                            <BotonSecundario texto="Enviame el enlace mágico" icono={<CirculoAprobado />} nivel="alto" accion={enviarCorreo}/>
                             
                             <EnlaceAlternativoPrimario  texto="Volver atras" enlace="/nueva-principal" icono={<FlechaIzquierda />} />
-                            
                         </section>
                     </div>
                 <Pie />
