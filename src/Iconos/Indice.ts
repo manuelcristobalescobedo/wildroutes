@@ -38,6 +38,7 @@ import Insatisfecho from "./Insatisfecho";
 import Limite from "./Limite";
 import Lista from "./Lista";
 import Mapa from "./Mapa";
+import Mercado from "./Mercado";
 import Mezcla from "./Mezcla";
 import Persona from "./Persona";
 import Rebaja from "./Rebaja";
@@ -52,9 +53,10 @@ import Vender from "./Vender";
 import Visibilidad from "./Visibilidad";
 import VisibilidadDesactivada from "./VisibilidadDesactivada";
 import Voluntariado from "./Voluntariado";
+import Webpay from "./Webpay";
 
-export { Actividad, Anadir, Apple, Aprobado, Borrar, Burbuja, Buscar, Calendario, Carro, Categoria, Cerrar, CerrarPequeno, Circulo, CirculoAgregar, CirculoAprobado, CirculoDenegado, CirculoQuitar, Correo, Descuento, Despejar, Dinero, Editar, Enlace, Estrella, Evento, Explorar, Facebook, Favorito, FlechaAbajo, FlechaArriba, FlechaDerecha, FlechaIzquierda, Foro, Google, Historial, Imagen, Insatisfecho, Limite, Lista, Mapa, Mezcla, Persona, Rebaja, Repetir, Satisfecho, Soporte, Sustraer, Telefono, Todo, Ubicacion, Vender, Visibilidad, VisibilidadDesactivada, Voluntariado, };
+export { Actividad, Anadir, Apple, Aprobado, Borrar, Burbuja, Buscar, Calendario, Carro, Categoria, Cerrar, CerrarPequeno, Circulo, CirculoAgregar, CirculoAprobado, CirculoDenegado, CirculoQuitar, Correo, Descuento, Despejar, Dinero, Editar, Enlace, Estrella, Evento, Explorar, Facebook, Favorito, FlechaAbajo, FlechaArriba, FlechaDerecha, FlechaIzquierda, Foro, Google, Historial, Imagen, Insatisfecho, Limite, Lista, Mapa, Mercado, Mezcla, Persona, Rebaja, Repetir, Satisfecho, Soporte, Sustraer, Telefono, Todo, Ubicacion, Vender, Visibilidad, VisibilidadDesactivada, Voluntariado, Webpay, };
 
-const Iconos = { Actividad, Anadir, Apple, Aprobado, Borrar, Burbuja, Buscar, Calendario, Carro, Categoria, Cerrar, CerrarPequeno, Circulo, CirculoAgregar, CirculoAprobado, CirculoDenegado, CirculoQuitar, Correo, Descuento, Despejar, Dinero, Editar, Enlace, Estrella, Evento, Explorar, Facebook, Favorito, FlechaAbajo, FlechaArriba, FlechaDerecha, FlechaIzquierda, Foro, Google, Historial, Imagen, Insatisfecho, Limite, Lista, Mapa, Mezcla, Persona, Rebaja, Repetir, Satisfecho, Soporte, Sustraer, Telefono, Todo, Ubicacion, Vender, Visibilidad, VisibilidadDesactivada, Voluntariado, };
+const Iconos = { Actividad, Anadir, Apple, Aprobado, Borrar, Burbuja, Buscar, Calendario, Carro, Categoria, Cerrar, CerrarPequeno, Circulo, CirculoAgregar, CirculoAprobado, CirculoDenegado, CirculoQuitar, Correo, Descuento, Despejar, Dinero, Editar, Enlace, Estrella, Evento, Explorar, Facebook, Favorito, FlechaAbajo, FlechaArriba, FlechaDerecha, FlechaIzquierda, Foro, Google, Historial, Imagen, Insatisfecho, Limite, Lista, Mapa, Mercado, Mezcla, Persona, Rebaja, Repetir, Satisfecho, Soporte, Sustraer, Telefono, Todo, Ubicacion, Vender, Visibilidad, VisibilidadDesactivada, Voluntariado, Webpay, };
 
 export default Iconos;
