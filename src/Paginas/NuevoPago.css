@@ -1,0 +1,225 @@
+.Compra {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 20px;
+    margin: 64px 0;
+}
+
+.Especificaciones {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    /* padding: 36px 32px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.Especificaciones > div {
+    gap: 8px !important;
+}
+
+.Especificaciones > .accion-cuaternaria {
+    margin-bottom: 48px;
+}
+
+.Especificaciones > .titulo-cuaternario {
+    margin-bottom: 24px;
+}
+
+.Especificaciones > table {
+    margin-bottom: 64px;
+}
+
+.Especificaciones > table span {
+    margin: 4px 0;
+}
+
+.Especificaciones > table tbody:nth-of-type(2) span, .Especificaciones > table tbody:nth-of-type(3) span {
+    font-weight: 700;
+}
+
+.Especificaciones > table tbody:nth-of-type(2) span {
+    color: var(--color-neutro-bajo);
+}
+
+.Especificaciones > .boton-secundario {
+    margin-bottom: 64px;
+}
+
+.Especificaciones > .entrada-texto:nth-of-type(3) {
+    margin-bottom: 48px;
+}
+
+.Especificaciones > .titulo-sextario {
+    margin-bottom: 16px;
+}
+
+.Especificaciones > .parrafo-primario {
+    margin-bottom: 36px;
+}
+
+.Especificaciones > .boton-primario {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.Ayuda {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+}
+
+.Medios {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 64px;
+}
+
+.Medios > div {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 26px 32px;
+    background-color: var(--color-neutro-mas-mas-bajo);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Medios > div:nth-of-type(1) > svg {
+    height: 56px;
+    width: 160px;
+}
+
+.Medios > div:nth-of-type(2) > svg {
+    height: 48px;
+    width: 160px;
+}
+
+.Articulos {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.Articulos > h1 {
+    margin-bottom: 8px;
+}
+
+.Articulos > p {
+    margin-bottom: 32px;
+}
+
+.Articulos > div {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Pieza {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 12px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 16px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+}
+
+.Pieza > div {
+    min-width: 0;
+}
+
+.Pieza > div:nth-of-type(1) {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.Pieza > div:nth-of-type(1) > img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 4px;
+}
+
+.Pieza > div:nth-of-type(2) {
+    height: fit-content;
+    width: 100%;
+    grid-column: 2 / 4;
+}
+
+.Pieza > div:nth-of-type(2) > p {
+    gap: 4px !important;
+}
+
+.Pieza > div:nth-of-type(2) > span {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.Pieza > div:nth-of-type(2) > div {
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.Pieza > div:nth-of-type(2) > h1:first-of-type {
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.Pieza > div:nth-of-type(2) > p {
+    margin-bottom: 16px;
+}
+
+.Pieza > div:nth-of-type(2) > span:last-of-type {
+    margin-bottom: 16px;
+}
+
+.Pieza > div:nth-of-type(2) > div > div {
+    height: fit-content;
+    width: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
