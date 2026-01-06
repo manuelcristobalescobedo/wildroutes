@@ -84,7 +84,7 @@ export default function RestablecerContrasena() {
                 <Encabezado/>
                 <section>
                     <div style={{display: "flex", flexDirection: "column", alignItems: "center", paddingTop: "2.5rem", paddingBottom: "2.5rem", gap: "1rem"}}>
-                        <TituloPrimario texto="Restablece tu contraseña" icono="" color="#000000ff" />
+                        <TituloPrimario fuente="serif" texto="Restablece tu contraseña" icono="" color="#000000ff" />
                         <TituloQuinario texto="¡Estamos casi listos! " icono="" color="#000000ff" />
                         <TituloQuinario texto="Ingresa tu nueva contraseña para volver a tu cuenta" icono="" color="#000000ff" />
                     </div>

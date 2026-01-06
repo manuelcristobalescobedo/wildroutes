@@ -80,7 +80,7 @@ export default function AgregarNuevaActividad() {
             <main>
                 <Encabezado />
                     <section className="TituloActividad" style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingTop: "2rem", }}>
-                        <Elementos.TituloTerciario texto="Agregar Nueva Actividad" color="var(--color-neutro-mas-mas-mas-mas-alto)" icono={<Iconos.Actividad />} />
+                        <Elementos.TituloTerciario fuente="serif" texto="Agregar Nueva Actividad" color="var(--color-neutro-mas-mas-mas-mas-alto)" icono={<Iconos.Actividad />} />
                     </section>
                     <section style={{paddingRight: "2rem", paddingLeft: "2rem", gap: "1rem"}}>
                         <Elementos.EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Nombre de actividad:" nombre="titulo" valor={entrada.titulo} accion={handleChange} marcador="" informacion="" tipo="text"/>

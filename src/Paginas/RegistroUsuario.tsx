@@ -104,8 +104,8 @@ export default function RegistroUsuario() {
 
         {/* Formulario */}
         <div style={{ padding: "2rem", maxWidth: 480 }}>
-          <TituloPrimario texto="¡Regístrate ahora!" color="#000" />
-          <TituloQuinario texto="WildRoutes es lo que estás buscando." color="#7a1e2b" />
+          <TituloPrimario fuente="serif" texto="¡Regístrate ahora!" color="#000" />
+          <TituloQuinario fuente="serif" texto="WildRoutes es lo que estás buscando." color="#7a1e2b" />
 
           <Elementos.EntradaTexto etiqueta="Nombre" nombre="nombre" valor={entrada.nombre}
             accion={(e) => setEntrada({ ...entrada, nombre: e.target.value })} />

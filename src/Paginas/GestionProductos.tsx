@@ -55,6 +55,7 @@ export default function GestionProductos() {
           texto="Mis Actividades"
           icono={<Actividad />}
           color="#000000ff"
+          fuente="serif"
         />
         </div>
         <BotonPrimario

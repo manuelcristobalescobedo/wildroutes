@@ -48,7 +48,7 @@ export default function RecuperarCuenta() {
                 <Encabezado />
                 <section style={{flexDirection: "column", display: "flex", alignItems: "center", paddingTop: "2.5rem", paddingBottom: "2.5rem", marginBottom: ""}}>
 
-                        <TituloPrimario texto="Recupera tu cuenta WildRoutes" icono="" color="#000000ff" />
+                        <TituloPrimario fuente="serif" texto="Recupera tu cuenta WildRoutes" icono="" color="#000000ff" />
                     <div style={{paddingTop: "1rem"}}>
                         <TituloQuinario texto="Ingresa tu correo para restablecer tu contraseña" icono="" color="#000000ff" />
                     </div>

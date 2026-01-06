@@ -15,7 +15,7 @@ export function Tarjeta({ id, imagenes, titulo, ubicacion, calificacion, resenas
             <Elementos.ParrafoPrimario icono={<Iconos.Estrella />} texto={`${calificacion} (${resenas} reseñas)`} color="var(--color-terciario-bajo)"/>
             <Elementos.TituloSextario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto={precio}/>
             <Elementos.ParrafoPrimario color="var(--color-neutro-mas-mas-mas-mas-alto)" texto="por persona"/>
-            <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace={`/nuevo-servicio/${id}`} />
+            <Elementos.EnlaceSecundario nivel="alto" texto="Ver detalles" enlace={`/servicio/${id}`} />
             {descuentos && <Iconos.Rebaja />}
         </div>
     )

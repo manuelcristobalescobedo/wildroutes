@@ -90,8 +90,8 @@ export default function LoginUsuario() {
                                 <section>
                                     <div >
                                         <TituloPrimario texto="WildRoutes" color="var(--color-primario-mas-alto)" />
-                                        <TituloPrimario texto="Ingresa a tu cuenta" color="#000000ff" />
-                                        <TituloQuinario texto="Gestiona tu próximo destino" color="#000000ff" />
+                                        <TituloPrimario fuente="serif" texto="Ingresa a tu cuenta" color="#000000ff" />
+                                        <TituloQuinario fuente="serif" texto="Gestiona tu próximo destino" color="#000000ff" />
                                     </div>
                                 </section>
 
