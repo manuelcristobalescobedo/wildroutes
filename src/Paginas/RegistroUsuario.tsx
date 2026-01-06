@@ -6,19 +6,25 @@ import TituloPrimario from "../Componentes/Elementos/TituloPrimario";
 import TituloQuinario from "../Componentes/Elementos/TituloQuinario";
 import Elementos, { BotonPrimario } from "../Componentes/Elementos/Indice";
 import EnlaceAlternativoSecundario from "../Componentes/Elementos/EnlaceAlternativoSecundario";
+import type { DatosFormulario } from "../Tipos/NuevosUsuarios";
+
+type RegistroForm = DatosFormulario & {
+  terminos: boolean;
+};
+
 
 export default function RegistroUsuario() {
   const navigate = useNavigate();
 
-  const [entrada, setEntrada] = useState({
+  const [entrada, setEntrada] = useState<RegistroForm>({
     nombre: "",
     apellido: "",
     telefono: "+56 9 ",
     rut: "",
     correo: "",
     contrasena: "",
-    confirmar: "",
-    publicidad: false,
+    novedades: false,
+    repetirContrasena: "",
     terminos: false,
   });
 
@@ -32,7 +38,7 @@ export default function RegistroUsuario() {
       !entrada.apellido ||
       !entrada.correo ||
       !entrada.contrasena ||
-      !entrada.confirmar
+      !entrada.repetirContrasena
     ) {
       setError("Completa todos los campos");
       return;
@@ -43,7 +49,7 @@ export default function RegistroUsuario() {
       return;
     }
 
-    if (entrada.contrasena !== entrada.confirmar) {
+    if (entrada.contrasena !== entrada.repetirContrasena) {
       setError("Las contraseñas no coinciden");
       return;
     }
@@ -64,7 +70,7 @@ export default function RegistroUsuario() {
           rut: entrada.rut,
           correo: entrada.correo,
           contrasena: entrada.contrasena,
-          publicidad: entrada.publicidad,
+          novedades: entrada.novedades,
         }),
       });
 
@@ -127,15 +133,15 @@ export default function RegistroUsuario() {
             accion={(e) => setEntrada({ ...entrada, contrasena: e.target.value })} />
 
           <Elementos.EntradaTexto etiqueta="Confirmar contraseña" nombre="confirmar"tipo="password"
-            valor={entrada.confirmar}
-            accion={(e) => setEntrada({ ...entrada, confirmar: e.target.value })} />
+            valor={entrada.repetirContrasena}
+            accion={(e) => setEntrada({ ...entrada, repetirContrasena: e.target.value })} />
 
           <label>
             <input
               type="checkbox"
-              checked={entrada.publicidad}
+              checked={entrada.novedades}
               onChange={(e) =>
-                setEntrada({ ...entrada, publicidad: e.target.checked })
+                setEntrada({ ...entrada, novedades: e.target.checked })
               }
             />{" "}
             Quiero recibir publicidad
@@ -158,7 +164,7 @@ export default function RegistroUsuario() {
 
           <EnlaceAlternativoSecundario
             texto="¿Ya tienes cuenta? Iniciar sesión"
-            enlace="/login"
+            enlace="/ingreso"
           />
         </div>
       </section>

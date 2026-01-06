@@ -16,37 +16,47 @@ type LoginForm = Pick<Usuario, "correo" | "contrasena">;
 
 export default function LoginUsuario() {
 
-    const [entrada, setEntrada] = useState({correo: "", contrasena: ""});
+    const [entrada, setEntrada] = useState<LoginForm>({
+        correo: "", 
+        contrasena: ""
+    });
 
     const navigate = useNavigate();
 
     const iniciarSesion = async () => {
+
+         if (!entrada.correo || !entrada.contrasena) {
+        alert("Completa todos los campos");
+        return;
+        }
+
     const response = await fetch(
     `http://localhost:3001/clientes?correo=${encodeURIComponent(
       entrada.correo
     )}&contrasena=${encodeURIComponent(entrada.contrasena)}`
-  );
+    );
 
-  if (!entrada.correo || !entrada.contrasena) {
-  alert("Completa todos los campos");
-  return;
-}
+    if (!response.ok) {
+        alert("Error al conectar con el servidor");
+        return;
+    }
 
-  if (!response.ok) {
-    alert("Error al conectar con el servidor");
-    return;
-  }
+    const data = await response.json();
 
-  const data = await response.json();
+    if (data.length === 0) {
+        alert("Correo o contraseña incorrectos");
+        return;
+    }
+    
+    const usuario = data[0];
+    console.log("Usuario autenticado:", usuario);
+    
+    localStorage.setItem("usuario", JSON.stringify(usuario));
 
-  if (data.length === 0) {
-    alert("Correo o contraseña incorrectos");
-    return;
-  }
+    // login OK
+    navigate("/");
 
-  // Login OK
-  navigate("/nueva-principal"); // or /gestion-productos
-};
+    };
 
     return(
         <>
@@ -100,7 +110,7 @@ export default function LoginUsuario() {
                                         <Elementos.EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Correo:" nombre="correo" valor={entrada.correo} accion={(e) => setEntrada({ ...entrada, correo: e.target.value })} marcador="@" informacion="" tipo="text"/>
                                         <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}></p>
 
-                                        <Elementos.EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Contraseña:" nombre="contraseña" valor={entrada.contrasena} accion={(e) => setEntrada({ ...entrada, contrasena: e.target.value })} marcador="" informacion="Mínimo 8 caracteres" tipo="password"/>
+                                        <Elementos.EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Contraseña:" nombre="contrasena" valor={entrada.contrasena} accion={(e) => setEntrada({ ...entrada, contrasena: e.target.value })} marcador="" informacion="Mínimo 8 caracteres" tipo="password"/>
                                         <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}></p>
                                     </div>
                                 </section>

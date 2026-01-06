@@ -57,6 +57,9 @@ export default function RecuperarCuenta() {
                         <section style={{ padding: "1rem", borderRadius: "12px", paddingLeft: "27rem", paddingRight: "27rem", display: "flex", flexDirection: "column", gap: "8px", alignItems: "center"}}>
                             <Elementos.EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Correo electrónico" nombre="correo" valor={entrada.correo} accion={(e) => setEntrada({ ...entrada, correo: e.target.value })} marcador="ejemplo@correo.cl" informacion="" tipo="text"/>
                         <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}></p>
+                        
+                            {error && <p style={{ color: "red" }}>{error}</p>}
+                        
                         </section>
 
                         <section style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem", paddingBottom: "2rem"}}>       

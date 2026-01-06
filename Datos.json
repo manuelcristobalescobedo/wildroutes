@@ -632,6 +632,16 @@
       "id": "0f83",
       "correo": "",
       "contrasena": ""
+    },
+    {
+      "id": "143c",
+      "nombre": "asdas",
+      "apellido": "asdasd",
+      "telefono": "+56 9 8888 8888",
+      "rut": "20.898.898-9",
+      "correo": "dasda@gmail.com",
+      "contrasena": "swwwwwww",
+      "novedades": false
     }
   ]
 }

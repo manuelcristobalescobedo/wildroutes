@@ -13,7 +13,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 export default function RestablecerContrasena() {
   const [entrada, setEntrada] = useState({
     contrasena: "",
-    confirmar: "",
+    repetirContrasena: "",
   });
 
   const [error, setError] = useState("");
@@ -23,60 +23,54 @@ export default function RestablecerContrasena() {
   const correo = searchParams.get("correo");
 
   const restablecer = async () => {
-    setError("");
+  setError("");
 
-    if (!correo) {
-      setError("Enlace inválido o expirado");
+  if (!correo) {
+    setError("El enlace de restablecimiento es inválido o ha expirado");
+    return;
+  }
+
+  if (!entrada.contrasena || !entrada.repetirContrasena) {
+    setError("Todos los campos son obligatorios");
+    return;
+  }
+
+  if (entrada.contrasena.length < 8) {
+    setError("La contraseña debe tener al menos 8 caracteres");
+    return;
+  }
+
+  if (entrada.contrasena !== entrada.repetirContrasena) {
+    setError("Las contraseñas no coinciden");
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      `http://localhost:3001/clientes?correo=${encodeURIComponent(correo)}`
+    );
+
+    const data = await response.json();
+
+    if (data.length === 0) {
+      setError("Usuario no encontrado");
       return;
     }
 
-    if (!entrada.contrasena || !entrada.confirmar) {
-      setError("Todos los campos son obligatorios");
-      return;
-    }
+    const usuario = data[0];
 
-    if (entrada.contrasena.length < 8) {
-      setError("La contraseña debe tener al menos 8 caracteres");
-      return;
-    }
+    await fetch(`http://localhost:3001/clientes/${usuario.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ contrasena: entrada.contrasena }),
+    });
 
-    if (entrada.contrasena !== entrada.confirmar) {
-      setError("Las contraseñas no coinciden");
-      return;
-    }
-
-    try {
-      // 1️⃣ Buscar usuario
-      const response = await fetch(
-        `http://localhost:3001/clientes?correo=${encodeURIComponent(correo)}`
-      );
-
-      const data = await response.json();
-
-      if (data.length === 0) {
-        setError("Usuario no encontrado");
-        return;
-      }
-
-      const usuario = data[0];
-
-      // 2️⃣ Actualizar contraseña
-      await fetch(`http://localhost:3001/clientes/${usuario.id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          contrasena: entrada.contrasena,
-        }),
-      });
-
-      alert("Contraseña actualizada correctamente");
-      navigate("/login");
-    } catch (err) {
-      setError("Error al conectar con el servidor");
-    }
-  };
+    alert("Contraseña actualizada correctamente");
+    navigate("/login");
+  } catch {
+    setError("Error al conectar con el servidor");
+  }
+};
 
     return(
         <>
@@ -94,8 +88,11 @@ export default function RestablecerContrasena() {
                         <Elementos.EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Nueva Contraseña" nombre="nueva-contraseña" valor={entrada.contrasena} accion={(e) => setEntrada({ ...entrada, contrasena: e.target.value })} informacion="Usa como mínimo un símbolo" tipo="password"/>
                         <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}></p>
 
-                        <Elementos.EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Confirma contraseña" nombre="confirmar" valor={entrada.confirmar} accion={(e) => setEntrada({ ...entrada, confirmar: e.target.value })} informacion="" tipo="password"/>
+                        <Elementos.EntradaTexto estilo="var(--color-neutro-mas-mas-mas-mas-alto)" etiqueta="Confirma contraseña" nombre="confirmar" valor={entrada.repetirContrasena} accion={(e) => setEntrada({ ...entrada, repetirContrasena: e.target.value })} informacion="" tipo="password"/>
                         <p style={{ fontFamily: "sans-serif", margin: "0", padding: "0" }}></p>
+
+                        {error && <p style={{ color: "red" }}>{error}</p>}
+
                     </section>
                 </div>
                 <div>

@@ -49,7 +49,7 @@ export default function AgregarNuevaActividad() {
     ideal: entrada.ideal,
     actividad: entrada.actividad,
     incluye: incluye,
-    excluye: [],                         // default empty
+    excluye: [],                         
     informacion: entrada.informacion,
     politicas: entrada.politicas,
     disponibilidad: disponibilidad,
