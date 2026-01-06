@@ -1,44 +1,79 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Encabezado from "../Componentes/Componentes/Encabezado";
 import Pie from "../Componentes/Componentes/Pie";
-import BotonCuaternario from "../Componentes/Elementos/BotonCuaternario";
-import EnlaceAlternativoSecundario from "../Componentes/Elementos/EnlaceAlternativoSecundario";
-import ParrafoSecundario from "../Componentes/Elementos/ParrafoSecundario";
 import TituloPrimario from "../Componentes/Elementos/TituloPrimario";
 import TituloQuinario from "../Componentes/Elementos/TituloQuinario";
-import Apple from "../Iconos/Apple";
-import Google from "../Iconos/Google";
-import Elementos, { BotonPrimario} from "../Componentes/Elementos/Indice";
-import type { Usuario } from "../Tipos/NuevosUsuarios"
-import { useNavigate } from "react-router-dom";
-
-type LoginForm = Pick<Usuario, "correo" | "contrasena">;
+import Elementos, { BotonPrimario } from "../Componentes/Elementos/Indice";
+import EnlaceAlternativoSecundario from "../Componentes/Elementos/EnlaceAlternativoSecundario";
 
 export default function RegistroUsuario() {
-  const [entrada, setEntrada] = useState<LoginForm>({
-    correo: "",
-    contrasena: ""
-  });
-
   const navigate = useNavigate();
 
-  const crearUsuario = async () => {
-  const response = await fetch("http://localhost:3001/clientes", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      correo: entrada.correo,
-      contrasena: entrada.contrasena
-    })
+  const [entrada, setEntrada] = useState({
+    nombre: "",
+    apellido: "",
+    telefono: "+56 9 ",
+    rut: "",
+    correo: "",
+    contrasena: "",
+    confirmar: "",
+    publicidad: false,
+    terminos: false,
   });
 
-  if (!response.ok) {
-    alert("Error al crear usuario");
-    return;
-  }
+  const [error, setError] = useState("");
 
-  navigate("/"); // or wherever makes sense
-};
+  const registrar = async () => {
+    setError("");
+
+    if (
+      !entrada.nombre ||
+      !entrada.apellido ||
+      !entrada.correo ||
+      !entrada.contrasena ||
+      !entrada.confirmar
+    ) {
+      setError("Completa todos los campos");
+      return;
+    }
+
+    if (entrada.contrasena.length < 8) {
+      setError("La contraseña debe tener al menos 8 caracteres");
+      return;
+    }
+
+    if (entrada.contrasena !== entrada.confirmar) {
+      setError("Las contraseñas no coinciden");
+      return;
+    }
+
+    if (!entrada.terminos) {
+      setError("Debes aceptar los términos y condiciones");
+      return;
+    }
+
+    try {
+      await fetch("http://localhost:3001/clientes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nombre: entrada.nombre,
+          apellido: entrada.apellido,
+          telefono: entrada.telefono,
+          rut: entrada.rut,
+          correo: entrada.correo,
+          contrasena: entrada.contrasena,
+          publicidad: entrada.publicidad,
+        }),
+      });
+
+      alert("Cuenta creada correctamente");
+      navigate("/login");
+    } catch {
+      setError("Error al crear la cuenta");
+    }
+  };
 
   return (
     <main>
@@ -49,19 +84,10 @@ export default function RegistroUsuario() {
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           minHeight: "100vh",
-          alignItems: "stretch"
         }}
       >
         {/* Imagen */}
-        <div
-          style={{
-            display: "flex",
-            alignContent: "center",
-            justifyContent: "center",
-            padding: "2rem",
-            paddingLeft: "7rem"
-          }}
-        >
+        <div style={{ display: "flex", justifyContent: "center", padding: "2rem" }}>
           <div
             style={{
               width: "100%",
@@ -70,85 +96,70 @@ export default function RegistroUsuario() {
               backgroundImage:
                 "url('https://i.postimg.cc/vTW31JSy/Piedras-Rojas-San-Pedro-de-Atacama-Chile-1.jpg')",
               backgroundSize: "cover",
-              backgroundPosition: "center",
               borderRadius: "20px",
-              boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
+              boxShadow: "0 20px 40px rgba(0,0,0,0.15)",
             }}
           />
         </div>
 
-        {/* Contenido */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            padding: "2rem",
-            paddingRight: "7rem",
-            alignItems: "center",
-            gap: "1rem"
-          }}
-        >
-          <section>
-            <svg viewBox="0 0 149 149" xmlns="http://www.w3.org/2000/svg" height={150}>
-              <circle cx="74.5" cy="74.5" r="74.5" fill="white" />
-              <path
-                d="M134.514 74.5002C134.514 107.645 107.645 134.514 74.5 134.514C41.3552 134.514 14.4861 107.645 14.4861 74.5002C14.4861 41.3555 41.3552 14.4863 74.5 14.4863C107.645 14.4863 134.514 41.3555 134.514 74.5002Z"
-                fill="#ECB9BD"
-              />
-            </svg>
-          </section>
+        {/* Formulario */}
+        <div style={{ padding: "2rem", maxWidth: 480 }}>
+          <TituloPrimario texto="¡Regístrate ahora!" color="#000" />
+          <TituloQuinario texto="WildRoutes es lo que estás buscando." color="#7a1e2b" />
 
-          <section>
-            <TituloPrimario texto="WildRoutes" color="var(--color-primario-mas-alto)" />
-            <TituloPrimario texto="Ingresa a tu cuenta" color="#000000ff" />
-            <TituloQuinario texto="Gestiona tu próximo destino" color="#000000ff" />
-          </section>
+          <Elementos.EntradaTexto etiqueta="Nombre" nombre="nombre" valor={entrada.nombre}
+            accion={(e) => setEntrada({ ...entrada, nombre: e.target.value })} />
 
-          <section>
-            <Elementos.EntradaTexto
-              estilo="var(--color-neutro-mas-mas-mas-mas-alto)"
-              etiqueta="Correo:"
-              nombre="correo"
-              valor={entrada.correo}
-              accion={(e) =>
-                setEntrada({ ...entrada, correo: e.target.value })
+          <Elementos.EntradaTexto etiqueta="Apellido" nombre="apellido" valor={entrada.apellido}
+            accion={(e) => setEntrada({ ...entrada, apellido: e.target.value })} />
+
+          <Elementos.EntradaTexto etiqueta="Celular" nombre="telefono" valor={entrada.telefono}
+            accion={(e) => setEntrada({ ...entrada, telefono: e.target.value })} />
+
+          <Elementos.EntradaTexto etiqueta="RUT" nombre="rut" valor={entrada.rut}
+            accion={(e) => setEntrada({ ...entrada, rut: e.target.value })} />
+
+          <Elementos.EntradaTexto etiqueta="Correo" nombre="correo" valor={entrada.correo}
+            accion={(e) => setEntrada({ ...entrada, correo: e.target.value })} />
+
+          <Elementos.EntradaTexto etiqueta="Contraseña" nombre="contrasena" tipo="password"
+            valor={entrada.contrasena}
+            accion={(e) => setEntrada({ ...entrada, contrasena: e.target.value })} />
+
+          <Elementos.EntradaTexto etiqueta="Confirmar contraseña" nombre="confirmar"tipo="password"
+            valor={entrada.confirmar}
+            accion={(e) => setEntrada({ ...entrada, confirmar: e.target.value })} />
+
+          <label>
+            <input
+              type="checkbox"
+              checked={entrada.publicidad}
+              onChange={(e) =>
+                setEntrada({ ...entrada, publicidad: e.target.checked })
               }
-              marcador="@"
-              informacion=""
-              tipo="text"
-            />
+            />{" "}
+            Quiero recibir publicidad
+          </label>
 
-            <Elementos.EntradaTexto
-              estilo="var(--color-neutro-mas-mas-mas-mas-alto)"
-              etiqueta="Contraseña:"
-              nombre="contrasena"
-              valor={entrada.contrasena}
-              accion={(e) =>
-                setEntrada({ ...entrada, contrasena: e.target.value })
+          <label>
+            <input
+              type="checkbox"
+              checked={entrada.terminos}
+              onChange={(e) =>
+                setEntrada({ ...entrada, terminos: e.target.checked })
               }
-              marcador=""
-              informacion="Mínimo 8 caracteres"
-              tipo="password"
-            />
-          </section>
+            />{" "}
+            Acepto los Términos y Condiciones
+          </label>
 
-          <section>
-            <BotonPrimario texto="Iniciar Sesión" accion={crearUsuario} icono="" nivel="alto"/>
+          {error && <p style={{ color: "red" }}>{error}</p>}
 
-            <EnlaceAlternativoSecundario
-              texto="¿Olvidaste tu contraseña?"
-              enlace=""
-            />
+          <BotonPrimario texto="Registrarse" nivel="alto" accion={registrar} />
 
-            <ParrafoSecundario texto="¿Eres nuevo?" color="#000000ff" icono="" />
-
-            <EnlaceAlternativoSecundario texto="Crear cuenta" enlace="" />
-          </section>
-
-          <section style={{ display: "flex", flexDirection: "column" }}>
-            <BotonCuaternario texto="Ingresar con Google" icono={<Google />} nivel="alto" />
-            <BotonCuaternario texto="Ingresar con Apple" icono={<Apple />} nivel="alto" />
-          </section>
+          <EnlaceAlternativoSecundario
+            texto="¿Ya tienes cuenta? Iniciar sesión"
+            enlace="/login"
+          />
         </div>
       </section>
 
